@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>效果測試網站</title>
+
+    <style>
+        p {
+            font-size: 40px;
+            color: rgb(248, 248, 248);
+            background-color: black;
+            display: block;
+            width: 680px;
+            margin: auto;
+            /*margin: auto 610px;*/
+            text-align: center;
+        }
+
+        h1 {
+
+            /* 文字的大小設置 */
+            font-size: 3rem;
+
+            /* 文字的顏色設置 */
+            color: red;
+
+            /* 背景顏色 */
+            background-color: black;
+
+            /* 字體的粗細 */
+            font-weight: bold;
+
+            /* 文字對齊方式 */
+            text-align: center;
+
+
+            /* 文字的外距 
+                 * 第一個值為上方與設定物件的距離(數值越大 物件會越下面)
+                 * 第二個值是左右的間距(數值越大 文字寬度會被壓得越窄)
+                */
+            margin: 30px 500px;
+
+            /*文字的內部擴充 向上下擴展 (數值越大會上下間距會由內向外越大)*/
+            padding: 50px;
+
+            /*文字置換 將小寫英文都換成大寫*/
+            text-transform: uppercase;
+
+            word-spacing: 10px;
+
+            /*文本行高 與padding效果看起來差不多*/
+            line-height: 5px;
+
+            text-decoration: underline overline;
+
+        }
+
+        div {
+            display: inline;
+        }
+
+        .放大縮小:hover {
+            transform: scale(1.5);
+        }
+
+        .元素旋轉:hover {
+            transform: rotate(180deg);
+        }
+
+        .元素傾斜:hover {
+            transform: skew(10deg, 5deg);
+        }
+
+        .元素移動:hover {
+            transform: translate(50px, 100px);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div>
+        <h1>這是一段 測試文字abc</h1>
+    </div><br>
+
+    <p>放大縮小</p>
+    <img src="https://i2.bahamut.com.tw/bahaLOGO_1200x630.jpg" alt="連結失效"
+        style="height:300px; width:650px; background-attachment:fixed; position: relative;left: 610px;border: 15px double black;margin-bottom:60px"
+        class="放大縮小">
+
+    <p>元素旋轉</p>
+    <img src="https://i2.bahamut.com.tw/bahaLOGO_1200x630.jpg" alt="連結失效"
+        style="height:300px; width:650px; background-attachment:fixed; position: relative;left: 610px;border: 15px double black;margin-bottom:60px"
+        class="元素旋轉">
+
+    <p>元素傾斜</p>
+    <img src="https://i2.bahamut.com.tw/bahaLOGO_1200x630.jpg" alt="連結失效"
+        style="height:300px; width:650px; background-attachment:fixed; position: relative;left: 610px;border: 15px double black;margin-bottom:60px"
+        class="元素傾斜">
+
+    <p>元素移動</p>
+    <img src="https://i2.bahamut.com.tw/bahaLOGO_1200x630.jpg" alt="連結失效"
+        style="height:300px; width:650px; background-attachment:fixed; position: relative;left: 610px;border: 15px double black;margin-bottom:60px"
+        class="元素移動">
+
+
+</body>
+
+</html>

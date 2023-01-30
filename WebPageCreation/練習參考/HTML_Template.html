@@ -1,0 +1,632 @@
+<!--所有HTML文件必要的的第一行元素，用於宣告這是使用HTML5架構的網頁文件-->
+<!DOCTYPE html>
+<!--HTML文件的內容都包含在html元素中-->
+<html lang="zh-tw">
+
+<!--head元素含有所有資訊資料型態的內容-->
+
+<head>
+    <!--Document metadata文件詮釋元素。用於處理文件數據-->
+    <!--瀏覽器分頁標籤上顯示的名稱-->
+    <title>網頁練習</title>
+    <!--瀏覽器分頁標籤上顯示的icon-->
+    <link rel="icon" href="Test.png">
+    <!--連結CSS表單-->
+    <link rel="stylesheet" href="Test.css">
+    <!--該網頁使用的文字編碼-->
+    <meta charset="utf-8">
+    <!--瀏覽器的搜尋關鍵字-->
+    <meta name="keywords" content="關鍵字1,關鍵字2">
+    <!--瀏覽器的顯示大標題-->
+    <meta name="name" content="在搜尋引擎上顯示的大標題">
+    <!--瀏覽器的顯示內容簡介-->
+    <meta name="description" content="在搜尋引擎上顯示的內容簡介">
+    <!--該網頁的作者-->
+    <meta name="author" content="Kaosu-Niku">
+    <!--每指定秒數刷新一次該網頁-->
+    <meta http-equiv="refresh" content="10000">
+    <!--定義網頁於螢幕顯示的相關設定，下列設定為定義響應式網頁的設定(第一個參數設定網頁的寬度自動符合用戶端設備的寬度)(第二個參數設定網頁的縮放倍率)-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--指定的HTTP請求的Header類型-->
+    <meta http-equiv="" content="">
+    <!--加載JS腳本，async屬性設定加載JS腳本時是非同步線程，HTML會立即繼續往下加載不會等待JS腳本載入完畢-->
+    <script src="Test.js" async=""></script>
+    <!--該網頁的所有相對URL所參考的位置-->
+    <base href="">
+    <!--style用於定義網頁元素的樣式(屬於最高優先級別，CSS樣式也無法覆蓋)-->
+    <style>
+        h1.分隔 {
+            color: yellow;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<!--body元素含有所有網頁實質呈現的內容-->
+
+<body>
+    <a href="https://www.w3schools.com/tags/default.asp">HTML元素參考</a>
+    <h1 class="分隔">Metadata 元數據元素</h1>
+
+    <h2>title 標頭</h2>
+    <p>用於定義該網頁於分頁欄顯示的以及提供給瀏覽器辨識的名稱。</p>
+
+    <h2>link 連結</h2>
+    <p>用於網頁與資源之間的連結並定義與資源之間的連結關係(rel屬性定義關係)。</p>
+
+    <h2>meta 數據</h2>
+    <p>用於定義該網頁的數據資訊並提供給瀏覽器或其它web服務使用。</p>
+
+    <h2>script 腳本</h2>
+    <p>用於加載JS腳本，該元素內部默認可以輸入JS語法運行邏輯但不建議。</p>
+
+    <h2>base 根</h2>
+    <p>用於定義該網頁所有的相對URL所參考的位置。</p>
+
+
+
+    <h1 class="分隔">Layout 佈局元素</h1>
+
+    <img src="佈局參考圖.png">
+
+    <header>
+        <h2>header 標題</h2>
+        <p>用於頁面的開頭起始部分。</p>
+    </header>
+
+    <nav>
+        <h2>nav 導航</h2>
+        <p>用於頁面的導航分類條目部分。</p>
+    </nav>
+
+    <main>
+        <h2>main 主體</h2>
+        <p>用於頁面的核心主體內容。</p>
+    </main>
+
+    <section>
+        <h2>section 部分</h2>
+        <p>用於頁面的部分內容(沒有其它適合使用的元素時才使用這個)。</p>
+    </section>
+
+    <aside>
+        <h2>aside 旁白</h2>
+        <p>用於非重點內容與主內容較無關之部分。通常做為側邊攔使用。</p>
+    </aside>
+
+    <footer>
+        <h2>footer 頁腳</h2>
+        <p>用於頁面的結尾頁腳部分的內容。</p>
+    </footer>
+
+    <article>
+        <h2>article 文章</h2>
+        <p>用於如文章或社群貼文等重複出現且獨立的內容。</p>
+    </article>
+
+    <h2>details 細節欄</h2>
+    <p>用於建立細節欄(可以打開或收起的內容欄位)。</p>
+    <h2>summary 概括</h2>
+    <p>用於建立細節欄的名稱，該元素必須作為details的子元素使用。</p>
+    <details open="true">
+        <summary>細節欄</summary>
+        細節欄的文本內容
+    </details>
+
+    <h2>figure 突出內容</h2>
+    <p>用於建立一段內容中的突出部分，例如: 文章中的圖片、表格、代碼段...等等。該元素呈現縮排。</p>
+    <h2>figcaption 突出內容說明</h2>
+    <p>用於對figure附帶的網頁元素的附加說明。該元素必須作為figure的子元素使用，且必須作為第一或是最後一個子元素。</p>
+    <figure>
+        <figcaption></figcaption>
+    </figure>
+
+    <h2>menu 菜單</h2>
+    <p>實驗中的功能元素。<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/menu" target="_blank">文章連結</a></p>
+    <menu> </menu>
+
+
+
+
+
+    <h1 class="分隔">Paragraphs 段落元素</h1>
+
+    <div>
+        <h2>div 空區塊元素</h2>
+        <p>不具任何特殊性質的通用區塊元素。適用於將多個相關元素包裹，使用id或class屬性來分類。</p>
+    </div>
+
+    <h2>span 空內聯元素</h2>
+    <span>不具任何特殊性質的通用內聯元素。適用於內容的編排，常使用id或class屬性來分類。</span>
+
+    <h1>h1 一級標題
+        <h2>h2 二級標題
+            <h3>h3 三級標題
+                <h4>h4 四級標題
+                    <h5>h5 五級標題
+                        <h6>h6 六級標題
+                        </h6>
+                    </h5>
+                </h4>
+            </h3>
+        </h2>
+    </h1>
+
+    <h2>p 文字區塊</h2>
+    <p>用於顯示純文字的區塊元素。</p>
+
+    <h2>a 超連結</h2>
+    <p>用於建立通往其他URL的超連結。</p>
+    <!--herf屬性設定通往的連結URL。target屬性設定新網頁要在哪個頁面開啟: _self = 該頁面開啟(可以以上一頁回到該網頁)、_blank = 新分頁開啟、_parent= 父框架開啟、_top = 新視窗開啟-->
+    <a href="http://example.com" target="_self">測試連結</a>
+    <!--herf特殊用法，用於前往指定id的元素-->
+    <a href="#頁面最下方">測試前往頁面最下方</a>
+    <!--herf特殊用法，用於連結信箱-->
+    <a href="mailto:s9613010@gmail.com" target="_blank">測試信箱連結</a>
+
+    <h2>br 跨行</h2>
+    <p>用於在文本中跨行，像<br>這樣。</br></b>
+
+    <h2>hr 分隔線</h2>
+    <p>跨行並顯示一個線條。</p>
+    <hr color="red" size="5" width="50%" align="left">
+
+    <h2>pre 原排版文字</h2>
+    <pre>
+    pre的文字內容可以忽略網頁建構，照著原文件的程式碼排版呈現。
+    ⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⠛⠛⠛⢻⡻⠿⣿⣿⣿⣿⣿⣿⣿⣿
+    ⣿⣿⣿⣿⣿⣿⣟⣫⡾⠛⠛⠛⠛⠛⠛⠿⣾⣽⡻⣿⣿⣿⣿⣿
+    ⣿⣿⣿⣿⣿⡟⣼⠏⠀⠀⠀⠀⠀⠀⣀⣀⡀⣙⣿⣎⢿⣿⣿⣿
+    ⣿⣿⣿⣿⣿⢹⡟⠀⠀⠀⣰⡾⠟⠛⠛⠛⠛⠛⠛⠿⣮⡻⣿⣿
+    ⣿⡿⢟⣻⣟⣽⠇⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢿⡹⣿
+    ⡟⣼⡟⠉⠉⣿⠀⠀⠀⠀⢿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⢟⣿
+    ⣇⣿⠁⠀⠀⣿⠀⠀⠀⠀⠘⢿⣦⣄⣀⣀⣀⣀⣤⡴⣾⣏⣾⣿
+    ⡇⣿⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠈⠉⠛⠋⠉⠉⠀⠀⢻⣿⣿⣿
+    ⢃⣿⠀⠀⠀⣿⠀ ⢸⣧⣿⣿
+    ⡻⣿⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣧⣿⣿
+    ⡇⣿⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⢹⣿⣿
+    ⣿⡸⢷⣤⣤⣿⡀⠀⠀⠀⠀⢠⣤⣄⣀⣀⣀⠀⠀⢠⣿⣿⣿⣿
+    ⣿⣿⣷⣿⣷⣿⡇⠀⠀⠀⠀⢸⡏⡍⣿⡏⠀⠀⠀⢸⡏⣿⣿⣿
+    ⣿⣿⣿⣿⣿⢼⡇⠀⠀⠀⠀⣸⡇⣷⣻⣆⣀⣀⣀⣼⣻⣿⣿⣿
+    ⣿⣿⣿⣿⣿⣜⠿⢦⣤⣤⡾⢟⣰⣿⣷⣭⣯⣭⣯⣥⣿⣿⣿⣿
+        </pre>
+
+
+
+    <h1 class="分隔">Formatting 格式化元素</h1>
+
+    <h2>b 粗體</h2>
+    <b>使內容呈現粗體。</b>
+
+    <h2>i 斜體</h2>
+    <i>使內容呈現斜體。</i>
+
+    <h2>small 縮小</h2>
+    <small>使內容呈現縮小。</small>
+
+    <h2>q 引言</h2>
+    <q>使內容前後加上引號。</q>
+
+    <h2>s 刪除線</h2>
+    <s>使內容加上刪除線。</s>
+
+    <h2>u 下劃線</h2>
+    <u>使內容加上下劃線。</u>
+
+    <h2>bdo 文本順序</h2>
+    <bdo dir="rtl">用於改變文本的文字排序，以dir屬性來更改方向。值ltr = 左至右。值rtl = 右置左。</bdo>
+
+    <h2>bdi 文本隔離</h2>
+    <bdi>用於將特定內容獨立出來與其它文本區隔開，此元素通常用於那些可能破壞排版的特殊語言格式。</bdi>
+
+    <h2>strong 強烈</h2>
+    <p>用於標註重點內容。<strong>內容呈現強烈</strong></p>
+
+    <h2>em 重點</h2>
+    <p>用於標註重點內容。<em>內容呈現斜體</em></p>
+
+    <h2>mark 標記</h2>
+    <p>用於標註重點內容。<mark>內容的背景呈現高亮</mark></p>
+
+    <h2>abbr 縮寫</h2>
+    <p>用於註記<abbr title="這是一段註記">重點內容</abbr>。使用title屬性使得焦點在該元素上會出現一個區塊顯示註記文字。</p>
+
+    <h2>blockquote 區塊引用</h2>
+    <blockquote cite="">
+        用於標註一段內容的引用出處或是詳細解釋。內容呈現縮排。使用cite屬性附上關於這段內容的相關連結。</blockquote>
+
+    <h2>cite 標籤</h2>
+    <p>用於呈現具有特殊涵義的名詞，例如:<cite>人名、書名、歌名、作品名</cite>...等等的。內容呈現斜體。</p>
+
+    <h2>address 地址</h2>
+    <p>用於存放如:連絡電話、住址、社交媒體帳號...等等的個人資訊內容。內容呈現斜體。</p>
+    <address>
+        我的Gmail:<a href="mailto:s9613010@gmail.com">s9613010@gmail.com</a>
+    </address>
+
+    <h2>time 時間</h2>
+    <p>用於標註時間，該元素可被編譯器辨識時間格式。<time datetime="2022-09-01T12:00">2022-09-01T12:00</time></p>
+
+    <h2>sup 上半部文字</h2>
+    <p>用於呈現像數學的次方或是腳註的上半部文字。2<sup>2</sup> * 2<sup>2</sup> =16</p>
+
+    <h2>sub 下半部文字</h2>
+    <p>用於呈現像化學式的下半部文字。H<sub>2</sub>SO<sub>4</sub></p>
+
+    <h2>ruby 拼字註記</h2>
+    <p>用於呈現東亞文字的拼音註記。<ruby>
+            日<rp>
+            <rt>ni</rt>
+            </rp>
+            本<rp>
+            <rt>hon</rt>
+            </rp>
+            語<rp>
+            <rt>go</rt>
+            </rp>
+        </ruby></p>
+    <ruby></ruby>
+
+    <h2>其餘不多加說明的元素</h2>
+    <p>ins=添加內容、del=移除內容、kbd=輸入按鍵、var=數學公式、code=程式碼、samp=計算機程序樣本、data、dfn、wbr。</p>
+
+
+
+    <h1 class="分隔">List 列表元素</h1>
+
+    <h2>dl 基本列表</h2>
+    <p>用於建立一個基本列表結構。使用dt元素呈現列表標題，使用dd元素呈現列表內容。</p>
+    <dl>
+        <dt> 基本列表標題 </dt>
+        <dd> 基本列表內容1 </dd>
+        <dd> 基本列表內容2 </dd>
+    </dl>
+
+    <h2>ul 無序列表</h2>
+    <p>用於建立一個無序列表結構。使用li子元素呈現列表內容，li元素前頭帶有預設的黑點標記。</p>
+    <ul>
+        <li>li 無序列表內容1</li>
+        <li>li 無序列表內容2</li>
+    </ul>
+
+    <h2>ol 有序列表</h2>
+    <p>用於建立一個有序列表結構。使用li子元素呈現列表內容，li元素前頭帶有預設的數字記號(可用start屬性改變)。使用reversed屬性可以顛倒記號順序。</p>
+    <ol type="A" start="A" reversed="">
+        <li>li 有序列表內容1</li>
+        <li>li 有序列表內容2</li>
+    </ol>
+
+
+
+    <h1 class="分隔">Table 表格元素</h1>
+
+    <h2>table 表格</h2>
+    <p>用於建立一個表格結構。</p>
+    <h2>caption 表格標題</h2>
+    <p>用於建立表格的標題。該元素必須作為table的子元素使用。</p>
+    <h2>colgroup 表格列組</h2>
+    <p>用於建立表格的列組。該元素必須作為table的子元素使用。使用col子元素代表表格的每一列。如要對表格的第三列做編輯，則需要三個col子元素並對第三個做屬性編輯。</p>
+    <h2>col 表格列</h2>
+    <p>用於建立表格的一列。該元素必須作為colgroup的子元素使用。</p>
+    <h2>tr 表格行</h2>
+    <p>用於建立表格的一行</p>
+    <h2>th 表格行標題</h2>
+    <p>用於建立表格行的標題。該元素必須作為tr的子元素使用，通常只使用於表格的第一行。</p>
+    <h2>td 表格行內容</h2>
+    <p>用於建立表格行的內容。該元素必須作為tr的子元素使用。</p>
+    <h2>其餘未說明的元素</h2>
+    <p>thead、tbody、tfoot。這些元素只是為了表格分類方便，不一定要用。</p>
+    <table>
+        <caption>東方角色表格。</caption>
+        <colgroup>
+            <col class="第一列表格">
+            <col class="第二列表格">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>種族</th>
+                <th>年齡</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>靈夢</td>
+                <td>人類</td>
+                <td>少女的年齡</td>
+            </tr>
+            <tr>
+                <td>八雲紫</td>
+                <td>妖怪</td>
+                <td>18歲</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+    <h1 class="分隔">Embedded Content 嵌入內容元素</h1>
+
+    <h2>iframe 框架</h2>
+    <p>用於再嵌入一個網頁區域(顯示內容根據URL決定)。設定寬度高度的屬性來限制嵌入網頁的顯示範圍。</p>
+    <iframe src="Test.html" width="500"></iframe>
+
+    <h2>object 物件</h2>
+    <p>用於嵌入資源內容。必須指派type屬性，type的值為 MIME type。</p>
+    <object data="Test.json" type="application/json" width="500"></object>
+
+    <h2>source 資源</h2>
+    <p>用於為一個媒體元素提供多個資源並以屬性設定條件讓使用者端根據條件判斷最適用的資源並顯示，該元素必須作為picture、audio、video的子元素使用。</p>
+    <!--srcset屬性: 主用於picture。格式以 "圖片url 圖片尺寸" 表示，尺寸分w和x兩個單位，w為實際寬度、x為像素比例。-->
+
+
+
+    <h1 class="分隔">Image 圖像元素</h1>
+
+    <h2>img 圖片</h2>
+    <p>用於嵌入圖片內容。</p>
+    <!--decoding屬性決定圖片編碼模式。loading屬性決定圖片何時加載: eager = 在進網頁立即加載、lazy = 在網頁位置接近圖片位置時才開始加載。-->
+    <img src="Test.png" alt="未顯示圖片內容則顯示該文字內容">
+
+    <h2>picture 響應式圖片</h2>
+    <p>用於建立響應式圖片(瀏覽器根據source的條件選擇適合的圖片顯示)，必須含有一個img子元素(必須是最後的子元素)，Source子元素可多個也可無。</p>
+    <!--source元素使用srcset屬性設定多個不同的圖片供瀏覽器選擇。img元素用於在沒有任何適合的source版本時最終會顯示的圖片-->
+    <picture>
+        <source srcset="Test_192.png 0.75x,Test_288.png 1.5x">
+        <img src="Test.png">
+    </picture>
+
+    <h2>map 圖像映射</h2>
+    <p>用於建立一個圖像映射(滑鼠點擊可以回饋的區域)，必須含有area子元素和配對一個img元素，map使用name屬性(img元素使用usemap屬性，兩屬性的值必須相同)。</p>
+    <h2>area 映射區域</h2>
+    <p>和map元素一起使用，用於定義映射的區域範圍，該元素必須作為map的子元素使用。</p>
+    <!--sharp屬性決定區域的形狀: rect = 方形、circle = 圓形、poly = 多邊形、default = 全部區域。-->
+    <!--coords屬性決定區域的詳細座標: 座標皆以兩個值成對表示(x,y)，對應從圖片左上角移動多少像素格。rect("矩形左上x,矩形左上y,矩形右下x,矩形右下y")、circle("x座標,y座標,半徑")。-->
+    <img src="Test.png" usemap="#TestMap">
+    <map name="TestMap">
+        <area shape="rect" coords="0,0,256,256" href="http://example.com" target="_blank">
+    </map>
+
+
+
+    <h1 class="分隔">Multimedia 多媒體元素</h1>
+    <h2>audio 音訊</h2>
+    <p>用於嵌入音訊媒體內容。</p>
+    <!--controls屬性顯示一個基本的控制面板。autoplay屬性使媒體自動播放。loop屬性使媒體重複播放-->
+    <audio src="Test.mp3" controls="" loop="" autoplay="" muted=""></audio>
+
+    <h2>video 影片</h2>
+    <p>用於嵌入影片媒體內容。</p>
+    <!--poster屬性設置影片的封面圖-->
+    <video src="Test.mp4" controls="" poster="Test.png" height="500"></video>
+
+    <h2>track 軌道</h2>
+    <p>用於嵌入媒體內容的字幕。該元素必須作為audio、video的子元素使用</p>
+    <!--default屬性設置字幕是否預設開啟。kind屬性可置字幕的呈現方式-->
+    <track default="" kind="subtitles" src="字幕檔" srclang="en">
+
+
+
+    <h1 class="分隔">Forms 表單元素</h1>
+
+    <h2>form 表單</h2>
+    <p>用於建立一個表單結構。使用action屬性指派提交表單的位置(php)。使用target屬性指派以何種方式開啟提交表單後顯示的視窗</p>
+    <p>使用method屬性指派提交表單要執行的HTTP請求操作。使用autocomplete屬性可以決定下次在開啟表單是否要自動填入上次用戶所提交的值</p>
+
+    <h2>fieldset 表單集區</h2>
+    <p>用於建立表單集區，將表單分區分類。</p>
+    <h2>legend 集區標題</h2>
+    <p>用於建立表單集區的標題。該元素必須作為fieldset的子元素使用。</p>
+
+    <h2>label 標籤</h2>
+    <p>用於建立表單元素的簡介說明。使用for屬性填入與之對應的表單元素的id來關聯兩者會較OK。</p>
+
+    <h2>input 輸入欄</h2>
+    <p>用於建立輸入欄。必須指派type屬性，type屬性會影響可輸入的內容類別。value屬性代表這個輸入框會提交給表單的值。
+        <a href="https://www.w3schools.com/html/html_form_input_types.asp" target="_blank">type屬性參考</a>
+    </p>
+    <!--
+    text = 文字型別
+    number = 數字型別
+    password = 密碼型別(在網頁上會自動碼掉輸入值)
+    email = 信箱型別
+    color = 色彩型別(視瀏覽器可能支援選擇器)
+    tel = 電話型別
+    time = 時間型別[不包含日期](視瀏覽器可能支援選擇器)
+    date = 日期型別[不包含時間](視瀏覽器可能支援選擇器)
+    datetime-local = 日期及時間型別(視瀏覽器可能支援選擇器)
+    url = URL型別
+    file = 文件型別(可以瀏覽文件並選擇文件)
+    search = 輸入框將轉型為搜尋框(搜尋字段)
+    radio = 輸入框將轉型為單選框
+    checkbox = 輸入框將轉型為確認框
+    range = 輸入框將轉型為滑動條
+    button = 輸入框將轉型為普通按鈕
+    reset = 輸入框將轉型為重置表單按鈕
+    submit = 輸入框將轉型為提交表單按鈕
+    image = 輸入框將轉型為可自訂顯示圖片的提交表單按鈕
+    hidden = 隱藏該輸入框(只是在網頁上不可見，實際上數據依然可以讀取)
+    -->
+
+    <h2>output 輸出欄</h2>
+    <p>用於建立輸出欄。<a href="https://www.w3schools.com/tags/tag_output.asp" target="_blank">參考文章</a></p>
+
+    <h2>datalist 資料列表</h2>
+    <p>用於建立資料列表(不可見)。必須含有option子元素。必須指派id屬性。input元素使用list屬性並輸入資料列表的id即可取得該資料列表並根據選項填入資料。</p>
+
+    <h2>select 選擇列表</h2>
+    <p>用於建立選擇列表(可見)。必須含有option子元素。</p>
+    <h2>optgroup 選項分類</h2>
+    <p>用於建立選項列表中的選項分類標頭。該元素必須作為select的子元素使用。必須指派label屬性。該元素不會被視為可選的選項。</p>
+    <h2>option 選項</h2>
+    <p>用於建立列表中的選項。該元素必須作為datalist、select的子元素使用。必須指派value屬性，value屬性代表提交給表單的值。若使用selected屬性則該選項設定為預設選項。</p>
+
+    <h2>textarea 文本區</h2>
+    <p>用於建立文本區。使用cols、rows屬性可分別指定寬度和行數。使用maxlength屬性可限制最大的文本字數。</p>
+
+    <h2>meter 儀表</h2>
+    <p>用於建立儀表(狀態條)。必須指派min、max、value屬性。分別代表最小值最大值當前值</p>
+
+    <h2>progress 進度條</h2>
+    <p>用於建立進度條。必須指派max、value屬性。</p>
+
+    <h2>button 按鈕</h2>
+    <p>用於建立按鈕。必須指派type屬性(button、reset、submit)。</p>
+
+    <h2>dialog 對話框</h2>
+    <p>用於建立對話框。該元素建議建立一個含有button的form子元素，form使用method屬性並設定dialog，可使button變成用於關閉對話框視窗的功能按鈕。</p>
+
+    <div>
+        <dialog open="">
+            <p>這是一個對話框</p>
+            <form method="dialog">
+                <button>關閉</button>
+            </form>
+        </dialog>
+    </div>
+    <form action="" method="get" target="_blank">
+        <fieldset>
+            <legend>問題1</legend>
+            <label for="輸入欄1">輸入欄:</label>
+            <input id="輸入欄1" type="text" required="該選項不能為空" value="初始值" maxlength="10"></input>
+        </fieldset>
+        <fieldset>
+            <legend>問題2</legend>
+            <label for="輸入欄2">取用資料列表的輸入欄:</label>
+            <input id="輸入欄2" list="選項列表1" required="該選項不能為空"></input>
+            <datalist id="選項列表1">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </datalist>
+        </fieldset>
+        <fieldset>
+            <legend>問題3</legend>
+            <label for="選擇列表">選擇列表:</label>
+            <select id="選擇列表" required="該選項不能為空">
+                <option value="">--</option>
+                <optgroup label="選項分類A">A</optgroup>
+                <option value="A1">A1</option>
+                <option value="A2">A2</option>
+                <option value="A3">A3</option>
+                <optgroup label="選項分類B">B</optgroup>
+                <option value="B1">B1</option>
+                <option value="B2">B2</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>問題4</legend>
+            <label for="文本區">文本區:</label>
+            <br>
+            <textarea id="文本區" required="該選項不能為空" maxlength="1000" cols="50" rows="5"></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>確認</legend>
+            <label for="儀表">儀表:</label>
+            <meter id="儀表" min="0" max="100" value="30"></meter>
+            <label for="進度條">進度條:</label>
+            <progress id="進度條" max="100" value="70"></progress>
+            <button id="按鈕">提交</button>
+        </fieldset>
+    </form>
+
+
+
+    <h1 class="分隔">Web Components 網頁元件元素</h1>
+
+    <h2>template 模板</h2>
+    <p>用於建立模板。template並不會被網頁渲染出來，而是做為參考模板供JS腳本取用，被取用後才會渲染出內容。</p>
+    <h2>slot 插槽</h2>
+    <p>用於建立插槽。<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/slot" target="_blank">參考文章</a></p>
+    <template id="模板"> </template>
+
+
+
+    <h1 class="分隔">其它元素</h1>
+
+    <h2>noscript 無腳本</h2>
+    <p>用於在腳本被關閉或無法使用時執行。</p>
+    <noscript></noscript>
+
+    <h2>canvas 畫布</h2>
+    <p>用於建立畫布，可在網頁上供使用者繪製圖形，但該元素只是提供容器並沒有實質功能，功能需由JS腳本撰寫。</p>
+    <canvas></canvas>
+
+    <h2>svg 向量圖</h2>
+    <p>用於繪製向量圖(使用該元素並不是要顯示SVG圖檔，而是直接繪製向量圖)。</p>
+    <svg xmlns="Test.svg"></svg>
+
+    <h2>math 數學算式</h2>
+    <p>過於複雜且幾乎不會用到，不詳細說明...</p>
+    <math> </math>
+
+
+
+    <h1 class="分隔">Obsolete and Deprecated 過時和棄用的元素</h1>
+
+    <p id="頁面最下方">以下元素皆不建議於新版架構使用。</p>
+    <p>acronym、applet、bgsound、big、blink、center、content、dir、embed、font、frame、frameset、image、keygen、marquee、<br></br>menuitem、nobr、noembed、
+        noframes、param、plaintext、rb、rtc、shadow、spacer、strike、tt、xmp。</p>
+
+</body>
+
+</html>
+<!--
+    屬性一覽
+    id = 定義一個ID，ID具有單一性不可重複。可用元素: 全部
+    class = 為元素分類。可用元素: 全部
+    tabindex = 瀏覽器的預設頁面標籤之順序。可用元素: 全部
+    lang = 指定語言。可用元素: 全部
+    style = 使用指定的樣式。可用元素: 全部
+    hidden = 不在網頁中顯示該元素。可用元素: 全部  
+    dir = 元素的左右方向。可用元素: 全部
+    contenteditable = 是否可以被編輯。可用元素: 全部
+    title = 滑鼠懸停在該元素上，顯示提示文字。可用元素: 全部
+    accesskey = 定義鍵盤快捷鍵啟動該元素。可用元素: 全部
+    draggable = 該元素是否能被滑鼠拖曳。可用元素: 全部
+    dropzone = 該元素是否接受滑鼠拖曳來的元素內容。可用元素: 全部
+    spellcheck = 是否檢查拼字。可用元素: 全部
+
+    name = 為元素命名，可用於識別。可用元素: <meta>,<iframe>,<object>,<map>,<form>,<fieldset>,<input>,<output>,<select>,<textarea>,<button>,
+    type = 元素的執行類型。可用元素: <script>,<style>,<menu><object>,<source>,<input>,<button>                       
+    language = 聲明腳本所使用的語言。可用元素: <script>
+    async = 非同步執行腳本。可用元素:<script>
+    defer = 該頁面被瀏覽完畢後執行腳本。可用元素: <script>
+    charset = 腳本或頁面所使用字元編碼。可用元素: <meta>,<script>
+    rel = 指定與連結物件的關係。可用元素: <link>,<a>,<area>
+    href = 連結URL。可用元素: <link>,<base>,<a>,<area>
+    hreflang = 連結URL時指定語言。可用元素: <link>,<a>,<area>
+    src = 指定可嵌入內容的URL。可用元素: <script>,<iframe>,<img>,<source>,<audio>,<video>,<track>,<input>
+    download = 下載資源的預設名稱。可用元素: <a>,<area>
+    media = 指定連接已設計好的媒體。可用元素: <link>,<style>,<a>,<area>,<source>
+    data = 指定資源的url。可用元素: <object>
+
+    alt = 圖像無法顯示的情況，替代顯示的文本。可用元素: <area>,<img>,<input type="image">
+    poster = 設置影片的預覽圖。可用元素: <video>
+    controls = 媒體是否該顯示錄放控制給使用者。可用元素: <audio>,<video>
+    preload = 媒體是否需要預加載。可用元素: <audio>,<video>
+    buffered = 媒體的緩衝時間。可用元素: <audio>,<video>
+    autoplay = 媒體自動播放。可用元素: <audio>,<video>
+    loop = 媒體是否該循環重播。可用元素: <audio>,<video>
+    muted = 媒體是否靜音。可用元素: <audio>,<video>
+    kind = track的類型。可用元素: <track>
+    default = track是否被啟用。可用元素: <track>
+    label = track給使用者可讀之標題。可用元素: <track>
+
+    action = 提交表單的位置(php)。可用元素: <form>
+    method = 提交表單使用的HTTP請求。可用元素: <form>    
+    list = 連結指定id的details元素。可用元素: <input>
+    cols = 指定一行的寬度。可用元素: <textarea>
+    rows = 指定行數。可用元素: <textarea>  
+    maxlength = 所允許的字元數目上限。可用元素: <input>,<textarea>
+    readonly = 是否可以被編輯。可用元素: <input>,<textarea>
+    multiple = 是否允許提交多個值。可用元素: <input>,<select>
+    required = 是否要求填寫。可用元素: <input>,<select>,<textarea>
+    min = 所允許的最小值。可用元素: <input>,<meter>
+    max = 所允許的最大值。可用元素: <input>,<meter>,<progress>
+    open = 是否於加載頁面顯示細節。可用元素: <details>
+    selected = 設定為預設選項。可用元素: <option>
+    value = 顯示預設值。可用元素: <li>,<input>,<option>,<meter>,<progress>,<button>
+    autodocus = 頁面加載後自動聚焦該元素。可用元素: <input>,<select>,<textarea>,<button>
+    disabled = 使用者是否能與元素互動。可用元素: <fieldset>,<input>,<option>,<select>,<textarea>,<button>
+-->

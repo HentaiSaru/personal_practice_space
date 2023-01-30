@@ -1,0 +1,155 @@
+@charset "UTF-8";
+.選擇按鈕 {
+    background: #010101;
+    background: linear-gradient(#f12424, #010101 50%, #f12424);
+    border: 1px solid #556699;
+    border-radius: 25px;
+    box-shadow: 0 1px #000000;
+    padding: 20px 45px;
+    display: inline-block;
+    font: normal bold 23px/1 "Droid Serif", serif;
+    font-size: 30px;
+    text-align: center;
+    color: rgba(142, 17, 225,0.5);
+    text-shadow: 2px 2px #c799e6;
+}
+
+.變色文字 {
+    animation: change 5s linear 0s infinite;
+    text-align: center;
+    font-size: 80px;
+    text-shadow: 3px 5px 4px rgba(228, 5, 143, 0.3);
+}
+
+@keyframes change {
+    0% {
+        color: rgba(255, 0, 0, 0.7);
+    }
+
+    25% {
+        color: rgba(255, 72, 0, 0.7);
+    }
+
+    50% {
+        color: rgba(253, 217, 9, 0.7);
+    }
+
+    75% {
+        color: rgba(0, 25, 253, 0.7);
+    }
+
+    100% {
+        color: rgba(17, 255, 0, 0.7);
+    }
+}
+
+.大標題div框架 {
+    background-color: rgba(70, 70, 70, 0.5);
+    border-radius: 50px;
+    border: none;
+    margin: auto;
+    padding: 1px;
+    width: 1400px;
+}
+
+.商品頁面div框架 {
+    background-color: rgba(70, 70, 70, 0.5);
+    border-radius: 30px;
+    border: none;
+    margin: 1px;
+    padding: 1px;
+    max-width: 1380px;
+    box-sizing:border-box;
+    height:1062px;
+}
+
+#選單div框架 {
+    background-color: rgba(15, 15, 15, 0.6);
+    border-radius: 50px;
+    border: none;
+    margin: auto;
+    padding: 10px;
+    width:1340px;
+    box-sizing:border-box;
+}
+
+.container {
+    height: 80px;
+    width: 450px;
+    margin: 10px;
+    padding: 5px;
+}
+.parent {
+    position: relative;
+}
+.search {
+    width: 300px;
+    height: 40px;
+    border-radius: 18px;
+    outline: none;
+    border: 1px solid #ccc;
+    padding-left: 20px;
+    position: absolute;
+}
+
+.商品預覽{
+    color: #8e11e1;
+    text-align: center;
+    text-shadow: 2px 2px #c799e6;
+    font-size: 80px;
+}
+
+.搜尋{
+    font-size: 28px;
+    color: rgb(255, 140, 0);
+    background-color: rgba(255, 0, 0,0.2);
+    margin: 10px;
+    outline: rgba(255, 0, 0,0.5) solid 10px;
+}
+
+.商品文字系列{
+    font-size: 60px;
+    text-align:center;
+    font-family:"Brush Script MT";
+    color: rgba(255, 248, 248,0.8);
+    text-shadow: 3px 2px #c799e6;
+}
+
+.商品文字大標{
+    font-weight:bold;
+    font-size: 20px;
+    text-align:center;
+    color: rgba(255, 255, 255,1);
+    text-shadow: 2px 3px #000000;
+}
+
+.gpu文字樣式{
+    text-align:center;
+    font-size: 50px;
+    border-radius: 18px;
+    background-color:rgba(0, 0, 0,0.2) ;
+    animation: change 5s linear 0s infinite;
+    border-top-style: dashed;
+    border-right-style: groove;
+    border-bottom-style: double;
+    border-left-style: groove;
+}
+
+.按鈕{
+    font-size: 20px;
+    float:right;
+    background-color:rgb(0, 0, 0) ;  
+    color:rgb(255, 0, 0);
+    border:2px solid rgb(255, 0, 0) ; 
+    padding:1px;
+    text-decoration: line-through;
+}
+
+.ram表格樣式{
+    font-size: 25px;
+    border-radius: 30px;
+    background-color:rgba(0, 0, 0,0.2) ;
+    width: 1370px;
+    text-align:left;
+  
+}
