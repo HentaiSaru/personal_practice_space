@@ -12,6 +12,7 @@
 
     <!--? 添加網頁圖標 -->
     <link rel="" type="image" href="https://pbs.twimg.com/profile_images/1337857299147333633/c9yqpu_u_400x400.jpg">
+    <!--! <link rel="icon" href="*.ico"> 基本圖標語法補充 -->
 
 </head>
 <!--! 這邊的元素要在head框內設置 -->
@@ -580,8 +581,8 @@
         *   cellpadding="5"         (內部元素與邊框的距離, 由內部做填充向外)
 
         ?   ================================================================
-        *   align="center"          (表格內元素水平對齊 , left、center、right)
-        *   valign="middle"         (表格內元素垂直對齊 , top、middle、bottom)
+        *   align="center"          (表格內元素水平對齊 , left、center、right、justify)
+        *   valign="middle"         (表格內元素垂直對齊 , top、middle、bottom、justify)
 
         ?   =====================================
         *   bgcolor="#000"          (表格背景顏色)
@@ -620,10 +621,13 @@
 
         ?   =========================================================================
         *   display:none;                    (控制在div內部的元素,在網頁上的顯示方式)
-        *   (none/不顯示)
-        *   (block/佔滿整個寬度,可另設置 width/height margin/padding)
-        *   (inline/只能設定 margin-left/margin-right)
-        *   (inline-block/與block差在不會自動換行)
+        *   (block 或 none /不顯示)
+        *   (block /佔滿整個寬度,可另設置 width/height margin/padding)
+        *   (inline /只能設定 margin-left/margin-right)
+        *   (inline-block /與block差在不會自動換行)
+
+        *   flex-direction: 子元素的排列方向 (row/水平排列) (column/垂直排列)
+        *   flex-wrap:      子元素的換行    (nowrap/不換行) (wrap/換行)
 
         ?   =========================================================================================
         *   position:static;                (控制div的顯示位置)
@@ -675,6 +679,9 @@
 
         !   ***圖像對齊****************************************************************************************************************************
         *   vertical-align:要對齊的物件
+        *   float: none;                (none/默認不浮動) (right/向右浮動) (left/向左浮動)
+        *   float需搭配 clear處理顯示問題
+        *   clear: both;                (both/不允許左右兩側浮動) (right/不允許右側浮動) (left/不允許左側浮動)
 
         !   ***特別效果設置************************************************************************************************************************
         *   (以設置的為a標籤做範例)
