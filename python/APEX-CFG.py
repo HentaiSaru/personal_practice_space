@@ -21,7 +21,7 @@ CFG = [
     "bind_held_US_standard '2' 'use_consumable HEALTH_LARGE' 							", #長按2拉大補
 
     #設定靈敏度參數(我的滑鼠DPI:1450)=======================================================================
-    "# 平均0.48",
+    # 平均0.48
     "m_rawinput '1'																	    ",#滑鼠開啟原始輸入
     "m_filter '0'																		",#禁用滑鼠過濾
     "m_acceleration '0'                                                                 ",#確保滑鼠加速關閉
@@ -40,7 +40,7 @@ CFG = [
     #玩法優化 =======================================================================================
 
     "cl_showpos '1'																		",#顯示跑速座標等各項數據(1~4可選)
-    "#developer '1'																	    ",#開發者模式(失效) 
+    #developer '1'																	      #開發者模式(失效) 
     "mat_queue_mode '2'																    ",#強製遊戲使用（-1 默認，0 同步單線程，1 排隊單線程，2 多線程）
     "localClientPlayerCachedLevel '25' 													",#修復了當你的隊友看到你為 1 級時無法排位的問題
     "ordnanceSwapSelectCooldown '0'  													",#減少手榴彈交換時間                                       
@@ -82,16 +82,16 @@ CFG = [
 
     #光影效果======================================================================================="
 
-    "mat_light_edit '1'																	#地圖燈光照明",
-    "map_settings_override '1'															#設置覆蓋 (不確定幹嘛的)",
-    "mat_autoexposure_min '1.9' 														#光照強度最小值",
-    "mat_autoexposure_max '1.9' 														#光照強度最大值",
-    "mat_autoexposure_speed '2' 														#畫面曝光轉變的速度",
-    "mat_hide_sun_in_last_cascade '1' 													#最後一個級聯中的太陽能照明",
-    "mat_colcorrection_disableentities '0' 												#更換濾色器（稍微去除離場時“失明”的效果)",
-    "mat_autoexposure_max_multiplier '1.7' 												#光強度最大乘數",
-    "mat_autoexposure_min_multiplier '1.7' 												#光強度最小的乘數",
-    "mat_autoexposure_override_min_max '1'												#曝光最大值最小值",
+    "mat_light_edit '1'																	",#地圖燈光照明
+    "map_settings_override '1'															",#設置覆蓋 (不確定幹嘛的)
+    "mat_autoexposure_min '1.9' 														",#光照強度最小值
+    "mat_autoexposure_max '1.9' 														",#光照強度最大值
+    "mat_autoexposure_speed '2' 														",#畫面曝光轉變的速度
+    "mat_hide_sun_in_last_cascade '1' 													",#最後一個級聯中的太陽能照明
+    "mat_colcorrection_disableentities '0' 												",#更換濾色器（稍微去除離場時“失明”的效果)
+    "mat_autoexposure_max_multiplier '1.7' 												",#光強度最大乘數
+    "mat_autoexposure_min_multiplier '1.7' 												",#光強度最小的乘數
+    "mat_autoexposure_override_min_max '1'												",#曝光最大值最小值
 
     #優化FPS======================================================================================="
 
@@ -99,44 +99,76 @@ CFG = [
     "bind_US_standard '9' 'fps_max 144'",
     "bind_US_standard '0' 'fps_max 240'",
     "fps_max 240",
-    "refresh 240																		#螢幕刷新 240",
-    "nomemorybias																	    #減少Ram消耗",
-    "cl_forcepreload '1'																#預先載入地圖避免FPS急速掉落",
-    "mat_compressedtextures '1' 														#壓縮遊戲裡面的畫質",
-    "mat_reduceparticles '0'															#粒子效果關閉",
-    "mat_screen_blur_enabled '0'														#螢幕模糊效果關閉",
-    "mat_disable_bloom '1'																#禁用綻放特效 (不確定)",
-    "cl_ragdoll_collide '0' 															#降低遊戲內死亡後的物理引擎",
-    "r_forcewaterleaf '0' 																#水中植被物理引擎降低",
-    "r_shadowrendertotexture '0' 														#降低陰影質量 (變的更亮) 0 最低",
-    "r_worldlights '0'																	#光源減少",
-    "r_dxgi_max_frame_latency '0'														#延遲最大幀",
-    "r_maxdlights '0'																	#不知道",
-    "nomansky																		    #減少天空渲染",
-    "noforcemaccel																	    #不知道",
-    "noforcemspd																		#不知道",
-    "host_writeconfig																	#不知道",
-    "staticProp_max_scaled_dist '1000'													#靜態物體渲染距離",
-    "r_particle_timescale '3'                                                           #加速粒子",
-    "nx_static_lobby_mode '2'                                                           #減少加載時間",
-    "noise_filter_scale '0'                                                             #去除膠片顆粒",
-    "cl_show_splashes '0'                                                               #減少水濺效果",
-    "fog_enable '0'                                                                     #禁用霧（不是到處禁用）（有效）",
-    "fast_fogvolume '1'                                                                 #使用優化的霧渲染",
-    "fog_enableskybox '1'                                                               #禁用天空上的霧（減少）（有效）",
-    "mat_bloom_scalefactor_scalar '0'                                                   #禁用綻放（減少）（有效）",
-    "r_forcecheapwater '1'                                                              #水質下降",
-    "r_waterdrawreflection '0'                                                          #禁用水面上的所有反射",
-    "r_waterforcereflectentities '0'                                                    #1 = 高（反射所有），0 = 低（減少）(有效)",
-    "r_cleardecals '1'                                                                  #清除所有貼花",
-    "r_decalstaticprops '0'                                                             #在靜態道具上禁用貼花",
-    "shadow_always_update '0'                                                           #禁用陰影檢查",
-    "r_shadows '0'                                                                      #陰影  on(1)/off(0)（不完全）（有效）",
-    "r_teeth '0'                                                                        #牙齒開（1）/降低質量（0）",
-    "r_flex '0'                                                                         #使用面部動畫 on(1)/off(0)",
-    "r_maxdlights '0'                                                                   #優化屏幕上可見的動態光的最大數量",
-    "stream_drop_unused '1'                                                             #丟棄未使用的紋理",
+    "refresh 240																		",#螢幕刷新 240
+    "nomemorybias																	    ",#減少Ram消耗
+    "cl_forcepreload '1'																",#預先載入地圖避免FPS急速掉落
+    "mat_compressedtextures '1' 														",#壓縮遊戲裡面的畫質
+    "mat_reduceparticles '0'															",#粒子效果關閉
+    "mat_screen_blur_enabled '0'														",#螢幕模糊效果關閉
+    "mat_disable_bloom '1'																",#禁用綻放特效 (不確定)
+    "cl_ragdoll_collide '0' 															",#降低遊戲內死亡後的物理引擎
+    "r_forcewaterleaf '0' 																",#水中植被物理引擎降低
+    "r_shadowrendertotexture '0' 														",#降低陰影質量 (變的更亮) 0 最低
+    "r_worldlights '0'																	",#光源減少
+    "r_dxgi_max_frame_latency '0'														",#延遲最大幀
+    "r_maxdlights '0'																	",#不知道
+    "nomansky																		    ",#減少天空渲染
+    "noforcemaccel																	    ",#不知道
+    "noforcemspd																		",#不知道
+    "host_writeconfig																	",#不知道
+    "staticProp_max_scaled_dist '1000'													",#靜態物體渲染距離
+    "r_particle_timescale '3'                                                           ",#加速粒子
+    "nx_static_lobby_mode '2'                                                           ",#減少加載時間
+    "noise_filter_scale '0'                                                             ",#去除膠片顆粒
+    "cl_show_splashes '0'                                                               ",#減少水濺效果
+    "fog_enable '0'                                                                     ",#禁用霧（不是到處禁用）（有效）
+    "fast_fogvolume '1'                                                                 ",#使用優化的霧渲染
+    "fog_enableskybox '1'                                                               ",#禁用天空上的霧（減少）（有效）
+    "mat_bloom_scalefactor_scalar '0'                                                   ",#禁用綻放（減少）（有效）
+    "r_forcecheapwater '1'                                                              ",#水質下降
+    "r_waterdrawreflection '0'                                                          ",#禁用水面上的所有反射
+    "r_waterforcereflectentities '0'                                                    ",#1 = 高（反射所有），0 = 低（減少）(有效)
+    "r_cleardecals '1'                                                                  ",#清除所有貼花
+    "r_decalstaticprops '0'                                                             ",#在靜態道具上禁用貼花
+    "shadow_always_update '0'                                                           ",#禁用陰影檢查
+    "r_shadows '0'                                                                      ",#陰影  on(1)/off(0)（不完全）（有效）
+    "r_teeth '0'                                                                        ",#牙齒開（1）/降低質量（0）
+    "r_flex '0'                                                                         ",#使用面部動畫 on(1)/off(0)
+    "r_maxdlights '0'                                                                   ",#優化屏幕上可見的動態光的最大數
+    "stream_drop_unused '1'                                                             ",#丟棄未使用的紋理
 
+    #網路優化(loss丟失/choke阻塞)=======================================================================
+
+    "host_limitlocal '1'															    ",#是否關閉使用本地DNS
+    "rate '125000'																	    ",#https//:agame01.com/article/682994/
+    "cl_cmdrate '100'																    ",#每秒上傳幾組 packet 到 server (丟包loss時降低)
+    "cl_updaterate '100'															    ",#每秒向 server 接收幾組 packet (阻塞choke時降低)
+    "cl_lagcompensation '1'															    ",#延遲補償開啟
+    "cl_resend '2'																	    ",#網路錯誤重發間隔
+    "cl_interp '0'																	    ",#網路插播關閉
+    "cl_interp_ratio '1'															    ",#間格比(數值加大減少丟包)
+    "cl_pred_optimize '1'															    ",#預優化?
+    "cl_predict '1'																	    ",#不確定
+    "cl_predictweapons '1'															    ",#不確定
+    "cl_wpn_sway_interp '0'															    ",#wpn搖擺解釋器
+    "cl_interpolate '0'																    ",#不知道
+    "cl_interpolation_before_prediction '0'											    ",#不知道
+    "cl_cmdbackup '2'																    ",#數據包丟失備份發送
+    "cl_updatevisibility '1'														    ",#更新可見性
+    "cl_timeout '25'																    ",#超時請求	
+    "cl_smooth '1'																	    ",#不知道
+    "cl_smoothtime '0.01'															    ",#不知道	
+    "pin_opt_in '0'																	    ",#禁止將 PIN 遙測數據發送到 EA
+    "pin_plat_id '0'																    ",#退出重生數據調查
+    "telemetry_client_enable '0'													    ",#多久發送一次遙測數據
+    "projectile_prediction ' 1 '													    ",#啟用客戶端預測和彈丸補償
+    "projectile_predictionErrorCorrectTime ' 0.01 '									    ",#修正彈丸預測誤差的時間
+    "origin_presense_updateRate ' 10 '												    ",#在每次 Origin 存在更新之間放寬秒數
+    "net_compresspackets ' 1 '														    ",#壓縮發送到服務器的數據包
+    "net_compresspackets_minsize ' 64 '												    ",#壓縮包不低於設定值
+    "net_maxcleartime ' 0.030000 '													    ",#減少引擎等待發送另一個數據包的時間
+    "host_sleep '0'																	    ",#強製主機每幀休眠一定的毫秒數
+    "telemetry_client_sendInterval '0'"
 
 
 ]
