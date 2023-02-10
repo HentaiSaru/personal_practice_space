@@ -8,10 +8,10 @@ CFG = [
 
     # 按鍵設定=======================================================================================
 
-    "bind_US_standard 'space' '+jump; +jump; +jump;'",
-    "bind_US_standard 'e' '+use; +use; +use; +use_long; +use_long;'",
-    "bind_US_standard 'mouse5' '+duck; +duck;' 											",  # 側鍵蹲
-    "bind_US_standard 'mwheelup' '+forward; +jump; +forward; +jump;' 					",  # 滾輪 (跳+前)
+    "bind_US_standard 'space' '+jump;'",
+    "bind_US_standard 'e' '+use;'",
+    "bind_US_standard 'mouse5' '+duck;' 											    ",  # 側鍵蹲
+    "bind_US_standard 'mwheelup' '+jump;' 					                            ",  # 滾輪 (跳+前)
     "bind_US_standard 'h' '+scriptCommand5' 											",  # 短按 輔助技能
     "bind_held_US_standard 'h' '+scriptCommand6'										",  # 長按 生存道具
 
@@ -39,6 +39,7 @@ CFG = [
     "mouse_zoomed_sensitivity_scalar_6 '0.860000'										",  # x10倍鏡
     "mouse_zoomed_sensitivity_scalar_7 '1.0'											",  # 不知道衝三小的
 
+    """
     # 玩法優化 =======================================================================================
 
     "cl_showpos '1'																		",  # 顯示跑速座標等各項數據(1~4可選)
@@ -140,7 +141,7 @@ CFG = [
     "stream_drop_unused '1'                                                             ",  # 丟棄未使用的紋理
 
     # 網路優化(loss丟失/choke阻塞)=======================================================================
-    """
+    
     "host_limitlocal '1'															    ",  # 是否關閉使用本地DNS
     "rate '125000'																	    ",  # https//:agame01.com/article/682994/
     "cl_cmdrate '100'																    ",  # 每秒上傳幾組 packet 到 server (丟包loss時降低)
@@ -186,6 +187,7 @@ os.system("@echo off")
 os.system("cls")
 os.system("@ ECHO.")
 os.system("@ ECHO.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ APEX-CFG設置程序 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+os.system("@ ECHO                                                   適用於15賽季")
 os.system("@ ECHO.")
 os.system("@ ECHO                                                     使用說明")
 os.system("@ ECHO.")
