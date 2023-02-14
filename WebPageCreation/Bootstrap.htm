@@ -8,8 +8,7 @@
     <link rel="icon" href="https://cdn.discordapp.com/attachments/794504493035159602/1074566158121967636/9041083_bootstrap_fill_icon">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <title>Bootstrap</title>
-
-</head>
+</head> 
 
 <body>
 
@@ -39,10 +38,104 @@
 
     <!--? Bootstrap中的 col-sm-1 ~ col-sm-12 由小到最大 在小螢幕跨越1列~12列 -->
     <!--? 通常 container 只有左右 可利用.pt-5 增加額外的填充 讓排版看起來更好 -->
-    <div class="cotainer-fluid p-5 bg-primary text-white text-center">
+    <div class="cotainer-fluid p-3 bg-primary text-white text-center" id="Home">
         <h1>我的第一個Bootstrap頁面</h1>
         <p>調整這個響應式頁面的大小，看看效果如何!</p>
     </div>
+
+<!-- ************************************************************************************ -->
+
+
+    <nav class="navbar navbar-expand-sm navbar-dark sticky-top bg-warning" id="nav">
+        <div class="container-fluid">
+            <div class="container-fluid">
+                <button type="button" class="btn btn-lg btn-outline-success">
+                    <a href="#Home" class="text-success">首頁</a>
+                </button>
+
+                <button type="button" class="btn btn-lg btn-outline-success dropdown-toggle" data-bs-toggle="dropdown">排版樣式</button>
+                  <ul class="dropdown-menu dropdown-menu-center">
+                    <li><a href="#BoxLine" class="text-success dropdown-item">框線文字</a></li>
+                    <li><a href="#FrameLayout" class="text-success dropdown-item">框線排版</a></li>
+                    <li><a href="#Bgc" class="text-success dropdown-item">背景顏色</a></li>
+                </ul>
+
+                <button type="button" class="btn btn-lg btn-outline-success dropdown-toggle" data-bs-toggle="dropdown">文字大小</button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#h1-h6" class="text-success dropdown-item">大標樣式</a></li>
+                    <li><a href="#FontSize" class="text-success dropdown-item">更大的文字</a></li>
+                    <li><a href="#SmallFont" class="text-success dropdown-item">較小的文字</a></li>
+                </ul>
+
+                <button type="button" class="btn btn-lg btn-outline-success dropdown-toggle" data-bs-toggle="dropdown">文字樣式</button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#Quotations" class="text-success dropdown-item">文章引用</a></li>
+                    <li><a href="#BL" class="text-success dropdown-item">底部虛線</a></li>
+                    <li><a href="#SpecialStyles" class="text-success dropdown-item">特別樣式</a></li>
+                    <li><a href="#Textcolor" class="text-success dropdown-item">文字顏色</a></li>
+                    <li><a href="#Tbg" class="text-success dropdown-item">文字背景</a></li>
+                </ul>
+
+                <button type="button" class="btn btn-lg btn-outline-success dropdown-toggle" data-bs-toggle="dropdown">表格樣式</button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#BF" class="text-success dropdown-item">基本表格</a></li>
+                    <li><a href="#TableColor" class="text-success dropdown-item">表格顏色</a></li>
+                </ul>
+
+                <button type="button" class="btn btn-lg btn-outline-success dropdown-toggle" data-bs-toggle="dropdown">警示條樣式</button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#WgL" class="text-success dropdown-item">警示連結</a></li>
+                    <li><a href="#Dwl" class="text-success dropdown-item">可關警示</a></li>
+                </ul>
+
+                <button type="button" class="btn btn-lg btn-outline-success dropdown-toggle" data-bs-toggle="dropdown">按鈕樣式</button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#BB" class="text-success dropdown-item">基本按鈕</a></li>
+                    <li><a href="#Eb" class="text-success dropdown-item">懸浮效果按鈕</a></li>
+                    <li><a href="#Bbs" class="text-success dropdown-item">按鈕大小</a></li>
+                    <li><a href="#SEB" class="text-success dropdown-item">特殊效果按鈕</a></li>
+                    <li><a href="#BG" class="text-success dropdown-item">按鈕群組</a></li>
+                </ul>
+
+                <button type="button" class="btn btn-lg btn-outline-success dropdown-toggle" data-bs-toggle="dropdown">特別物件</button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#Medallion" class="text-success dropdown-item">勳章樣式</a></li>
+                    <li><a href="#LoadingStyle" class="text-success dropdown-item">載入樣式</a></li>
+                    <li><a href="#Pb" class="text-success dropdown-item">進度條</a></li>
+                    <li><a href="#card" class="text-success dropdown-item">卡片樣式</a></li>
+                    <li><a href="#PL" class="text-success dropdown-item">分頁連結</a></li>
+                    <li><a href="#Slideshow" class="text-success dropdown-item">圖像幻燈片</a></li>
+                </ul>
+
+                <button type="button" class="btn btn-lg btn-outline-success dropdown-toggle" data-bs-toggle="dropdown">列表與選單</button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a href="#BLG" class="text-success dropdown-item">基本列表組</a></li>
+                    <li><a href="#Pdm" class="text-success dropdown-item">下拉式選單</a></li>
+                    <li><a href="#Foldable" class="text-success dropdown-item">折疊式</a></li>
+                    <li><a href="#GuidedMenu" class="text-success dropdown-item">引導菜單</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="fixed-buttons">
+        <button class="btn bg-info text-white" id="show-button">顯示</button>
+        <button class="btn bg-info text-white" id="hide-button">隱藏</button>
+        <button class="btn bg-info"><a href="#Page-end">頁尾</a></button>
+    </div>
+
+    <script>
+        const nav_hide = document.querySelector('nav');
+        const button_hide = document.getElementById('hide-button');
+        button_hide.addEventListener('click', () => {nav_hide.style.display = 'none';});
+
+        const nav_show = document.querySelector('nav');
+        const button_show = document.getElementById('show-button');
+        button_show.addEventListener('click', () => {nav_show.style.display = 'block';});
+    </script>
+
+
+<!-- ************************************************************************************ -->
 
     <!--! row是水平排版 col是垂直排版 -->
     <div class="container col-sm-4">
@@ -72,7 +165,7 @@
 <!-- ************************************************************************************ -->
 
     <!--? p-5 = 容器內部往邊上間距為5單位 / my-5 = 容器外部上下的邊距單位 / mt-5 = 容器外部左右的邊距單位 -->
-    <div class="container p-5 my-5 border text-center">
+    <div class="container p-5 my-5 border text-center" id="BoxLine">
         <h1>預設框線</h1>
         <p>測試文字</p>
     </div>
@@ -102,7 +195,7 @@
 
 <!-- ************************************************************************************ -->
 
-    <div class="container p-3 my-5 mt-3 border text-center">
+    <div class="container p-3 my-5 mt-3 border text-center" id="FrameLayout">
         <h1>框線的排版練習</h1>
 
         <div class="row" style="padding: 0px 50px;">
@@ -110,7 +203,6 @@
             <div class="col bg-dark text-white text-center">測試文字</div>
             <div class="col bg-danger text-white text-center">測試文字</div>
         </div>
-
     </div><hr>
 
 <!-- ************************************************************************************ -->
@@ -121,7 +213,7 @@
 *   所有的 <p> 都有 margin-top: 0 和 margin-bottom: 1rem
 -->
 
-    <div class="container my-5 mt-3 border">
+    <div class="container my-5 mt-3 border" id="h1-h6">
         <h1 class="text-center" style="font-size: 50px;">h1到h6的展示</h1>
         <h1 class="text-dark">h1 Bootstrap</h1>
         <h2>h2 Bootstrap</h2>
@@ -129,12 +221,11 @@
         <h4>h4 Bootstrap</h4>
         <h5>h5 Bootstrap</h5>
         <h6>h6 Bootstrap</h6>
-    </div>
-    <hr>
+    </div><hr>
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border">
+    <div class="container my-5 mt-3 border" id="FontSize">
         <h1 class="text-center">Display更大的字體的練習</h1>
         <p class="display-1">Display 1</p>
         <p class="display-2">Display 2</p>
@@ -142,45 +233,41 @@
         <p class="display-4">Display 4</p>
         <p class="display-5">Display 5</p>
         <p class="display-6">Display 6</p>
-    </div>
-    <hr>
+    </div><hr>
 
     <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border">
+    <div class="container my-5 mt-3 border" id="SmallFont">
         <h1 class="text-center">small更小的字體</h1>
         <p class="text-center">測試<small>文字</small></p>
-    </div>
-    <hr>
+    </div><hr>
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border">
+    <div class="container my-5 mt-3 border" id="BL">
         <h1 class="text-center">abbr底部虛線邊框</h1>
         <p class="text-center">測<abbr title="test">試文</abbr>字</p>
-    </div>
-    <hr>
+    </div><hr>
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border text-center">
+    <div class="container my-5 mt-3 border text-center" id="Quotations">
         <h1 class="text-center">footer引文</h1>
         <p>這是一篇文章</p>
         <footer class="blockquote-footer">這是文章來源</footer>
-    </div>
-    <hr>
+    </div><hr>
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border text-center">
+    <div class="container my-5 mt-3 border text-center" id="SpecialStyles">
         <h1 class="text-center">特別用途標籤</h1>
         <p>這是一個<code>code</code></p>
         <p><kbd>win+s</kbd></p>
-    </div>
+    </div><hr>
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border text-center">
+    <div class="container my-5 mt-3 border text-center" id="Textcolor">
         <h1 class="text-center">文字顏色</h1>
         <p class="text-muted">灰色顏色</p>
         <p class="text-primary">藍色文字</p>
@@ -189,12 +276,11 @@
         <p class="text-warning">黃色文字</p>
         <p class="text-danger">紅色文字</p>
         <p class="text-white-50 bg-dark">白色50透明度</p>
-    </div>
-    <hr>
+    </div><hr>
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border">
+    <div class="container my-5 mt-3 border" id="Bgc">
         <h1 class="text-center">背景顏色</h1>
         <div class="bg-primary p-3 my-2"></div>
         <div class="bg-success p-3 my-2"></div>
@@ -207,7 +293,7 @@
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border text-center">
+    <div class="container my-5 mt-3 border text-center" id="Tbg">
         <h1>文字與背景顏色</h1>
         <div class="text-bg-primary p-3 my-2">文字顏色自動調整與背景顏色</div>
         <div class="text-bg-success p-3 my-2">文字顏色自動調整與背景顏色</div>
@@ -220,7 +306,7 @@
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border">
+    <div class="container my-5 mt-3 border" id="BF">
         <h1 class="text-center">基本表格</h1>
         <!--? (table/初始,只有底線)(table-striped/加上條紋)(table-bordered/增加所有的邊框)(table-hover/滑鼠旋停變色)(table-borderless/無邊框) -->
         <table class="table table-dark table-striped table-bordered table-hover">
@@ -257,7 +343,7 @@
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border">
+    <div class="container my-5 mt-3 border" id="TableColor">
         <h1 class="text-center">進階表格顏色</h1>
         <table class="table table-bordered">
             <tr class="table-secondary">
@@ -302,7 +388,7 @@
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border">
+    <div class="container my-5 mt-3 border" id="WgL">
         <h1 class="text-center">警示鏈接</h1>
 
         <div class="alert alert-success text-center">
@@ -328,7 +414,7 @@
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border">
+    <div class="container my-5 mt-3 border" id="Dwl">
         <h1 class="text-center">可關閉警示窗格</h1>
 
         <div class="alert alert-success text-center alert-dismissible fade show">
@@ -374,7 +460,7 @@
  
 <!-- ************************************************************************************ -->
 
-      <div class="container my-5 mt-3 border text-center">
+      <div class="container my-5 mt-3 border text-center" id="BB">
             <h1>基本按鈕</h1>
 
             <table class="table table-bordered">
@@ -402,7 +488,7 @@
 
 <!-- ************************************************************************************ -->
 
-<div class="container my-5 mt-3 border justify-content-center">
+<div class="container my-5 mt-3 border justify-content-center" id="Bbs">
     <h1 class="text-center">大中小按鈕</h1>
 
     <table class="table table-bordered">
@@ -418,7 +504,7 @@
 
 <!-- ************************************************************************************ -->
 
-<div class="container my-5 mt-3 border text-center">
+<div class="container my-5 mt-3 border text-center" id="Eb">
     <h1>懸停效果按鈕</h1>
 
     <table class="table table-bordered">
@@ -442,7 +528,7 @@
 
 <!-- ************************************************************************************ -->
 
-<div class="container my-5 mt-3 border">
+<div class="container my-5 mt-3 border" id="SEB">
     <h1 class="text-center">特別效果按鈕</h1>
 
     <table class="table table-bordered">
@@ -459,13 +545,12 @@
             <td><button class="btn btn-primary" disabled><span class="spinner-border spinner-border-sm"></span>Loading..</button></td>
             <td><button class="btn btn-primary" disabled><span class="spinner-grow spinner-grow-sm"></span>Loading..</button></td>
         </tr>
-
     </table>
 </div><hr>
 
 <!-- ************************************************************************************ -->
 
-<div class="container my-5 mt-3 border">
+<div class="container my-5 mt-3 border" id="BG">
     <h1 class="text-center">按鈕群組</h1>
 
     <table class="table table-bordered">
@@ -489,24 +574,25 @@
             </div></td>
 
             <!-- 下拉式 -->
-            <td><div class="btn-group">
+            <td>
                 <button type="button" class="btn btn-primary">Apple</button>
                 <button type="button" class="btn btn-primary">Samsung</button>
+
                 <div class="btn-group">
-                  <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Sony</button>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Tablet</a></li>
-                    <li><a class="dropdown-item" href="#">Smartphone</a></li>
-                  </ul>
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Sony</button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Tablet</a></li>
+                        <li><a class="dropdown-item" href="#">Smartphone</a></li>
+                    </ul>
                 </div>
-            </div></td>
+            </td>
         </tr>
     </table>
 </div><hr>
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border text-center">
+    <div class="container my-5 mt-3 border text-center" id="Medallion">
         <h1 class="text-center">勳章樣式</h1>
         <span class="badge bg-primary">Primary</span>
         <span class="badge bg-secondary">Secondary</span>
@@ -536,7 +622,7 @@
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border">
+    <div class="container my-5 mt-3 border" id="Pb">
         <h1 class="text-center">進度條</h1>
 
         <div class="progress" style="height:20px">
@@ -648,7 +734,7 @@
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-1 mt-2 border">
+    <div class="container my-1 mt-2 border" id="LoadingStyle">
         <h1 class="text-center">彩色載入Spinners</h1>
       
         <div class="justify-content-center align-items-center d-flex">
@@ -674,7 +760,7 @@
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border">
+    <div class="container my-5 mt-3 border" id="PL">
         <h1 class="text-center">分頁連結列表</h1>
 
         <ul class="pagination justify-content-center">
@@ -693,7 +779,7 @@
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border">
+    <div class="container my-5 mt-3 border" id="BLG">
         <h1 class="text-center">基本列表組</h1>
 
         <ul class="list-group text-center">
@@ -759,7 +845,7 @@
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border text-center">
+    <div class="container my-5 mt-3 border text-center" id="card">
         <h1>Card卡片樣式</h1>
 
         <div class="d-flex justify-content-center text-white">
@@ -787,7 +873,7 @@
 
 <!-- ************************************************************************************ -->
 
-    <div class="container p-5 my-5 mt-3 border text-center" style="height:600px">
+    <div class="container p-5 my-5 mt-3 border text-center" style="height:600px" id="Pdm">
         <h1>下拉式表單</h1>
 
         <button type="button" class="btn btn-primary">水平按鈕1</button>
@@ -829,7 +915,7 @@
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border text-center" style="height:500px">
+    <div class="container my-5 mt-3 border text-center" style="height:500px" id="Foldable">
         <h1>基本可折疊</h1>
 
         <a href="#demo" class="btn btn-primary" data-bs-toggle="collapse">展開文章</a>
@@ -888,11 +974,215 @@
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border text-center">
+    <div class="container my-5 mt-3 border text-center" id="GuidedMenu">
+
+        <nav class="navbar navbar-expand bg-dark navbar-dark" style="height: 70px;">
+            <div class="container-fluid">
+                <h1>版面定位</h1>
+            </div>
+            
+            <form class="d-flex" style="padding: 20px;">
+                <input class="form-control me-2" type="text" placeholder="Search">
+                <button class="btn btn-primary" type="button">Search</button>
+            </form>
+        </nav>
+    
         <h1>導覽菜單</h1>
+        <ul class="nav">
+            <li class="nav-item">
+                <a href="#move" class="nav-link" data-toggle="tab">導覽連結1</a>
+            </li>
 
-    </div>
+            <li class="nav-item">
+                <a href="#move" class="nav-link" data-toggle="tab">導覽連結2</a>
+            </li>
 
+            <li class="nav-item">
+                <a href="#move" class="nav-link disabled">被鎖定的</a>
+            </li>
+        </ul>
+
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a href="#move" class="nav-link" data-toggle="tab">導覽連結3</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#move" class="nav-link" data-toggle="tab">導覽連結4</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#move" class="nav-link disabled" data-toggle="tab">被鎖定的</a>
+            </li>
+        </ul>
+
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a href="#move" class="nav-link" data-toggle="tab">導覽連結5</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#move" class="nav-link" data-toggle="tab">導覽連結6</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#move" class="nav-link disabled">被鎖定的</a>
+            </li>
+        </ul><br>
+
+        <br> <!-- --------------------我是分隔線------------------------- -->
+
+        <h1>垂直導覽</h1>
+
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a href="#move" class="nav-link" data-toggle="tab">導覽連結1</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#move" class="nav-link" data-toggle="tab">導覽連結2</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#move" class="nav-link" data-toggle="tab">導覽連結3</a>
+            </li>
+        </ul><br>
+
+        <br> <!-- --------------------我是分隔線------------------------- -->
+
+        <h1>文字選項卡</h1>
+
+        <ul class="nav nav-tabs nav-justified">
+            <li class="nav-item">
+                <a href="#move" class="nav-link active" data-toggle="tab">預設選項</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#move" class="nav-link" data-toggle="tab">選項2</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#move" class="nav-link" data-toggle="tab">選項3</a>
+            </li>
+        </ul><br>
+
+        <br> <!-- --------------------我是分隔線------------------------- -->
+
+        <h1>按鈕選項卡</h1>
+
+        <ul class="nav nav-pills nav-justified">
+            <li class="nav-item">
+                <a href="#move" class="nav-link active" data-toggle="tab">link</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#move" class="nav-link" data-toggle="tab">link</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#move" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-toggle="tab">link</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#move">Link 1</a></li>
+                        <li><a class="dropdown-item" href="#move">Link 2</a></li>
+                        <li><a class="dropdown-item" href="#move">Link 3</a></li>
+                    </ul>
+            </li>
+        </ul><br>
+
+        <br> <!-- --------------------我是分隔線------------------------- -->
+
+        <h1>動態切換選項卡</h1>
+
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#menu1">Menu 1</a></li>
+            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#menu2">Menu 2</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="home" class="container tab-pane active"><br>
+                <h3>HOME</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+
+            <div id="menu1" class="container tab-pane fade"><br>
+                <h3>Menu 1</h3>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+
+            <div id="menu2" class="container tab-pane fade"><br>
+                <h3>Menu 2</h3>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+            </div>
+        </div>
+    </div><hr id="move">
+
+<!-- ************************************************************************************ -->
+
+    <div class="container my-5 mt-3 border text-center" id="Slideshow">
+        <h1>圖片幻燈片</h1>
+
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            </div>
+
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <img src="https://www.w3schools.com/bootstrap5/la.jpg" alt="連線失敗" class="d-block" style="width: 100%;">
+                    <div class="carousel-caption">
+                        <h3>文字標題1</h3>
+                        <p>這是一串文字喔</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="https://www.w3schools.com/bootstrap5/chicago.jpg" alt="連線失敗" class="d-block" style="width: 100%;">
+                    <div class="carousel-caption">
+                        <h3>文字標題2</h3>
+                        <p>這是一串文字喔</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="https://www.w3schools.com/bootstrap5/ny.jpg" alt="連線失敗" class="d-block" style="width: 100%;">
+                    <div class="carousel-caption">
+                        <h3>文字標題3</h3>
+                        <p>這是一串文字喔</p>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </div><hr>
+
+<!--
+*   .carousel                   創建一個旋轉木馬
+*   .carousel-indicators        爲旋轉木馬添加指標，底部的小圓點
+*   .carousel-inner             將幻燈片添加到旋轉木馬中
+*   .carousel-item              指定每張幻燈片的內容
+*   .carousel-control-prev      在旋轉木馬上添加一個左邊（前一個）的按鈕，允許用戶在幻燈片之間返回。
+*   .carousel-control-next      爲旋轉木馬添加一個右鍵（下一個），允許用戶在幻燈片之間前進。
+*   .carousel-control-prev-icon 創建一個 "上一個 "按鈕。
+*   .carousel-control-next-icon 創建一個 "下一個 "按鈕。
+*   .slide                      添加一個CSS過渡和動畫效果
+-->
+
+<!-- ************************************************************************************ -->
+
+
+
+<div id="Page-end"></div>
 </body>
 
 <!--! **************************Body結束了喔*********************************** -->
@@ -909,6 +1199,10 @@
         margin: 60px;
     }
 
+    a {
+        text-decoration:none;
+    }
+
     p {
         font-size: 30px;
     }
@@ -916,6 +1210,20 @@
     table,th,tr,td{
         border:8px double rgb(0, 0, 0);
         text-align: center;
+    }
+
+    .fixed-buttons {
+        position: fixed;
+        top: 60%;
+        right: 0;
+        width: 32px;
+        transform: translateY(-20%);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fixed-buttons button {
+        margin-bottom: 5px;
     }
 
 </style>
