@@ -49,10 +49,10 @@
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top bg-warning" id="nav">
         <div class="container-fluid">
             <div class="container-fluid">
-                <button type="button" class="btn btn-lg btn-outline-success">
+                <button type="button" class="btn btn-lg btn-outline-success" data-bs-toggle="tooltip" data-bs-placement="bottom" title="<img src='https://cdn.discordapp.com/attachments/794504493035159602/1077143164126773369/image.png' alt='My Image'>" data-bs-html="true">
                     <a href="#Home" class="text-success">首頁</a>
                 </button>
-
+                  
                 <button type="button" class="btn btn-lg btn-outline-success dropdown-toggle" data-bs-toggle="dropdown">排版樣式</button>
                   <ul class="dropdown-menu dropdown-menu-center">
                     <li><a href="#BoxLine" class="text-success dropdown-item">框線文字</a></li>
@@ -1180,7 +1180,70 @@
 
 <!-- ************************************************************************************ -->
 
+    <div class="container p-5 my-5 mt-3 border text-center">
+        <h1>模態Modal</h1>
 
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#mymodal">基本模態</button>
+    </div>
+
+    <!--! 模態面板 -->
+    <!--? class="fade" 是淡出動畫效果 -->
+    <div class="modal fade" id="mymodal">
+        <!--? 模態置中 modal-dialog-centered -->
+        <!--? 模態大小 (modal-sm / 小) (modal-lg / 中) (modal-xl / 大) (modal-fullscreen / 全螢幕) -->
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+
+                <!--! 模態標題 -->
+                <div class="modal-header">
+                    <h4 class="modal-title">模態標題</h4>
+                </div>
+
+                <!--! 模態內容 -->
+                <div class="modal-body text-center">
+                    <h3>內容的部份</h3>
+                    <p>上了三個月的網頁課程 什麼東西都沒學到因何而發生？上了三個月的網頁課程 什麼東西都沒學到，到底應該如何實現。更多上了三個月的網頁課程 什麼東西都沒學到的意義是這樣的，既然如此，非洲有講過一句名言，最靈繁的人也看不見自己的背脊。這不禁令我深思。</p>
+
+                    <p>我這幾天一直在思索這個問題，我們一般認為，抓住了問題的關鍵，其他一切則會迎刃而解。就我個人來說，上了三個月的網頁課程 什麼東西都沒學到對我的意義，不能不說非常重大。我們都知道，只要有意義，那麽就必須慎重考慮。而這些並不是完全重要，更加重要的問題是，一般來說，總結的來說，問題的關鍵究竟為何？本人也是經過了深思熟慮，在每個日日夜夜思考這個問題。帶著這些問題，我們來審視一下上了三個月的網頁課程 什麼東西都沒學到。</p>
+                        
+                    <p>生活中，若上了三個月的網頁課程 什麼東西都沒學到出現了，我們就不得不考慮它出現了的事實。瞭解清楚上了三個月的網頁課程 什麼東西都沒學到到底是一種怎麽樣的存在，是解決一切問題的關鍵。其實上了三個月的網頁課程 什麼東西都沒學到是非常值得我們深思的。</p>
+                </div>
+
+                <!--! 退出按鈕 -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div><hr>
+
+<!--
+*   .modal-fullscreen-sm-down	576px 以下全屏	
+*   .modal-fullscreen-md-down	768px 以下全屏	
+*   .modal-fullscreen-lg-down	992px 以下全屏
+*   .modal-fullscreen-xl-down	1200px 以下全屏
+*   .modal-fullscreen-xxl-down	1400px 以下全屏
+-->
+
+<!-- ************************************************************************************ -->
+
+    <div class="container p-3 mt-3 my-5 border text-center">
+        <h1>提示文字Tooltip</h1>
+
+        <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="這是往上顯示">Top</a>
+        <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="這是往下顯示">Bottom</a>
+        <a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="這是往左顯示">Left</a>
+        <a href="#" data-bs-toggle="tooltip" data-bs-placement="right" title="這是往右顯示">Right</a>      
+
+        <script>
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+              return new bootstrap.Tooltip(tooltipTriggerEl)
+            })
+        </script>
+
+    </div>
 
 <div id="Page-end"></div>
 </body>
@@ -1224,6 +1287,11 @@
 
     .fixed-buttons button {
         margin-bottom: 5px;
+    }
+
+    .tooltip img {
+        width: 180px;
+        height: auto;
     }
 
 </style>
