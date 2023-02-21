@@ -1,5 +1,8 @@
 import configparser as config
+import tkinter as tk
+from tkinter import filedialog
 import os
+
 CFG = [
     # 特別按鍵設置=====================================================================================
     'bind_US_standard "F2"  "exec autoexec.cfg"											',# 重新加載 autoexec (刷新Cfg)
@@ -8,8 +11,10 @@ CFG = [
 
     # 按鍵設定=======================================================================================
 
-    'bind_US_standard "space" "+jump; +jump; +jump;"',
-    'bind_US_standard "e" "+use; +use; +use; +use_long; +use_long;"',
+    'bind_US_standard "x" "+ping"                                                       ',  # 使用X ping點
+    'bind_US_standard "space" "+jump; +jump; +jump;"                                    ',
+    'bind_US_standard "e" "+use; +use; +use; +use_long; +use_long;"                     ',
+    'bind_US_standard "MOUSE4" "+melee"                                                 ',  # 側鍵近戰
     'bind_US_standard "mouse5" "+duck; +duck;" 											',  # 側鍵蹲
     'bind_US_standard "mwheelup" "+forward; +jump; +forward; +jump;" 					',  # 滾輪 (跳+前)
     'bind_US_standard "h" "+scriptCommand5" 											',  # 短按 輔助技能
@@ -26,7 +31,7 @@ CFG = [
     # 平均0.48
     'm_acceleration "0"                                                                 ',  # 確保滑鼠加速關閉
 
-    'mouse_sensitivity "0.370000" 														',  # 腰射 edpi:507.5
+    'mouse_sensitivity "0.400000" 														',  # 腰射 edpi:
     'mouse_use_per_scope_sensitivity_scalars "1"										',  # 是否開啟個別設置倍鏡 1(True) 2(False)
     'mouse_zoomed_sensitivity_scalar_0 "0.510000" 										',  # x1倍鏡 edpi:739.5
     'mouse_zoomed_sensitivity_scalar_1 "0.530000" 										',  # x2倍鏡 edpi:768.5
@@ -173,11 +178,19 @@ CFG = [
 
 ]
 
-def fac(path):
-    with open(path, 'w') as Auto:
-        for output in CFG:
-            Auto.write(output + '\n')
+# ===================================================上面才是設定值,下面不用觀看=============================================================
 
+""" 
+Versions 1.1
++ 系統選取介面
+- 修復了例外Bug
+- 重構了一小部份代碼
+
+預計增加
++ UI介面
++ 更易維護與觀看的代碼
+
+"""
 
 os.system('color A')
 os.system('@echo off')
@@ -199,41 +212,101 @@ os.system('@ ECHO.')
 os.system('pause')
 os.system('cls')
 
+def fac(path):
+    with open(path, 'w') as Auto:
+        for output in CFG:
+            Auto.write(output + '\n')
 
+# ========== 讀取設置檔 ==========
 try:
 
-    FileSet = './CFG_Set.ini'
-
+    FileSet = "CFG_Set.ini"
     InSet = config.ConfigParser()
-    InSet.read(FileSet, 'UTF-8')
+    InSet.read(FileSet , "UTF-8")
 
-    path1 = InSet.get('set', 'PATH1')
-    path2 = InSet.get('set', 'PATH2')
+    path1 = InSet.get("set","PATH1")
+    path2 = InSet.get("set","PATH2")
 
     fac(path1)
-    fac(path2)
 
-except:
-
-    file = open('CFG_Set.ini', 'w')
-    file.write('[set]\n')
-
-    path1 = input('請輸入您的APEX資料夾,內的CFG資料夾的路徑(支援設置兩個路徑):')
-    path1 += '/autoexec.cfg'
-    file.write('PATH1='+path1+'\n')
-
-    path2 = input('第二路徑設置(如不需要打N即可):')
-
-    if path2.lower() == 'n':
-        file.write('PATH2='+path1)
-        file.close()
-        fac(path1)
-    else:
-        path2 += '/autoexec.cfg'
-        file.write('PATH2='+path2)
-        file.close()
-        fac(path1)
+# ========== 判斷設置檔是否存在第二項位置 ==========
+    if path2.lower() != "null":
         fac(path2)
 
-print('運行完畢')
-os.system('pause')
+    elif path2.lower() == "null":
+        pass
+
+except:
+# ========== 因為無檔案所有創建一個 ==========
+    file = open('CFG_Set.ini', 'w')
+
+    FileSet = "CFG_Set.ini"
+    InSet = config.ConfigParser()
+    InSet.read(FileSet , "UTF-8")
+
+    """也可使用 file.write("[set]\n") 去進行寫入,這方法較為簡單"""
+    InSet.add_section('set')
+
+    root = tk.Tk()
+    root.withdraw()
+    
+# ========== 開始設置 ==========
+    print('請選擇您的APEX資料夾,內的CFG資料夾的')
+    # 選擇文件 -> askopenfilename()  選擇資料夾 -> askdirectory()
+    path1 = filedialog.askdirectory() + '/autoexec.cfg'
+
+# ========== 第二項設置詢問 ==========
+    path2 = input('是否需要設置第二個位置(Y/N):')
+
+# ========== 怕有額外的錯誤使用except ==========
+    """舊版的手動輸入,要讓設置檔的路徑顯示是反斜 \\ 可以這樣打"""    
+
+    try:
+
+        # ===== 輸入是y時 ===== 
+        if path2.lower() == 'y':
+            path2 = filedialog.askdirectory() + '/autoexec.cfg'
+
+        # ===== 輸入是n時,在ini設置寫入NULL ===== 
+        elif path2.lower() == 'n':
+            path2 = "NULL" 
+
+        # ===== 有正常輸入時,設置寫入位置,然後呼叫輸出方法 =====
+        else:
+            print("請輸入 Y 或 N")
+            pass
+
+        # ===== (原本是手動輸入的驗證,改成直接選擇這邊就非必要了) =====
+        if os.path.isfile(path1) and os.path.isfile(path2):
+            
+            InSet.set('set','PATH1', path1) #將輸入的路徑位置設置寫入
+            InSet.set('set','PATH2', path2)
+
+            fac(path1)
+            fac(path2)
+        
+        elif os.path.isfile(path1) and path2 == "NULL":
+
+            InSet.set('set','PATH1', path1) #將輸入的路徑位置設置寫入
+            InSet.set('set','PATH2', path2)
+
+            fac(path1)
+
+        else:
+            raise InvalidFilePathError()
+        
+        # ===== 通過驗證後最後將路徑寫入至Config =====
+        file.close()
+        with open(FileSet, 'w') as configfile:InSet.write(configfile)
+
+        print('運行成功')
+        os.system('pause')
+
+    except:
+
+        file.close()
+        os.system('cls')
+        print('運行錯誤,請重新運行\n')
+
+        os.system("del /f /s /q CFG_Set.ini >nul 2>&1") #採用靜默刪除指令
+        os.system('pause')

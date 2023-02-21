@@ -1,3 +1,9 @@
+/***
+ @
+ * todo 末三碼發票兌獎程式碼
+ * ! 預計增加API連結,和UI介面
+ @ 
+*/
 import java.io.*;
 import java.util.*;
 import java.time.*;

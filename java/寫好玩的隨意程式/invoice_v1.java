@@ -1,5 +1,9 @@
-//todo 末三碼發票兌獎程式碼
-//! 以下刻意採取較繁瑣的方式 作為練習使用
+/***
+ @
+ * todo 末三碼發票兌獎程式碼
+ * ! 以下刻意採取較繁瑣的方式 作為練習使用
+ @ 
+*/
 import java.util.*;
 import java.time.*;
 import java.time.format.*;
