@@ -48,27 +48,27 @@
 
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top bg-warning" id="nav">
         <div class="container-fluid">
-            <div class="container-fluid">
-                <button type="button" class="btn btn-lg btn-outline-success" data-bs-toggle="tooltip" data-bs-placement="bottom" title="<img src='https://cdn.discordapp.com/attachments/794504493035159602/1077143164126773369/image.png' alt='My Image'>" data-bs-html="true">
+            <div class="dropdown">
+                <button type="button" class="btn btn-lg btn-outline-success" data-bs-toggle="tooltip" data-bs-placement="bottom" title="<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Go-home.svg/2048px-Go-home.svg.png' alt='My Image'>" data-bs-html="true">
                     <a href="#Home" class="text-success">首頁</a>
                 </button>
                   
                 <button type="button" class="btn btn-lg btn-outline-success dropdown-toggle" data-bs-toggle="dropdown">排版樣式</button>
-                  <ul class="dropdown-menu dropdown-menu-center">
+                  <ul class="dropdown-menu" style="transform: translateX(40%);">
                     <li><a href="#BoxLine" class="text-success dropdown-item">框線文字</a></li>
                     <li><a href="#FrameLayout" class="text-success dropdown-item">框線排版</a></li>
                     <li><a href="#Bgc" class="text-success dropdown-item">背景顏色</a></li>
                 </ul>
 
                 <button type="button" class="btn btn-lg btn-outline-success dropdown-toggle" data-bs-toggle="dropdown">文字大小</button>
-                  <ul class="dropdown-menu">
+                  <ul class="dropdown-menu" style="transform: translateX(125%);">
                     <li><a href="#h1-h6" class="text-success dropdown-item">大標樣式</a></li>
                     <li><a href="#FontSize" class="text-success dropdown-item">更大的文字</a></li>
                     <li><a href="#SmallFont" class="text-success dropdown-item">較小的文字</a></li>
                 </ul>
 
                 <button type="button" class="btn btn-lg btn-outline-success dropdown-toggle" data-bs-toggle="dropdown">文字樣式</button>
-                  <ul class="dropdown-menu">
+                  <ul class="dropdown-menu" style="transform: translateX(210%);">
                     <li><a href="#Quotations" class="text-success dropdown-item">文章引用</a></li>
                     <li><a href="#BL" class="text-success dropdown-item">底部虛線</a></li>
                     <li><a href="#SpecialStyles" class="text-success dropdown-item">特別樣式</a></li>
@@ -77,19 +77,19 @@
                 </ul>
 
                 <button type="button" class="btn btn-lg btn-outline-success dropdown-toggle" data-bs-toggle="dropdown">表格樣式</button>
-                  <ul class="dropdown-menu">
+                  <ul class="dropdown-menu" style="transform: translateX(293%);">
                     <li><a href="#BF" class="text-success dropdown-item">基本表格</a></li>
                     <li><a href="#TableColor" class="text-success dropdown-item">表格顏色</a></li>
                 </ul>
 
                 <button type="button" class="btn btn-lg btn-outline-success dropdown-toggle" data-bs-toggle="dropdown">警示條樣式</button>
-                  <ul class="dropdown-menu">
+                  <ul class="dropdown-menu" style="transform: translateX(385%);">
                     <li><a href="#WgL" class="text-success dropdown-item">警示連結</a></li>
                     <li><a href="#Dwl" class="text-success dropdown-item">可關警示</a></li>
                 </ul>
 
                 <button type="button" class="btn btn-lg btn-outline-success dropdown-toggle" data-bs-toggle="dropdown">按鈕樣式</button>
-                  <ul class="dropdown-menu">
+                  <ul class="dropdown-menu" style="transform: translateX(475%);">
                     <li><a href="#BB" class="text-success dropdown-item">基本按鈕</a></li>
                     <li><a href="#Eb" class="text-success dropdown-item">懸浮效果按鈕</a></li>
                     <li><a href="#Bbs" class="text-success dropdown-item">按鈕大小</a></li>
@@ -98,17 +98,19 @@
                 </ul>
 
                 <button type="button" class="btn btn-lg btn-outline-success dropdown-toggle" data-bs-toggle="dropdown">特別物件</button>
-                  <ul class="dropdown-menu">
+                  <ul class="dropdown-menu" style="transform: translateX(560%);">
                     <li><a href="#Medallion" class="text-success dropdown-item">勳章樣式</a></li>
                     <li><a href="#LoadingStyle" class="text-success dropdown-item">載入樣式</a></li>
                     <li><a href="#Pb" class="text-success dropdown-item">進度條</a></li>
                     <li><a href="#card" class="text-success dropdown-item">卡片樣式</a></li>
                     <li><a href="#PL" class="text-success dropdown-item">分頁連結</a></li>
                     <li><a href="#Slideshow" class="text-success dropdown-item">圖像幻燈片</a></li>
+                    <li><a href="#Modal" class="text-success dropdown-item">模態面板</a></li>
+                    <li><a href="#Tooltip" class="text-success dropdown-item">提示文字</a></li>
                 </ul>
 
-                <button type="button" class="btn btn-lg btn-outline-success dropdown-toggle" data-bs-toggle="dropdown">列表與選單</button>
-                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <button type="button" class="btn btn-lg btn-outline-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">列表與選單</button>
+                  <ul class="dropdown-menu" style="transform: translateX(650%);">
                     <li><a href="#BLG" class="text-success dropdown-item">基本列表組</a></li>
                     <li><a href="#Pdm" class="text-success dropdown-item">下拉式選單</a></li>
                     <li><a href="#Foldable" class="text-success dropdown-item">折疊式</a></li>
@@ -1180,7 +1182,7 @@
 
 <!-- ************************************************************************************ -->
 
-    <div class="container p-5 my-5 mt-3 border text-center">
+    <div class="container p-5 my-5 mt-3 border text-center" id="Modal">
         <h1>模態Modal</h1>
 
         <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#mymodal">基本模態</button>
@@ -1228,7 +1230,7 @@
 
 <!-- ************************************************************************************ -->
 
-    <div class="container p-3 mt-3 my-5 border text-center">
+    <div class="container p-3 mt-3 my-5 border text-center" id="Tooltip">
         <h1>提示文字Tooltip</h1>
 
         <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="這是往上顯示">Top</a>
@@ -1272,6 +1274,10 @@
 
     table,th,tr,td{
         border:8px double rgb(0, 0, 0);
+        text-align: center;
+    }
+
+    .dropdown-menu {
         text-align: center;
     }
 
