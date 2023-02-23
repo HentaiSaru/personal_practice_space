@@ -1,39 +1,42 @@
-<!DOCTYPE html><html><head>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-</head></html>
-
 <div align=center>
 
-# <div style="color: Green; font-size:80px">個人練習筆記資料</div> #
+# 個人練習筆記資料 #
 
-## <div class="變色文字">並不是專案項目只是個筆記!!</div> ##
+## 並不是專案項目只是個筆記!! ##
 
 ***
 
-> <div class="Title">目前練習的語言</div> 
+> 目前練習的語言 
 
 <br>
-<img src="https://yen0304.github.io/p/java%E7%AD%86%E8%A8%981%E6%B3%9B%E5%9E%8B%E9%9B%86%E5%90%88%E8%88%87%E6%AA%94%E6%A1%88%E6%93%8D%E4%BD%9C/logo.jpeg" width="500"/>
+
+
+|  Java  | Python  |
+|  ----  | ----  |
+| <img src="https://yen0304.github.io/p/java%E7%AD%86%E8%A8%981%E6%B3%9B%E5%9E%8B%E9%9B%86%E5%90%88%E8%88%87%E6%AA%94%E6%A1%88%E6%93%8D%E4%BD%9C/logo.jpeg" width="500"/>  | <img src="https://s3.ap-northeast-1.amazonaws.com/happycoding.production/post_cover/pyhton.jepg.png_1541832388png" width="500"/> |
+
+<br>
+
+|  Html  | Css |
+|  ----  | ----  |
+| <img src="https://3.bp.blogspot.com/-aDqImTsOEZg/WsT-piLHKEI/AAAAAAAAT1Q/ZmBDvYeCv_YkL6-48CEPyJ13jFhrmk5HACLcBGAs/s1600/html5.jpg" width="500"/>  | <img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ac1dffdfe83e4bd6aadef0ca50a78de0~tplv-k3u1fbpfcp-zoom-crop-mark:3969:3969:3969:2234.awebp" width="500"/> |
 
 </div>
 
 ***
-## <div style="color: Green; font-size:65px ; text-align:center;">Markdown的使用筆記</div>
+## Markdown的使用筆記
 
 <div align=left>
-<div class="container p-3 my-5 mt-3 border">
 
 說明 : `Markdown 是一種輕量級標記語言，它允許人們使用易讀易寫的純文本格式編寫文檔。`
 
 應用 : `許多網站都廣泛使用 Markdown 來撰寫幫助文檔或是用於論壇上發表消息。`
 
-</div>
 </div><hr>
 
-## <div style="color: Green; font-size:65px ; text-align:center;">使用教學</div> ##
+## 使用教學
 
-> <div class="Title">標題</div>
+> 標題
 
 一級標題
 (在文字下方輸入=====)
@@ -58,7 +61,7 @@
 
 <hr>
 
-> <div class="Title">文本效果</div>
+> 文本效果
 
 *斜體文本* (在* *內輸入文字)
 _斜體文本_ (在_ _內輸入文字)
@@ -75,14 +78,14 @@ ___粗斜體文本___ (在___ ___內輸入文字)
 
 <hr>
 
-> <div class="Title">文本換行</div>
+> 文本換行
 
 <p>可以直接使用</p>
 HTML 中的 p 標籤進行換行<br>或是br
 
 <hr>
 
-> <div class="Title">分隔線</div>
+> 分隔線
 
 `***`
 
@@ -96,7 +99,7 @@ HTML 中的 p 標籤進行換行<br>或是br
 
 <hr>
 
-> <div class="Title">無序與有序列表</div>
+> 無序與有序列表
 
 * 使用一個*
 + 使用一個+
@@ -114,7 +117,7 @@ HTML 中的 p 標籤進行換行<br>或是br
 
 <hr>
 
-> <div class="Title">引用區塊</div>
+> 引用區塊
 
 > 第一層引用 (在最前面打>)
 >> 第二層引用 (在最前面打>>)
@@ -122,7 +125,7 @@ HTML 中的 p 標籤進行換行<br>或是br
 
 <hr>
 
-> <div class="Title">代碼的標記</div>
+> 代碼的標記
 
 (在最上方與最下方打上 ```)
 ```javascript
@@ -133,7 +136,7 @@ $(document).ready(function () {
 
 <hr>
 
-> <div class="Title">URL連結</div>
+> URL連結
 
 文字連結 : `[連結文字] (連結)`
 [我的GitHub](https://github.com/HentaiSaru)
@@ -143,7 +146,7 @@ $(document).ready(function () {
 
 <hr>
 
-> <div class="Title">放入圖片</div>
+> 放入圖片
 
 圖標 : `![說明文字,可以不打](連結)`
 ![](https://allvectorlogo.com/img/2021/12/github-logo-vector.png)
@@ -153,7 +156,7 @@ $(document).ready(function () {
 
 <hr>
 
-> <div class="Title">表格使用</div>
+> 表格使用
 
 |  表頭   | 表頭  |
 |  ----  | ----  |
@@ -171,7 +174,7 @@ $(document).ready(function () {
 
 <hr>
 
-> <div class="Title">特別技巧</div>
+> 特別技巧
 
 使用 <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Del</kbd> 用kbd標籤將要轉換的包起來
 
@@ -189,40 +192,3 @@ $(document).ready(function () {
 \-   減號
 \.   英文句點
 \!   感嘆號
-
-<style>
-
-    .Title{
-
-        text-align:center;
-        font-size: 35px; 
-        color: red;
-        padding: 20px;
-
-    }
-
-    .變色文字 {
-        animation: change 5s linear 0s infinite;
-        text-align: center;
-        font-size: 60px;
-        text-shadow: 3px 5px 4px rgba(228, 5, 143, 0.3);
-    }
-    @keyframes change {
-        0% {
-            color: rgba(255, 0, 0, 0.7);
-        }
-        25% {
-            color: rgba(255, 72, 0, 0.7);
-        }
-        50% {
-            color: rgba(253, 217, 9, 0.7);
-        }
-        75% {
-            color: rgba(0, 25, 253, 0.7);
-        }
-        100% {
-            color: rgba(17, 255, 0, 0.7);
-        }
-    }
-
-</style>
