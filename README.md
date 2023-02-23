@@ -180,6 +180,7 @@ $(document).ready(function () {
 
 使用反斜線將特殊字元顯示
 
+<pre>
 \\   反斜線
 \`   反引號
 \*   星號
@@ -192,3 +193,4 @@ $(document).ready(function () {
 \-   減號
 \.   英文句點
 \!   感嘆號
+</pre>
