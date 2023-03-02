@@ -180,17 +180,16 @@ CFG = [
 
 # ===================================================上面才是設定值,下面不用觀看=============================================================
 
-""" 
+"""~~~~~~~~~~~~~~~~~~~~
 Versions 1.2
-- 修復了例外Bug
-- 修復環境差異造成的例外
-- 重構了一小部份代碼
+[-] 修復了例外Bug
+[-] 修復環境差異造成的例外
+[+] 重構了一小部份代碼
 
 預計增加
-+ UI介面
-+ 更易維護與觀看的代碼
-
-"""
+[+] UI介面
+[+] 更易維護與觀看的代碼
+~~~~~~~~~~~~~~~~~~~~""" 
 
 os.system('color A')
 os.system('@echo off')
@@ -247,8 +246,8 @@ try:
         pass
 
 except (FileNotFoundError, config.ParsingError) as e:
-# ========== 因為無檔案所有創建一個 ==========
-    filename = "/autoexec.cfg"
+# ========== 因為無設置檔所以創建一個 ==========
+    filename = "/autoexec.cfg" #檔名格式宣告
     file = open('CFG_Set.ini', 'w')
 
     FileSet = "./CFG_Set.ini"
@@ -271,7 +270,7 @@ except (FileNotFoundError, config.ParsingError) as e:
     with open(Cfg_File, 'w') as cfg_file:
        cfg_file.write('\n')
 
-    # 創建完後再將字串加入,寫入至設定ini檔保存
+    # 創建完後再將字串加入,方便寫入至設定ini檔保存
     path1+=filename
 
 # ========== 第二項設置詢問 ==========
@@ -326,7 +325,7 @@ except (FileNotFoundError, config.ParsingError) as e:
 
         print('運行成功')
         input('\n按任意鍵結束運行...')
-        os._exit(0)
+        os._exit(0) #正常運行結束後,以不返回例外強制結束程式
 
     except:
 
@@ -337,5 +336,6 @@ except (FileNotFoundError, config.ParsingError) as e:
         os.system("del /f /s /q CFG_Set.ini >nul 2>&1") #採用靜默刪除指令
         input('\n按任意鍵結束運行...')
 
+# 用於已有設置ini檔,運行成功的提示
 print('運行成功')
 input('\n按任意鍵結束運行...')
