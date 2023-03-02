@@ -181,9 +181,9 @@ CFG = [
 # ===================================================上面才是設定值,下面不用觀看=============================================================
 
 """ 
-Versions 1.1
-+ 系統選取介面
+Versions 1.2
 - 修復了例外Bug
+- 修復環境差異造成的例外
 - 重構了一小部份代碼
 
 預計增加
@@ -220,12 +220,22 @@ def fac(path):
 # ========== 讀取設置檔 ==========
 try:
 
-    FileSet = "CFG_Set.ini"
+    """FileSet = "./CFG_Set.ini"
     InSet = config.ConfigParser()
-    InSet.read(FileSet , "UTF-8")
+    #InSet.read(FileSet, encoding='utf-8')
 
-    path1 = InSet.get("set","PATH1")
-    path2 = InSet.get("set","PATH2")
+    path1 = InSet.get("set","path1")
+    path2 = InSet.get("set","path2")"""
+
+    # 因環境不同有解析失敗的問題,改成直接讀取
+    with open('CFG_Set.ini', 'r') as c:
+        contents = c.read()
+
+    InSet = config.ConfigParser()
+    InSet.read_string(contents)
+
+    path1 = InSet.get('set', 'path1')
+    path2 = InSet.get('set', 'path2')
 
     fac(path1)
 
@@ -236,11 +246,12 @@ try:
     elif path2.lower() == "null":
         pass
 
-except:
+except (FileNotFoundError, config.ParsingError) as e:
 # ========== 因為無檔案所有創建一個 ==========
+    filename = "/autoexec.cfg"
     file = open('CFG_Set.ini', 'w')
 
-    FileSet = "CFG_Set.ini"
+    FileSet = "./CFG_Set.ini"
     InSet = config.ConfigParser()
     InSet.read(FileSet , "UTF-8")
 
@@ -253,19 +264,33 @@ except:
 # ========== 開始設置 ==========
     print('請選擇您的APEX資料夾,內的CFG資料夾的')
     # 選擇文件 -> askopenfilename()  選擇資料夾 -> askdirectory()
-    path1 = filedialog.askdirectory() + '/autoexec.cfg'
+    path1 = filedialog.askdirectory()
+
+    # 改成讀取到選擇位置後,直接在該路徑創建 .cfg 且隨意寫入個東西
+    Cfg_File = os.path.join(path1,'autoexec.cfg')
+    with open(Cfg_File, 'w') as cfg_file:
+       cfg_file.write('\n')
+
+    # 創建完後再將字串加入,寫入至設定ini檔保存
+    path1+=filename
 
 # ========== 第二項設置詢問 ==========
     path2 = input('是否需要設置第二個位置(Y/N):')
-
+    
 # ========== 怕有額外的錯誤使用except ==========
-    """舊版的手動輸入,要讓設置檔的路徑顯示是反斜 \\ 可以這樣打"""    
+    """舊版的手動輸入,要讓設置檔的路徑顯示是反斜 \\ 可以這樣打"""  
 
     try:
 
         # ===== 輸入是y時 ===== 
         if path2.lower() == 'y':
-            path2 = filedialog.askdirectory() + '/autoexec.cfg'
+            path2 = filedialog.askdirectory()
+            Cfg_File = os.path.join(path2,'autoexec.cfg')
+
+            with open(Cfg_File, 'w') as cfg_file:
+                cfg_file.write('\n')
+
+            path2+=filename
 
         # ===== 輸入是n時,在ini設置寫入NULL ===== 
         elif path2.lower() == 'n':
@@ -273,22 +298,22 @@ except:
 
         # ===== 有正常輸入時,設置寫入位置,然後呼叫輸出方法 =====
         else:
-            print("請輸入 Y 或 N")
+            print("輸入錯誤 , 請輸入 Y 或 N")
             pass
 
         # ===== (原本是手動輸入的驗證,改成直接選擇這邊就非必要了) =====
         if os.path.isfile(path1) and os.path.isfile(path2):
             
-            InSet.set('set','PATH1', path1) #將輸入的路徑位置設置寫入
-            InSet.set('set','PATH2', path2)
+            InSet.set('set','path1', path1) #將輸入的路徑位置設置寫入
+            InSet.set('set','path2', path2)
 
             fac(path1)
             fac(path2)
         
         elif os.path.isfile(path1) and path2 == "NULL":
 
-            InSet.set('set','PATH1', path1) #將輸入的路徑位置設置寫入
-            InSet.set('set','PATH2', path2)
+            InSet.set('set','path1', path1) #將輸入的路徑位置設置寫入
+            InSet.set('set','path2', path2)
 
             fac(path1)
 
@@ -300,7 +325,8 @@ except:
         with open(FileSet, 'w') as configfile:InSet.write(configfile)
 
         print('運行成功')
-        os.system('pause')
+        input('\n按任意鍵結束運行...')
+        os._exit(0)
 
     except:
 
@@ -309,4 +335,7 @@ except:
         print('運行錯誤,請重新運行\n')
 
         os.system("del /f /s /q CFG_Set.ini >nul 2>&1") #採用靜默刪除指令
-        os.system('pause')
+        input('\n按任意鍵結束運行...')
+
+print('運行成功')
+input('\n按任意鍵結束運行...')
