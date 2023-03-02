@@ -116,6 +116,7 @@
                     <li><a href="#Foldable" class="text-success dropdown-item">折疊式</a></li>
                     <li><a href="#GuidedMenu" class="text-success dropdown-item">引導菜單</a></li>
                 </ul>
+ 
             </div>
         </div>
     </nav>
@@ -1244,6 +1245,73 @@
               return new bootstrap.Tooltip(tooltipTriggerEl)
             })
         </script>
+    </div><hr>
+
+<!-- ************************************************************************************ -->
+
+    <div class="container border text-center" style="height: 350px;">
+        <h1>懸浮彈窗</h1>
+
+        <button type="button" class="btn btn-info" data-bs-toggle="popover" data-bs-placement="left" data-bs-trigger="hover" title="左左左左" data-bs-content="測試文字" id="toastbtn1">
+            不要按我
+        </button>
+
+        <button type="button" class="btn btn-info" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="focus" title="上上上上" data-bs-content="測試文字">
+            用力按我
+        </button>
+
+        <button type="button" class="btn btn-info" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-trigger="focus" title="下下下下" data-bs-content="測試文字">
+            用力按我
+        </button>
+
+        <button type="button" class="btn btn-info" data-bs-toggle="popover" data-bs-placement="right" data-bs-trigger="hover" title="右右右右" data-bs-content="測試文字" id="toastbtn2">
+            不要按我
+        </button>
+
+        <div class="toast">
+            <div class="toast-header">
+                <strong class="me-auto">叫你點了嗎</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+            </div>
+
+            <div class="toast-body">
+                <p>不是說不要點嗎</p>
+            </div>
+        </div>
+        
+        <script>
+            var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+            var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+              return new bootstrap.Popover(popoverTriggerEl)
+            })
+
+            document.getElementById("toastbtn1").onclick = function(){
+                var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+                var toastList = toastElList.map(function(toastEl) {
+                return new bootstrap.Toast(toastEl)
+            })
+                toastList.forEach(toast => toast.show()) 
+            }
+
+            document.getElementById("toastbtn2").onclick = function(){
+                var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+                var toastList = toastElList.map(function(toastEl) {
+                    return new bootstrap.Toast(toastEl)
+            })
+                toastList.forEach(toast => toast.show()) 
+            }
+        </script>
+    </div><hr>
+
+ <!-- ************************************************************************************ -->
+
+    <div class="container p-5 mt-3 my-5 border text-center">
+        <h1>Scrollspy</h1>
+
+        <iframe
+            src="./AddBootstrap.htm" class="container"
+            height="450" frameborder="0" name="null">
+        </iframe>
 
     </div>
 
