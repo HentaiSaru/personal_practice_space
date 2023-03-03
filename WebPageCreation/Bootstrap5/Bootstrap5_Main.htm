@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="widdth=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./BT.css">
     <link rel="icon" href="https://cdn.discordapp.com/attachments/794504493035159602/1074566158121967636/9041083_bootstrap_fill_icon">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <title>Bootstrap</title>
@@ -17,22 +18,98 @@
     <!--* ("container-fluid" 全寬容器,橫跨窗口整個寬度) -->
 
 <!--
-*   Extra small | <576px Small |  ≥576px Medium | ≥768px Large | ≥992px Extra Large | ≥1200px XXL | ≥1400px  
-!   max-width     最大寬度100%	      540px	          720px	          960px	             1140px	       1320px
-!   網格            .col-            col-sm-         col-md-         col-lg-            col-xl-       col-xxl-
+!   Extra small | <576px Small |  ≥576px Medium | ≥768px Large | ≥992px Extra Large | ≥1200px XXL | ≥1400px  
+*   max-width     最大寬度100%	      540px	          720px	          960px	             1140px	       1320px
+*   網格            .col-            col-sm-         col-md-         col-lg-            col-xl-       col-xxl-
+*
+*   row是水平排版 col是垂直排版
+
+?   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+!   設置框架反應的時機點 -> 慢反應 ~ 快反應 
+*             Extra small <576px | Small ≥576px | Medium ≥768px | Large ≥992px |  Extra large ≥1200px | XXL ≥1400px
+*.container-sm      100%            540px	        720px	        960px	        1140px	        1320px
+*.container-md	    100%	        100%	        720px	        960px	        1140px	        1320px
+*.container-lg	    100%	        100%	        100%	        960px	        1140px	        1320px
+*.container-xl	    100%	        100%	        100%	        100%	        1140px	        1320px
+*.container-xxl	    100%	        100%	        100%	        100%	        100%            1320px
+*   xs (<=576px) 
+*   sm (>=576px) 
+*   md (>=768px) 
+*   lg (>=992px) 
+*   xl (>=1200px) or xxl (>=1400px))
+
+?   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+!   各類別單字代表
+*   m = margin
+*   p = padding
+*   ------------------------------------
+*   t = margin-top 或 padding-top
+*   b = margin-bottom 或 padding-bottom
+*   s = margin-left 或 padding-left
+*   e = margin-right 或 padding-right
+*   x = padding-left 和 padding-right 或 margin-left 和 margin-right
+*   y = padding-top 和 padding-bottom 或 margin-top 和 margin-bottom
+*   blank = 在元素的所有 4 個邊上設置一個 margin 或 padding
+*   ------------------------------------
+*   0 = 將 margin 或 padding 設置為 0
+*   1 = 將 margin 或 padding 設置為 .25rem
+*   2 = 將 margin 或 padding 設置為 .5rem
+*   3 = 將 margin 或 padding 設置為 1rem
+*   4 = 將 margin 或 padding 設置為 1.5rem
+*   5 = 將 margin 或 padding 設置為 3rem
+*   auto = 將 margin 設置為自動
+*   ------------------------------------
+*   m-0	    四邊邊距	
+*   mt-0	頂部邊距	
+*   mb-0	底部邊距	
+*   ms-0	左邊距	
+*   me-0	右邊距	
+*   mx-0	左邊距和右邊距	
+*   my-0	頂部和底部邊距	
+*   p-0	    四面填充	
+*   pt-0	填充頂部	
+*   pb-0	填充底部	
+*   ps-0	左填充	
+*   pe-0	右填充	
+*   py-0	填充頂部和底部	
+*   px-0	左右填充
+
+?   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+!   文本對齊類別Class
+*   text-start              (開使處對齊/置左)
+*   text-center             (置中)
+*   text-end                (結束處齊/置右)
+*   text-break              (長文本自動換行)
+*   text-decoration-none    (連結無底線)
+*   text-uppercase          (大寫文本)
+*   text-lowercase          (小寫文本)
+*   text-capitalize         (文本首字母大寫)
+
+?   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+!   Bootstrap 5 置中的類別
+*   d-flex                  (告訴網頁使用 flexbox 佈局的方式)
+*   justify-content-center  (告訴網頁確保所有內容（如文本或圖片）連續置中的方式)
+*   align-items-center      (另一種確保一切都居中的方法，但這次是在一列中。)
+*   text-center             (確保文本在頁面上居中的一種方式)
+
+?   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+!   顏色設置
+*   primary                 (藍色)
+*   success                 (綠色)
+*   info                    (淺藍)
+*   warning                 (黃色)
+*   danger                  (紅色)
+*   secondary               (灰色)
+*   dark                    (黑色)
+
 -->
 
-<!--
-*   文本對齊類別Class
-!   text-start              (開使處對齊/置左)
-!   text-center             (置中)
-!   text-end                (結束處齊/置右)
-!   text-break              (長文本自動換行)
-!   text-decoration-none    (連結無底線)
-!   text-uppercase          (大寫文本)
-!   text-lowercase          (小寫文本)
-!   text-capitalize         (文本首字母大寫)
--->
+
 
 <!-- ************************************************************************************ -->
 
@@ -140,7 +217,6 @@
 
 <!-- ************************************************************************************ -->
 
-    <!--! row是水平排版 col是垂直排版 -->
     <div class="container col-sm-4">
         <div class="row">
             <div class="col-sm-4">
@@ -183,18 +259,6 @@
         <p>測試文字</p>
     </div>
     <hr>
-
-<!-- ************************************************************************************ -->
-
-<!--
-!       設置框架反應的時機點 -> 慢反應 ~ 快反應 
-*        Extra small <576px | Small ≥576px | Medium ≥768px | Large ≥992px |  Extra large ≥1200px | XXL ≥1400px
-*.container-sm      100%            540px	        720px	        960px	        1140px	        1320px
-*.container-md	    100%	        100%	        720px	        960px	        1140px	        1320px
-*.container-lg	    100%	        100%	        100%	        960px	        1140px	        1320px
-*.container-xl	    100%	        100%	        100%	        100%	        1140px	        1320px
-*.container-xxl	    100%	        100%	        100%	        100%	        100%	        1320px
--->
 
 <!-- ************************************************************************************ -->
 
@@ -977,7 +1041,7 @@
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border text-center" id="GuidedMenu">
+    <div class="container my-5 border text-center" id="GuidedMenu">
 
         <nav class="navbar navbar-expand bg-dark navbar-dark" style="height: 70px;">
             <div class="container-fluid">
@@ -989,136 +1053,12 @@
                 <button class="btn btn-primary" type="button">Search</button>
             </form>
         </nav>
-    
-        <h1>導覽菜單</h1>
-        <ul class="nav">
-            <li class="nav-item">
-                <a href="#move" class="nav-link" data-toggle="tab">導覽連結1</a>
-            </li>
 
-            <li class="nav-item">
-                <a href="#move" class="nav-link" data-toggle="tab">導覽連結2</a>
-            </li>
-
-            <li class="nav-item">
-                <a href="#move" class="nav-link disabled">被鎖定的</a>
-            </li>
-        </ul>
-
-        <ul class="nav justify-content-center">
-            <li class="nav-item">
-                <a href="#move" class="nav-link" data-toggle="tab">導覽連結3</a>
-            </li>
-
-            <li class="nav-item">
-                <a href="#move" class="nav-link" data-toggle="tab">導覽連結4</a>
-            </li>
-
-            <li class="nav-item">
-                <a href="#move" class="nav-link disabled" data-toggle="tab">被鎖定的</a>
-            </li>
-        </ul>
-
-        <ul class="nav justify-content-end">
-            <li class="nav-item">
-                <a href="#move" class="nav-link" data-toggle="tab">導覽連結5</a>
-            </li>
-
-            <li class="nav-item">
-                <a href="#move" class="nav-link" data-toggle="tab">導覽連結6</a>
-            </li>
-
-            <li class="nav-item">
-                <a href="#move" class="nav-link disabled">被鎖定的</a>
-            </li>
-        </ul><br>
-
-        <br> <!-- --------------------我是分隔線------------------------- -->
-
-        <h1>垂直導覽</h1>
-
-        <ul class="nav flex-column">
-            <li class="nav-item">
-                <a href="#move" class="nav-link" data-toggle="tab">導覽連結1</a>
-            </li>
-
-            <li class="nav-item">
-                <a href="#move" class="nav-link" data-toggle="tab">導覽連結2</a>
-            </li>
-
-            <li class="nav-item">
-                <a href="#move" class="nav-link" data-toggle="tab">導覽連結3</a>
-            </li>
-        </ul><br>
-
-        <br> <!-- --------------------我是分隔線------------------------- -->
-
-        <h1>文字選項卡</h1>
-
-        <ul class="nav nav-tabs nav-justified">
-            <li class="nav-item">
-                <a href="#move" class="nav-link active" data-toggle="tab">預設選項</a>
-            </li>
-
-            <li class="nav-item">
-                <a href="#move" class="nav-link" data-toggle="tab">選項2</a>
-            </li>
-
-            <li class="nav-item">
-                <a href="#move" class="nav-link" data-toggle="tab">選項3</a>
-            </li>
-        </ul><br>
-
-        <br> <!-- --------------------我是分隔線------------------------- -->
-
-        <h1>按鈕選項卡</h1>
-
-        <ul class="nav nav-pills nav-justified">
-            <li class="nav-item">
-                <a href="#move" class="nav-link active" data-toggle="tab">link</a>
-            </li>
-
-            <li class="nav-item">
-                <a href="#move" class="nav-link" data-toggle="tab">link</a>
-            </li>
-
-            <li class="nav-item">
-                <a href="#move" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-toggle="tab">link</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#move">Link 1</a></li>
-                        <li><a class="dropdown-item" href="#move">Link 2</a></li>
-                        <li><a class="dropdown-item" href="#move">Link 3</a></li>
-                    </ul>
-            </li>
-        </ul><br>
-
-        <br> <!-- --------------------我是分隔線------------------------- -->
-
-        <h1>動態切換選項卡</h1>
-
-        <ul class="nav nav-tabs" role="tablist">
-            <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#home">Home</a></li>
-            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#menu1">Menu 1</a></li>
-            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#menu2">Menu 2</a></li>
-        </ul>
-
-        <div class="tab-content">
-            <div id="home" class="container tab-pane active"><br>
-                <h3>HOME</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-
-            <div id="menu1" class="container tab-pane fade"><br>
-                <h3>Menu 1</h3>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-
-            <div id="menu2" class="container tab-pane fade"><br>
-                <h3>Menu 2</h3>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-            </div>
-        </div>
-    </div><hr id="move">
+        <iframe
+            src="./AddBootstrap_0.htm" class="container"
+            height="450" frameborder="0" name="null">
+        </iframe>
+    </div><hr>
 
 <!-- ************************************************************************************ -->
 
@@ -1305,69 +1245,201 @@
 
  <!-- ************************************************************************************ -->
 
-    <div class="container p-5 mt-3 my-5 border text-center">
+    <div class="container p-5 border text-center">
         <h1>Scrollspy</h1>
 
         <iframe
-            src="./AddBootstrap.htm" class="container"
+            src="./AddBootstrap_1.htm" class="container-fluid w-100"
             height="450" frameborder="0" name="null">
         </iframe>
 
+    </div><hr>
+
+ <!-- ************************************************************************************ -->
+
+    <div class="offcanvas offcanvas-start text-bg-dark" id="Sidebar_Left">
+        <div class="offcanvas-header">
+            <h1 class="offcanvas-title" style="color: white;">標題內容</h>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+
+        <div class="offcanvas-body">
+            <p>文本內容文本內容</p>
+            <p>文本內容文本內容</p>
+            <p>文本內容文本內容</p>
+            <button class="btn btn-secondary" type="button">就是一個按鈕</button>
+        </div>
     </div>
+
+    <div class="offcanvas offcanvas-end text-bg-dark" id="Sidebar_Right">
+        <div class="offcanvas-header">
+            <h1 class="offcanvas-title" style="color: white;">標題內容</h>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+
+        <div class="offcanvas-body">
+            <p>文本內容文本內容</p>
+            <p>文本內容文本內容</p>
+            <p>文本內容文本內容</p>
+            <button class="btn btn-secondary" type="button">就是一個按鈕</button>
+        </div>
+    </div>
+
+    <div class="offcanvas offcanvas-top text-bg-dark" style="padding-bottom: 300px;" id="Sidebar_Top">
+        <div class="offcanvas-header" style="padding:0%;">
+            <h1 class="offcanvas-title" style="color: white;">標題內容</h>
+            <button type="button" class="btn-close" style="margin-left: 1000px;" data-bs-dismiss="offcanvas"></button>
+        </div>
+
+        <div class="offcanvas-body text-center" style="padding:50px;">
+            <p>文本內容文本內容</p>
+            <button class="btn btn-secondary" type="button">就是一個按鈕</button>
+        </div>
+    </div>
+
+    <div class="offcanvas offcanvas-bottom text-bg-dark" style="padding-bottom: 300px;" id="Sidebar_Bottom">
+        <div class="offcanvas-header" style="padding:0%;">
+            <h1 class="offcanvas-title" style="color: white;">標題內容</h>
+            <button type="button" class="btn-close" style="margin-left: 1000px;" data-bs-dismiss="offcanvas"></button>
+        </div>
+
+        <div class="offcanvas-body text-center" style="padding-bottom:150px;">
+            <p>文本內容文本內容</p>
+            <button class="btn btn-secondary" type="button">就是一個按鈕</button>
+        </div>
+    </div>
+
+    <div class="container p-5 border text-center">
+        <h1>側邊欄</h1>
+
+        <button class="btn btn-info" type="button" data-bs-toggle="offcanvas" data-bs-target="#Sidebar_Left">
+            開啟左側邊欄
+        </button>
+
+        <button class="btn btn-info" type="button" data-bs-toggle="offcanvas" data-bs-target="#Sidebar_Top">
+            開啟上邊欄
+        </button>
+
+        <button class="btn btn-info" type="button" data-bs-toggle="offcanvas" data-bs-target="#Sidebar_Bottom">
+            開啟下邊欄
+        </button>
+
+        <button class="btn btn-info" type="button" data-bs-toggle="offcanvas" data-bs-target="#Sidebar_Right">
+            開啟右側邊欄
+        </button>
+    </div><hr>
+
+ <!-- ************************************************************************************ -->
+
+    <div class="container border text-center" style="width: auto; height: 1050px">
+        <h1>表格方框</h1>
+
+        <span class="border border-dark">四面框</span>
+        <span class="border border-0 border-dark">無邊框</span>
+        <span class="border border-top-0 border-dark">上方無框</span>
+        <span class="border border-bottom-0 border-dark">下方無框</span>
+        <span class="border border-start-0 border-dark">左方無框</span>
+        <span class="border border-end-0 border-dark">右方無框</span>
+
+        <br><!-- --------------------我是分隔線------------------------- -->
+
+        <span class="border-top border-dark">只有上方</span>
+        <span class="border-end border-dark">只有右方</span>
+        <span class="border-bottom border-dark">只有下方</span>
+        <span class="border-start border-dark">只有左方</span>
+
+        <br><!-- --------------------我是分隔線------------------------- -->
+
+        <span class="border border-1 border-dark"></span>
+        <span class="border border-2 border-dark"></span>
+        <span class="border border-3 border-dark"></span>
+        <span class="border border-4 border-dark"></span>
+        <span class="border border-5 border-dark"></span>
+
+        <br><!-- --------------------我是分隔線------------------------- -->
+
+        <span class="border border-3 border-primary"></span>
+        <span class="border border-3 border-secondary"></span>
+        <span class="border border-3 border-success"></span>
+        <span class="border border-3 border-danger"></span>
+        <span class="border border-3 border-warning"></span>
+        <span class="border border-3 border-info"></span>
+        <span class="border border-3 border-dark"></span>
+
+        <br><!-- --------------------我是分隔線------------------------- -->
+
+        <span class="border rounded border-dark"></span>
+        <span class="border rounded-top border-info"></span>
+        <span class="border rounded-end border-warning"></span>
+        <span class="border rounded-bottom border-danger"></span>
+        <span class="border rounded-start border-success"></span>
+        <span class="border rounded-circle border-secondary"></span>
+        <span class="border rounded-pill border-primary" style="width:130px"></span>
+
+        <br><!-- --------------------我是分隔線------------------------- -->
+
+        <span class="border rounded-0 border-primary"></span>
+        <span class="border rounded-1 border-primary"></span>
+        <span class="border rounded-2 border-primary"></span>
+        <span class="border rounded-3 border-primary"></span>
+        <span class="border rounded-4 border-primary"></span>
+        <span class="border rounded-5 border-primary"></span>
+
+        <br><!-- --------------------我是分隔線------------------------- -->
+
+        <span class="border border-dark float-start">置左</span>
+        <span class="border border-dark mx-auto">置中</span>
+        <span class="border border-dark float-end">置右</span>
+
+        <br><!-- --------------------我是分隔線------------------------- -->
+
+        <span class="bg-warning float-start w-25">Width 25%</span>
+        <span class="bg-warning float-start w-50">Width 50%</span>
+        <span class="bg-warning float-start w-75">Width 75%</span>
+        <span class="bg-warning float-start w-100">Width 100%</span>
+        <span class="bg-warning float-start w-auto">Width auto</span>
+    </div><hr>
+
+ <!-- ************************************************************************************ -->
+
+    <div class="container p-auto border text-center">
+        <h1>效果陰影</h1>
+
+        <div class="shadow-none p-4 mb-4 bg-white">無影子</div>
+        <div class="shadow-sm p-4 mb-4 bg-white">小影子</div>
+        <div class="shadow p-4 mb-4 bg-white">預設影子</div>
+        <div class="shadow-lg p-4 mb-4 bg-white">大影子</div>
+    </div><hr>
+
+ <!-- ************************************************************************************ -->
+
+    <div class="container p-auto border text-center">
+        <h1>縮放比例</h1>
+  
+        <h2>縮放比例 1:1</h2>
+        <div class="ratio ratio-1x1">
+            <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+        </div><br>
+  
+        <h2>縮放比例 4:3</h2>
+        <div class="ratio ratio-4x3">
+            <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+        </div><br> 
+  
+        <h2>縮放比例 16:9</h2>
+        <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+        </div><br>
+    
+        <h2>縮放比例 21:9</h2>
+        <div class="ratio ratio-21x9">
+            <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+        </div>
+    </div>
+
 
 <div id="Page-end"></div>
 </body>
-
 <!--! **************************Body結束了喔*********************************** -->
-
-<style>
-
-    h1 {
-        color: rgba(255, 0, 0, 0.8);
-        padding: 30px;
-    }
-
-    hr {
-        border: 3px solid rgba(125, 11, 255, 0.8);
-        margin: 60px;
-    }
-
-    a {
-        text-decoration:none;
-    }
-
-    p {
-        font-size: 30px;
-    }
-
-    table,th,tr,td{
-        border:8px double rgb(0, 0, 0);
-        text-align: center;
-    }
-
-    .dropdown-menu {
-        text-align: center;
-    }
-
-    .fixed-buttons {
-        position: fixed;
-        top: 60%;
-        right: 0;
-        width: 32px;
-        transform: translateY(-20%);
-        display: flex;
-        flex-direction: column;
-    }
-
-    .fixed-buttons button {
-        margin-bottom: 5px;
-    }
-
-    .tooltip img {
-        width: 180px;
-        height: auto;
-    }
-
-</style>
 
 </html>
