@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="widdth=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./BT.css">
+    <link rel="stylesheet" href="./Css/bootstrap.min-5.3.0.css">
+    <link rel="stylesheet" href="./Css/BT.css">
     <link rel="icon" href="https://cdn.discordapp.com/attachments/794504493035159602/1074566158121967636/9041083_bootstrap_fill_icon">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./Js/bootstrap.bundle.min-5.3.0.js"></script>
+
     <title>Bootstrap</title>
 </head> 
 
@@ -107,16 +108,53 @@
 *   secondary               (灰色)
 *   dark                    (黑色)
 
+!   d-flex 的說明 ( * 代表任意)		 
+*   .d-*-flex                  (創建FlexBox) 
+*   .d-*-inline-flex           (創建FlexBox 內部的 FlexBox)
+*   .flex-*-row                (再不同螢幕水平顯示 FlexBox 內項目)	
+*   .flex-*-row-reverse        (再不同螢幕水平顯示 FlexBox 內項目,並靠右對齊)	
+*   .flex-*-column	           (再不同螢幕垂直顯示 FlexBox 內項目)
+*   .flex-*-column-reverse     (再不同螢幕相反的垂直顯示 FlexBox 內項目) 	
+*   .justify-content-*-start   (再不同螢幕左對齊)
+*   .justify-content-*-end     (再不同螢幕右對齊)	
+*   .justify-content-*-center  (再不同螢幕置中)
+*   .justify-content-*-between (再不同螢幕顯示項目之間的項目)	
+*   .justify-content-*-around  (再不同螢幕顯示項目周圍的項目)
+ 	
+*   .flex-*-fill               (再不同螢幕強制等寬)	 	 
+*   .flex-*-grow-0             (不使項目再不同螢幕增長)	 
+*   .flex-*-grow-1             (使項目再不同螢幕增長)	  	 
+*   .flex-*-shrink-0           (不使項目再不同螢幕縮減)	 
+*   .flex-*-shrink-1           (使項目再不同螢幕縮減)  	 
+*   .order-*-0-12              (再小螢幕順序由0改成5)		 
+*   .flex-*-nowrap             (再不同螢幕不要包住項目)	
+*   .flex-*-wrap               (再不同螢幕要包住項目)	
+*   .flex-*-wrap-reverse       (再不同螢幕反向包住項目)	
+*   .align-content-*-start     (再不同螢幕從頭開始對齊項目)
+*   .align-content-*-end       (再不同螢幕從尾開始對齊項目)	
+*   .align-content-*-center    (再不同螢幕中間開始對齊項目)		
+*   .align-content-*-around    (再不同螢幕中間項目圍繞)	
+*   .align-content-*-stretch   (再不同螢幕中間項目延伸)		
+		 
+*   .align-items-*-start       (再不同螢幕從頭開始對齊單行項目)	
+*   .align-items-*-end         (再不同螢幕從尾開始對齊單行項目)	
+*   .align-items-*-center      (再不同螢幕從頭中間對齊單行項目)	
+*   .align-items-*-baseline    (再不同螢幕單行排在基準線)	
+*   .align-items-*-stretch     (再不同螢幕單行拉伸項目)
+ 	
+*   .align-self-*-start        (再不同螢幕從頭開始對齊柔性項目)	
+*   .align-self-*-end          (再不同螢幕從尾開始對齊柔性項目)	
+*   .align-self-*-center       (再不同螢幕將柔性項目置中)	
+*   .align-self-*-baseline     (再不同螢幕將柔性項目置於基準線)	
+*   .align-self-*-stretch      (再不同螢幕拉伸柔性項目)
 -->
-
-
 
 <!-- ************************************************************************************ -->
 
     <!--? Bootstrap中的 col-sm-1 ~ col-sm-12 由小到最大 在小螢幕跨越1列~12列 -->
     <!--? 通常 container 只有左右 可利用.pt-5 增加額外的填充 讓排版看起來更好 -->
     <div class="cotainer-fluid p-3 bg-primary text-white text-center" id="Home">
-        <h1>我的第一個Bootstrap頁面</h1>
+        <h1>這是一個使用Bootstrap 5.3.0的網頁</h1>
         <p>調整這個響應式頁面的大小，看看效果如何!</p>
     </div>
 
@@ -130,52 +168,55 @@
                     <a href="#Home" class="text-success">首頁</a>
                 </button>
                   
-                <button type="button" class="btn btn-lg btn-outline-success dropdown-toggle" data-bs-toggle="dropdown">排版樣式</button>
-                  <ul class="dropdown-menu" style="transform: translateX(40%);">
+                <button type="button" class="btn btn-lg btn-outline-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">排版樣式</button>
+                <ol class="dropdown-menu" style="transform: translateX(40%);" aria-labelledby="dropdownMenuButtonLight">
                     <li><a href="#BoxLine" class="text-success dropdown-item">框線文字</a></li>
                     <li><a href="#FrameLayout" class="text-success dropdown-item">框線排版</a></li>
                     <li><a href="#Bgc" class="text-success dropdown-item">背景顏色</a></li>
-                </ul>
+                    <li><a href="#Ssp" class="text-success dropdown-item">Scrollspy</a></li>
+                    <li><a href="#Flex" class="text-success dropdown-item">Flex演示</a></li>
+                </ol>
 
                 <button type="button" class="btn btn-lg btn-outline-success dropdown-toggle" data-bs-toggle="dropdown">文字大小</button>
-                  <ul class="dropdown-menu" style="transform: translateX(125%);">
+                <ol class="dropdown-menu" style="transform: translateX(125%);">
                     <li><a href="#h1-h6" class="text-success dropdown-item">大標樣式</a></li>
                     <li><a href="#FontSize" class="text-success dropdown-item">更大的文字</a></li>
                     <li><a href="#SmallFont" class="text-success dropdown-item">較小的文字</a></li>
-                </ul>
+                </ol>
 
                 <button type="button" class="btn btn-lg btn-outline-success dropdown-toggle" data-bs-toggle="dropdown">文字樣式</button>
-                  <ul class="dropdown-menu" style="transform: translateX(210%);">
+                <ol class="dropdown-menu" style="transform: translateX(210%);">
                     <li><a href="#Quotations" class="text-success dropdown-item">文章引用</a></li>
                     <li><a href="#BL" class="text-success dropdown-item">底部虛線</a></li>
                     <li><a href="#SpecialStyles" class="text-success dropdown-item">特別樣式</a></li>
                     <li><a href="#Textcolor" class="text-success dropdown-item">文字顏色</a></li>
                     <li><a href="#Tbg" class="text-success dropdown-item">文字背景</a></li>
-                </ul>
+                </ol>
 
                 <button type="button" class="btn btn-lg btn-outline-success dropdown-toggle" data-bs-toggle="dropdown">表格樣式</button>
-                  <ul class="dropdown-menu" style="transform: translateX(293%);">
+                <ol class="dropdown-menu" style="transform: translateX(293%);">
                     <li><a href="#BF" class="text-success dropdown-item">基本表格</a></li>
                     <li><a href="#TableColor" class="text-success dropdown-item">表格顏色</a></li>
-                </ul>
+                    <li><a href="#tbb" class="text-success dropdown-item">表格方框</a></li>
+                </ol>
 
                 <button type="button" class="btn btn-lg btn-outline-success dropdown-toggle" data-bs-toggle="dropdown">警示條樣式</button>
-                  <ul class="dropdown-menu" style="transform: translateX(385%);">
+                <ol class="dropdown-menu" style="transform: translateX(385%);">
                     <li><a href="#WgL" class="text-success dropdown-item">警示連結</a></li>
                     <li><a href="#Dwl" class="text-success dropdown-item">可關警示</a></li>
-                </ul>
+                </ol>
 
                 <button type="button" class="btn btn-lg btn-outline-success dropdown-toggle" data-bs-toggle="dropdown">按鈕樣式</button>
-                  <ul class="dropdown-menu" style="transform: translateX(475%);">
+                <ol class="dropdown-menu" style="transform: translateX(475%);">
                     <li><a href="#BB" class="text-success dropdown-item">基本按鈕</a></li>
                     <li><a href="#Eb" class="text-success dropdown-item">懸浮效果按鈕</a></li>
                     <li><a href="#Bbs" class="text-success dropdown-item">按鈕大小</a></li>
                     <li><a href="#SEB" class="text-success dropdown-item">特殊效果按鈕</a></li>
                     <li><a href="#BG" class="text-success dropdown-item">按鈕群組</a></li>
-                </ul>
+                </ol>
 
                 <button type="button" class="btn btn-lg btn-outline-success dropdown-toggle" data-bs-toggle="dropdown">特別物件</button>
-                  <ul class="dropdown-menu" style="transform: translateX(560%);">
+                <ol class="dropdown-menu" style="transform: translateX(560%);">
                     <li><a href="#Medallion" class="text-success dropdown-item">勳章樣式</a></li>
                     <li><a href="#LoadingStyle" class="text-success dropdown-item">載入樣式</a></li>
                     <li><a href="#Pb" class="text-success dropdown-item">進度條</a></li>
@@ -184,15 +225,19 @@
                     <li><a href="#Slideshow" class="text-success dropdown-item">圖像幻燈片</a></li>
                     <li><a href="#Modal" class="text-success dropdown-item">模態面板</a></li>
                     <li><a href="#Tooltip" class="text-success dropdown-item">提示文字</a></li>
-                </ul>
+                    <li><a href="#effS" class="text-success dropdown-item">效果陰影</a></li>
+                    <li><a href="#scra" class="text-success dropdown-item">縮放比例</a></li>
+                </ol>
 
                 <button type="button" class="btn btn-lg btn-outline-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">列表與選單</button>
-                  <ul class="dropdown-menu" style="transform: translateX(650%);">
+                <ol class="dropdown-menu" style="transform: translateX(650%);">
                     <li><a href="#BLG" class="text-success dropdown-item">基本列表組</a></li>
                     <li><a href="#Pdm" class="text-success dropdown-item">下拉式選單</a></li>
                     <li><a href="#Foldable" class="text-success dropdown-item">折疊式</a></li>
                     <li><a href="#GuidedMenu" class="text-success dropdown-item">引導菜單</a></li>
-                </ul>
+                    <li><a href="#Fpw" class="text-success dropdown-item">懸浮彈窗</a></li>
+                    <li><a href="#Sbar" class="text-success dropdown-item">側邊欄</a></li>
+                </ol>
  
             </div>
         </div>
@@ -201,7 +246,8 @@
     <div class="fixed-buttons">
         <button class="btn bg-info text-white" id="show-button">顯示</button>
         <button class="btn bg-info text-white" id="hide-button">隱藏</button>
-        <button class="btn bg-info"><a href="#Page-end">頁尾</a></button>
+        <button class="btn bg-info"><a href="#Home" class="text-white">頁首</a></button>
+        <button class="btn bg-info"><a href="#Page-end" class="text-white">頁尾</a></button>
     </div>
 
     <script>
@@ -212,6 +258,59 @@
         const nav_show = document.querySelector('nav');
         const button_show = document.getElementById('show-button');
         button_show.addEventListener('click', () => {nav_show.style.display = 'block';});
+    </script>
+
+    <div class="Theme-color-hide Theme-color-show">
+        <button class="btn bg-info text-white" id="light-button" onclick="toggleLightMode()">白色主題</button>
+        <button class="btn bg-info text-white" id="dark-button" onclick="toggleDarkMode()">黑色主題</button>
+    </div>
+
+    <script>
+        function toggleDarkMode() {
+            var body = document.getElementsByTagName("body")[0];
+            if (body.classList.contains("white")) {
+                return;
+            }
+            body.classList.remove("light-mode");
+            body.classList.add("dark-mode");
+            var elements = document.querySelectorAll('body *:not(script):not(style):not(br):not(hr)');
+                for (var i = 0; i < elements.length; i++) {
+                    var color = window.getComputedStyle(elements[i]).color;
+                    if (color === 'rgb(0, 0, 0)') {
+                        elements[i].style.color = 'white';
+                    } 
+                }toggleButtonStates();
+        }
+
+        function toggleLightMode() {
+            var body = document.getElementsByTagName("body")[0];
+            if (body.classList.contains("black")) {
+                return;
+            }
+            body.classList.remove("dark-mode");
+            body.classList.add("light-mode");
+            var elements = document.querySelectorAll('body h2,h3,h4,h5,h6,p,th');
+                for (var i = 0; i < elements.length; i++) {
+                    var color = window.getComputedStyle(elements[i]).color;
+                    //if (color === 'rgb(255,255,255)') {
+                        elements[i].style.color = 'rgb(0, 0, 0)';
+                    //} 
+                }toggleButtonStates();
+        }
+
+        function toggleButtonStates() {
+            var darkButton = document.getElementById("dark-button");
+            var lightButton = document.getElementById("light-button");
+            var body = document.getElementsByTagName("body")[0];
+  
+            if (body.classList.contains("dark-mode")) {
+                darkButton.disabled = true;
+                lightButton.disabled = false;
+            } else {
+                darkButton.disabled = false;
+                lightButton.disabled = true;
+            }
+        }
     </script>
 
 
@@ -238,13 +337,12 @@
                 <p>測試文字6</p>
             </div>
         </div>
-    </div>
-    <hr>
+    </div><hr id="BoxLine">
 
 <!-- ************************************************************************************ -->
 
     <!--? p-5 = 容器內部往邊上間距為5單位 / my-5 = 容器外部上下的邊距單位 / mt-5 = 容器外部左右的邊距單位 -->
-    <div class="container p-5 my-5 border text-center" id="BoxLine">
+    <div class="container p-5 my-5 border text-center">
         <h1>預設框線</h1>
         <p>測試文字</p>
     </div>
@@ -257,12 +355,11 @@
     <div class="container p-5 my-5 bg-primary text-white text-center">
         <h1>藍底白字</h1>
         <p>測試文字</p>
-    </div>
-    <hr>
+    </div><hr id="FrameLayout">
 
 <!-- ************************************************************************************ -->
 
-    <div class="container p-3 my-5 mt-3 border text-center" id="FrameLayout">
+    <div class="container p-3 my-5 mt-3 border text-center">
         <h1>框線的排版練習</h1>
 
         <div class="row" style="padding: 0px 50px;">
@@ -270,7 +367,7 @@
             <div class="col bg-dark text-white text-center">測試文字</div>
             <div class="col bg-danger text-white text-center">測試文字</div>
         </div>
-    </div><hr>
+    </div><hr id="h1-h6">
 
 <!-- ************************************************************************************ -->
 
@@ -280,19 +377,19 @@
 *   所有的 <p> 都有 margin-top: 0 和 margin-bottom: 1rem
 -->
 
-    <div class="container my-5 mt-3 border" id="h1-h6">
+    <div class="container my-5 mt-3 border">
         <h1 class="text-center" style="font-size: 50px;">h1到h6的展示</h1>
-        <h1 class="text-dark">h1 Bootstrap</h1>
+        <h1 style="color: #000;">h1 Bootstrap</h1>
         <h2>h2 Bootstrap</h2>
         <h3>h3 Bootstrap</h3>
         <h4>h4 Bootstrap</h4>
         <h5>h5 Bootstrap</h5>
         <h6>h6 Bootstrap</h6>
-    </div><hr>
+    </div><hr id="FontSize">
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border" id="FontSize">
+    <div class="container my-5 mt-3 border">
         <h1 class="text-center">Display更大的字體的練習</h1>
         <p class="display-1">Display 1</p>
         <p class="display-2">Display 2</p>
@@ -300,41 +397,41 @@
         <p class="display-4">Display 4</p>
         <p class="display-5">Display 5</p>
         <p class="display-6">Display 6</p>
-    </div><hr>
+    </div><hr id="SmallFont">
 
     <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border" id="SmallFont">
+    <div class="container my-5 mt-3 border">
         <h1 class="text-center">small更小的字體</h1>
         <p class="text-center">測試<small>文字</small></p>
-    </div><hr>
+    </div><hr id="BL">
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border" id="BL">
+    <div class="container my-5 mt-3 border">
         <h1 class="text-center">abbr底部虛線邊框</h1>
         <p class="text-center">測<abbr title="test">試文</abbr>字</p>
-    </div><hr>
+    </div><hr id="Quotations">
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border text-center" id="Quotations">
+    <div class="container my-5 mt-3 border text-center">
         <h1 class="text-center">footer引文</h1>
         <p>這是一篇文章</p>
         <footer class="blockquote-footer">這是文章來源</footer>
-    </div><hr>
+    </div><hr id="SpecialStyles">
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border text-center" id="SpecialStyles">
+    <div class="container my-5 mt-3 border text-center">
         <h1 class="text-center">特別用途標籤</h1>
         <p>這是一個<code>code</code></p>
         <p><kbd>win+s</kbd></p>
-    </div><hr>
+    </div><hr id="Textcolor">
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border text-center" id="Textcolor">
+    <div class="container my-5 mt-3 border text-center">
         <h1 class="text-center">文字顏色</h1>
         <p class="text-muted">灰色顏色</p>
         <p class="text-primary">藍色文字</p>
@@ -343,11 +440,11 @@
         <p class="text-warning">黃色文字</p>
         <p class="text-danger">紅色文字</p>
         <p class="text-white-50 bg-dark">白色50透明度</p>
-    </div><hr>
+    </div><hr id="Bgc">
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border" id="Bgc">
+    <div class="container my-5 mt-3 border">
         <h1 class="text-center">背景顏色</h1>
         <div class="bg-primary p-3 my-2"></div>
         <div class="bg-success p-3 my-2"></div>
@@ -356,11 +453,16 @@
         <div class="bg-danger p-3 my-2"></div>
         <div class="bg-secondary p-3 my-2"></div>
         <div class="bg-dark p-3 my-2"></div>
-    </div><hr>
+
+        <div class="p-3 my-2 bg-primary-subtle"></div>
+        <div class="p-3 my-2 bg-danger-subtle"></div>
+        <div class="p-3 my-2 bg-warning-subtle"></div>
+        <div class="p-3 my-2 bg-info-subtle"></div>
+    </div><hr id="Tbg">
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border text-center" id="Tbg">
+    <div class="container my-5 mt-3 border text-center">
         <h1>文字與背景顏色</h1>
         <div class="text-bg-primary p-3 my-2">文字顏色自動調整與背景顏色</div>
         <div class="text-bg-success p-3 my-2">文字顏色自動調整與背景顏色</div>
@@ -369,11 +471,11 @@
         <div class="text-bg-danger p-3 my-2">文字顏色自動調整與背景顏色</div>
         <div class="text-bg-secondary p-3 my-2">文字顏色自動調整與背景顏色</div>
         <div class="text-bg-dark p-3 my-2">文字顏色自動調整與背景顏色</div>
-    </div><hr>
+    </div><hr id="BF">
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border" id="BF">
+    <div class="container my-5 mt-3 border">
         <h1 class="text-center">基本表格</h1>
         <!--? (table/初始,只有底線)(table-striped/加上條紋)(table-bordered/增加所有的邊框)(table-hover/滑鼠旋停變色)(table-borderless/無邊框) -->
         <table class="table table-dark table-striped table-bordered table-hover">
@@ -406,11 +508,11 @@
                 </tr>
             </tbody>
         </table>
-    </div><hr>
+    </div><hr id="TableColor">
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border" id="TableColor">
+    <div class="container my-5 mt-3 border">
         <h1 class="text-center">進階表格顏色</h1>
         <table class="table table-bordered">
             <tr class="table-secondary">
@@ -451,11 +553,11 @@
                 </tr>
             </tbody>
         </table>
-    </div><hr>
+    </div><hr id="WgL">
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border" id="WgL">
+    <div class="container my-5 mt-3 border">
         <h1 class="text-center">警示鏈接</h1>
 
         <div class="alert alert-success text-center">
@@ -477,57 +579,83 @@
         <div class="alert alert-primary text-center">
             <strong>水藍的</strong> 文字 <a href="" class="alert-link">超連結</a>
         </div>
-    </div><hr>
+    </div><hr id="Dwl">
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border" id="Dwl">
+    <div class="container my-5 mt-3 border">
         <h1 class="text-center">可關閉警示窗格</h1>
 
         <div class="alert alert-success text-center alert-dismissible fade show">
-          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-          <strong>Success</strong> 這是一個可被關閉的警示窗格
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <strong>Success</strong> 這是一個可被關閉的警示窗格
         </div>
 
         <div class="alert alert-info text-center alert-dismissible fade show">
-          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-          <strong>Info</strong> 這是一個可被關閉的警示窗格
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <strong>Info</strong> 這是一個可被關閉的警示窗格
         </div>
 
         <div class="alert alert-warning text-center alert-dismissible fade show">
-          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-          <strong>Warning</strong> 這是一個可被關閉的警示窗格
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <strong>Warning</strong> 這是一個可被關閉的警示窗格
         </div>
 
         <div class="alert alert-danger text-center alert-dismissible fade show">
-          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-          <strong>Danger</strong> 這是一個可被關閉的警示窗格
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <strong>Danger</strong> 這是一個可被關閉的警示窗格
         </div>
 
         <div class="alert alert-primary text-center alert-dismissible fade show">
-          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-          <strong>Primary</strong> 這是一個可被關閉的警示窗格
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <strong>Primary</strong> 這是一個可被關閉的警示窗格
         </div>
 
         <div class="alert alert-secondary text-center alert-dismissible fade show">
-          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-          <strong>Secondary</strong> 這是一個可被關閉的警示窗格
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <strong>Secondary</strong> 這是一個可被關閉的警示窗格
         </div>
 
         <div class="alert alert-dark text-center alert-dismissible fade show">
-          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-          <strong>Dark</strong> 這是一個可被關閉的警示窗格
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <strong>Dark</strong> 這是一個可被關閉的警示窗格
         </div>
 
         <div class="alert alert-light text-center alert-dismissible fade show">
-          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-          <strong>Light</strong> 這是一個可被關閉的警示窗格
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <strong>Light</strong> 這是一個可被關閉的警示窗格
         </div>
-      </div><hr>
+
+        <div id="liveAlertPlaceholder"></div>
+        <button type="button" class="btn btn-primary text-center" id="liveAlertBtn">警報呼叫</button>
+
+        <script>
+            const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+            const alert = (message, type) => {
+                const wrapper = document.createElement('div')
+
+                wrapper.innerHTML = [
+                    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+                    `   <div>${message}</div>`,
+                    '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+                    '</div>'
+                ].join('')
+                alertPlaceholder.append(wrapper)
+            }
+
+            const alertTrigger = document.getElementById('liveAlertBtn')
+            if (alertTrigger) {
+                alertTrigger.addEventListener('click', () => {
+                    alert('警報 警報 警報', 'danger')
+                })
+            }
+        </script>
+
+      </div><hr id="BB">
  
 <!-- ************************************************************************************ -->
 
-      <div class="container my-5 mt-3 border text-center" id="BB">
+      <div class="container my-5 mt-3 border text-center">
             <h1>基本按鈕</h1>
 
             <table class="table table-bordered">
@@ -551,11 +679,11 @@
                     <td><button type="button" class="btn btn-light">Light</button></button></td>
                 </tr>
             </table>
-      </div><hr>
+      </div><hr id="Bbs">
 
 <!-- ************************************************************************************ -->
 
-<div class="container my-5 mt-3 border justify-content-center" id="Bbs">
+<div class="container my-5 mt-3 border justify-content-center">
     <h1 class="text-center">大中小按鈕</h1>
 
     <table class="table table-bordered">
@@ -567,11 +695,11 @@
             <td><button type="button" class="btn btn-warning btn-sm">Small</button></td>
         </tr>
     </table>
-</div><hr>
+</div><hr id="Eb">
 
 <!-- ************************************************************************************ -->
 
-<div class="container my-5 mt-3 border text-center" id="Eb">
+<div class="container my-5 mt-3 border text-center">
     <h1>懸停效果按鈕</h1>
 
     <table class="table table-bordered">
@@ -591,11 +719,11 @@
             <td><button type="button" class="btn btn-outline-light text-dark">Light</button></td>
         </tr>
     </table>
-</div><hr>
+</div><hr id="SEB">
 
 <!-- ************************************************************************************ -->
 
-<div class="container my-5 mt-3 border" id="SEB">
+<div class="container my-5 mt-3 border">
     <h1 class="text-center">特別效果按鈕</h1>
 
     <table class="table table-bordered">
@@ -613,11 +741,11 @@
             <td><button class="btn btn-primary" disabled><span class="spinner-grow spinner-grow-sm"></span>Loading..</button></td>
         </tr>
     </table>
-</div><hr>
+</div><hr id="BG">
 
 <!-- ************************************************************************************ -->
 
-<div class="container my-5 mt-3 border" id="BG">
+<div class="container my-5 mt-3 border">
     <h1 class="text-center">按鈕群組</h1>
 
     <table class="table table-bordered">
@@ -647,19 +775,19 @@
 
                 <div class="btn-group">
                     <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Sony</button>
-                    <ul class="dropdown-menu">
+                    <ol class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Tablet</a></li>
                         <li><a class="dropdown-item" href="#">Smartphone</a></li>
-                    </ul>
+                    </ol>
                 </div>
             </td>
         </tr>
     </table>
-</div><hr>
+</div><hr id="Medallion">
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border text-center" id="Medallion">
+    <div class="container my-5 mt-3 border text-center">
         <h1 class="text-center">勳章樣式</h1>
         <span class="badge bg-primary">Primary</span>
         <span class="badge bg-secondary">Secondary</span>
@@ -685,11 +813,12 @@
             <button type="button" class="btn btn-primary">Messages <span class="badge bg-danger">8</span></button>
             <button type="button" class="btn btn-danger">Notifications <span class="badge bg-dark">7</span></button>
         </p>
-    </div><hr>
+
+    </div><hr id="Pb">
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border" id="Pb">
+    <div class="container my-5 mt-3 border">
         <h1 class="text-center">進度條</h1>
 
         <div class="progress" style="height:20px">
@@ -796,12 +925,11 @@
 
             <dev class="progress-bar bg-success" style="width: 40%;">剩餘空間40%</dev>
         </div>
-
-    </div><hr>
+    </div><hr id="LoadingStyle">
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-1 mt-2 border" id="LoadingStyle">
+    <div class="container my-1 mt-2 border">
         <h1 class="text-center">彩色載入Spinners</h1>
       
         <div class="justify-content-center align-items-center d-flex">
@@ -823,14 +951,14 @@
             <div class="spinner-grow text-danger"></div>
             <div class="spinner-grow text-dark"></div>
         </div>
-    </div><hr>
+    </div><hr id="PL">
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border" id="PL">
+    <div class="container my-5 mt-3 border">
         <h1 class="text-center">分頁連結列表</h1>
 
-        <ul class="pagination justify-content-center">
+        <ol class="pagination justify-content-center">
             <li class="page-item"><a class="page-link" href="#">Previous</a></li>
             <li class="page-item"><a class="page-link" href="#">1</a></li>
             <li class="page-item"><a class="page-link" href="#">2</a></li>
@@ -841,20 +969,20 @@
             <li class="page-item"><a class="page-link pagination-sm" href="#">Small</a></li>
             <li class="page-item"><a class="page-link pagination" href="#">Default</a></li>
             <li class="page-item"><a class="page-link pagination-lg" href="#">Large</a></li>
-        </ul>
-    </div><hr>
+        </ol>
+    </div><hr id="BLG">
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border" id="BLG">
+    <div class="container my-5 mt-3 border">
         <h1 class="text-center">基本列表組</h1>
 
-        <ul class="list-group text-center">
+        <ol class="list-group text-center">
             <li class="list-group-item active">被觸發的樣式</li>
             <li class="list-group-item">基本的樣式</li>
             <li class="list-group-item list-group-item-action">懸停效果的樣式</li>
             <li class="list-group-item disabled">被鎖定的樣式</li>
-        </ul><br>
+        </ol><br>
 
         <br> <!-- --------------------我是分隔線------------------------- -->
 
@@ -870,12 +998,12 @@
 
         <h1 class="text-center">水平列表組</h1>
 
-        <ul class="list-group list-group-horizontal justify-content-center">
+        <ol class="list-group list-group-horizontal justify-content-center">
             <li class="list-group-item">First item</li>
             <li class="list-group-item">Second item</li>
             <li class="list-group-item">Third item</li>
             <li class="list-group-item">Fourth item</li>
-        </ul><br>
+        </ol><br>
 
         <br> <!-- --------------------我是分隔線------------------------- -->
 
@@ -895,7 +1023,7 @@
 
         <h1 class="text-center">帶有勳章的列表組</h1>
 
-        <ul class="list-group align-items-center p-4">
+        <ol class="list-group align-items-center p-4">
             <li class="list-group-item d-flex justify-content-between align-items-center">Inbox
                 &nbsp;<span class="badge bg-primary rounded-pill">30</span>
             </li>
@@ -907,12 +1035,12 @@
             <li class="list-group-item d-flex justify-content-between align-items-center">Junk
                 &nbsp;<span class="badge bg-primary rounded-pill">99</span>
             </li>
-          </ul>
-    </div><hr>
+          </ol>
+    </div><hr id="card">
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border text-center" id="card">
+    <div class="container my-5 mt-3 border text-center">
         <h1>Card卡片樣式</h1>
 
         <div class="d-flex justify-content-center text-white">
@@ -936,11 +1064,11 @@
             </div>
 
         </div>
-    </div><hr>
+    </div><hr id="Pdm">
 
 <!-- ************************************************************************************ -->
 
-    <div class="container p-5 my-5 mt-3 border text-center" style="height:600px" id="Pdm">
+    <div class="container p-5 my-5 mt-3 border text-center" style="height:600px">
         <h1>下拉式表單</h1>
 
         <button type="button" class="btn btn-primary">水平按鈕1</button>
@@ -948,7 +1076,7 @@
         <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">你拉阿 按鈕</button>
 
         <div class="btn-group">
-            <ul class="dropdown-menu">
+            <ol class="dropdown-menu">
                 <li><h5 class="dropdown-header">標題 1</h5></li>
                 <li><a class="dropdown-item" href="#">內容 1</a></li>
                 <li><a class="dropdown-item" href="#">內容 2</a></li>
@@ -959,7 +1087,7 @@
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item active" href="#">被選擇的</a></li>
                 <li><a class="dropdown-item disabled" href="#">想要點我嗎</a></li>
-            </ul>
+            </ol>
         </div><br>
 
         <br> <!-- --------------------我是分隔線------------------------- -->
@@ -972,21 +1100,21 @@
 
         <div class="btn-group">
             <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Sony</button>
-                <ul class="dropdown-menu">
+                <ol class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">Tablet</a></li>
                     <li><a class="dropdown-item" href="#">Smartphone</a></li>
-                </ul>
+                </ol>
             </div>
         </div>
-    </div><hr>
+    </div><hr id="Foldable">
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border text-center" style="height:500px" id="Foldable">
+    <div class="container my-5 mt-3 border text-center" style="height:500px">
         <h1>基本可折疊</h1>
 
-        <a href="#demo" class="btn btn-primary" data-bs-toggle="collapse">展開文章</a>
-        <div id="demo" class="collapse">
+        <a href="#ExpandTheArticle" class="btn btn-primary" data-bs-toggle="collapse">展開文章</a>
+        <div id="ExpandTheArticle" class="collapse">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit,
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -1037,11 +1165,11 @@
                 </div>
             </div>
         </div>
-    </div><hr>
+    </div><hr id="GuidedMenu">
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 border text-center" id="GuidedMenu">
+    <div class="container my-5 border text-center">
 
         <nav class="navbar navbar-expand bg-dark navbar-dark" style="height: 70px;">
             <div class="container-fluid">
@@ -1055,27 +1183,27 @@
         </nav>
 
         <iframe
-            src="./AddBootstrap_0.htm" class="container"
+            src="./OtherPG/AddBootstrap_0.htm" class="container"
             height="450" frameborder="0" name="null">
         </iframe>
-    </div><hr>
+    </div><hr id="Slideshow">
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border text-center" id="Slideshow">
+    <div class="container my-5 mt-3 border text-center">
         <h1>圖片幻燈片</h1>
 
-        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+        <div id="slide_show" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#slide_show" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#slide_show" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#slide_show" data-bs-slide-to="2"></button>
             </div>
 
             <div class="carousel-inner">
 
                 <div class="carousel-item active">
-                    <img src="https://www.w3schools.com/bootstrap5/la.jpg" alt="連線失敗" class="d-block" style="width: 100%;">
+                    <img src="./Picture/la.jpg" alt="連線失敗" class="d-block" style="width: 100%;">
                     <div class="carousel-caption">
                         <h3>文字標題1</h3>
                         <p>這是一串文字喔</p>
@@ -1083,7 +1211,7 @@
                 </div>
 
                 <div class="carousel-item">
-                    <img src="https://www.w3schools.com/bootstrap5/chicago.jpg" alt="連線失敗" class="d-block" style="width: 100%;">
+                    <img src="./Picture/chicago.jpg" alt="連線失敗" class="d-block" style="width: 100%;">
                     <div class="carousel-caption">
                         <h3>文字標題2</h3>
                         <p>這是一串文字喔</p>
@@ -1091,23 +1219,23 @@
                 </div>
 
                 <div class="carousel-item">
-                    <img src="https://www.w3schools.com/bootstrap5/ny.jpg" alt="連線失敗" class="d-block" style="width: 100%;">
+                    <img src="./Picture/ny.jpg" alt="連線失敗" class="d-block" style="width: 100%;">
                     <div class="carousel-caption">
                         <h3>文字標題3</h3>
                         <p>這是一串文字喔</p>
                     </div>
                 </div>
 
-                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#slide_show" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon"></span>
                 </button>
 
-                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#slide_show" data-bs-slide="next">
                     <span class="carousel-control-next-icon"></span>
                 </button>
             </div>
         </div>
-    </div><hr>
+    </div><hr id="Modal">
 
 <!--
 *   .carousel                   創建一個旋轉木馬
@@ -1123,7 +1251,7 @@
 
 <!-- ************************************************************************************ -->
 
-    <div class="container p-5 my-5 mt-3 border text-center" id="Modal">
+    <div class="container p-5 my-5 mt-3 border text-center">
         <h1>模態Modal</h1>
 
         <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#mymodal">基本模態</button>
@@ -1159,7 +1287,7 @@
 
             </div>
         </div>
-    </div><hr>
+    </div><hr id="Tooltip">
 
 <!--
 *   .modal-fullscreen-sm-down	576px 以下全屏	
@@ -1171,7 +1299,7 @@
 
 <!-- ************************************************************************************ -->
 
-    <div class="container p-3 mt-3 my-5 border text-center" id="Tooltip">
+    <div class="container p-3 mt-3 my-5 border text-center">
         <h1>提示文字Tooltip</h1>
 
         <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="這是往上顯示">Top</a>
@@ -1185,7 +1313,7 @@
               return new bootstrap.Tooltip(tooltipTriggerEl)
             })
         </script>
-    </div><hr>
+    </div><hr id="Fpw">
 
 <!-- ************************************************************************************ -->
 
@@ -1241,7 +1369,7 @@
                 toastList.forEach(toast => toast.show()) 
             }
         </script>
-    </div><hr>
+    </div><hr id="Ssp">
 
  <!-- ************************************************************************************ -->
 
@@ -1249,11 +1377,11 @@
         <h1>Scrollspy</h1>
 
         <iframe
-            src="./AddBootstrap_1.htm" class="container-fluid w-100"
+            src="./OtherPG/AddBootstrap_1.htm" class="container-fluid w-100"
             height="450" frameborder="0" name="null">
         </iframe>
 
-    </div><hr>
+    </div><hr id="Sbar">
 
  <!-- ************************************************************************************ -->
 
@@ -1327,7 +1455,7 @@
         <button class="btn btn-info" type="button" data-bs-toggle="offcanvas" data-bs-target="#Sidebar_Right">
             開啟右側邊欄
         </button>
-    </div><hr>
+    </div><hr id="tbb">
 
  <!-- ************************************************************************************ -->
 
@@ -1398,45 +1526,457 @@
         <span class="bg-warning float-start w-75">Width 75%</span>
         <span class="bg-warning float-start w-100">Width 100%</span>
         <span class="bg-warning float-start w-auto">Width auto</span>
-    </div><hr>
+    </div><hr id="effS">
 
  <!-- ************************************************************************************ -->
 
     <div class="container p-auto border text-center">
-        <h1>效果陰影</h1>
+        <h1>效果陰影(只有白色主題看得到)</h1>
 
         <div class="shadow-none p-4 mb-4 bg-white">無影子</div>
         <div class="shadow-sm p-4 mb-4 bg-white">小影子</div>
         <div class="shadow p-4 mb-4 bg-white">預設影子</div>
         <div class="shadow-lg p-4 mb-4 bg-white">大影子</div>
-    </div><hr>
+    </div><hr id="scra">
 
  <!-- ************************************************************************************ -->
 
     <div class="container p-auto border text-center">
-        <h1>縮放比例</h1>
+        <h1>縮放比例(會造成卡頓將其註解)</h1>
   
         <h2>縮放比例 1:1</h2>
         <div class="ratio ratio-1x1">
-            <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+            <!-- <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe> -->
         </div><br>
   
         <h2>縮放比例 4:3</h2>
         <div class="ratio ratio-4x3">
-            <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+            <!-- <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe> -->
         </div><br> 
   
         <h2>縮放比例 16:9</h2>
         <div class="ratio ratio-16x9">
-            <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+            <!-- <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe> -->
         </div><br>
     
         <h2>縮放比例 21:9</h2>
         <div class="ratio ratio-21x9">
-            <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+            <!-- <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe> -->
         </div>
-    </div>
+    </div><hr id="Flex">
 
+ <!-- ************************************************************************************ -->
+
+    <div class="container p-auto border">
+        <h1 class="text-center">Flex演示</h1>
+
+        <div class="d-flex p-3 text-white bg-secondary">
+            <div class="p-2 bg-info">Flex1</div>
+            <div class="p-2 bg-warning">Flex2</div>
+            <div class="p-2 bg-primary">Flex3</div>
+        </div><br>
+
+        <div class="d-inline-flex p-3 text-white bg-secondary">
+            <div class="p-2 bg-info">Flex1</div>
+            <div class="p-2 bg-warning">Flex2</div>
+            <div class="p-2 bg-primary">Flex3</div>
+        </div><br><br>
+
+        <div class="d-flex flex-row p-3 text-white bg-secondary">
+            <div class="p-2 bg-info">Flex1</div>
+            <div class="p-2 bg-warning">Flex2</div>
+            <div class="p-2 bg-primary">Flex3</div>
+        </div><br>
+
+        <div class="d-flex flex-row-reverse p-3 text-white bg-secondary">
+            <div class="p-2 bg-info">Flex1</div>
+            <div class="p-2 bg-warning">Flex2</div>
+            <div class="p-2 bg-primary">Flex3</div>
+        </div><br>
+
+        <div class="d-flex flex-column p-3 text-white bg-secondary">
+            <div class="p-2 bg-info">Flex1</div>
+            <div class="p-2 bg-warning">Flex2</div>
+            <div class="p-2 bg-primary">Flex3</div>
+        </div><br>
+
+        <div class="d-flex flex-column-reverse p-3 text-white bg-secondary">
+            <div class="p-2 bg-info">Flex1</div>
+            <div class="p-2 bg-warning">Flex2</div>
+            <div class="p-2 bg-primary">Flex3</div>
+        </div><br>
+
+        <div class="d-flex justify-content-start bg-secondary mb-3">
+            <div class="p-2 bg-info">Flex item 1</div>
+            <div class="p-2 bg-warning">Flex item 2</div>
+            <div class="p-2 bg-primary">Flex item 3</div>
+        </div><br>
+
+        <div class="d-flex justify-content-end bg-secondary mb-3">
+            <div class="p-2 bg-info">Flex item 1</div>
+            <div class="p-2 bg-warning">Flex item 2</div>
+            <div class="p-2 bg-primary">Flex item 3</div>
+        </div><br>
+
+        <div class="d-flex justify-content-center bg-secondary mb-3">
+            <div class="p-2 bg-info">Flex item 1</div>
+            <div class="p-2 bg-warning">Flex item 2</div>
+            <div class="p-2 bg-primary">Flex item 3</div>
+        </div><br>
+
+        <div class="d-flex justify-content-between bg-secondary mb-3">
+            <div class="p-2 bg-info">Flex item 1</div>
+            <div class="p-2 bg-warning">Flex item 2</div>
+            <div class="p-2 bg-primary">Flex item 3</div>
+        </div><br>
+
+        <div class="d-flex justify-content-around bg-secondary mb-3">
+            <div class="p-2 bg-info">Flex item 1</div>
+            <div class="p-2 bg-warning">Flex item 2</div>
+            <div class="p-2 bg-primary">Flex item 3</div>
+        </div><br>
+
+        <div class="d-flex mb-3">
+            <div class="p-2 flex-fill bg-info">Flex item 1</div>
+            <div class="p-2 flex-fill bg-warning">Flex item 2</div>
+            <div class="p-2 flex-fill bg-primary">Flex item 3</div>
+        </div><br>
+
+        <div class="d-flex mb-3">
+            <div class="p-2 bg-info">Flex item 1</div>
+            <div class="p-2 bg-warning">Flex item 2</div>
+            <div class="p-2 flex-grow-1 bg-primary">Flex item 3</div>
+        </div><br>
+
+        <div class="d-flex mb-3 bg-secondary">
+            <div class="p-2 bg-info">Flex item 1</div>
+            <div class="p-2 bg-warning">Flex item 2</div>
+            <div class="p-2 bg-primary">Flex item 3</div>
+        </div><br>
+
+        <div class="d-flex mb-3 bg-secondary">
+            <div class="p-2 order-3 bg-info">Flex item 1</div>
+            <div class="p-2 order-2 bg-warning">Flex item 2</div>
+            <div class="p-2 order-1 bg-primary">Flex item 3</div>
+        </div><br>
+
+        <div class="d-flex mb-3 bg-secondary">
+            <div class="p-2 ms-auto bg-info">Flex item 1</div>
+            <div class="p-2 bg-warning">Flex item 2</div>
+            <div class="p-2 bg-primary">Flex item 3</div>
+        </div><br>
+
+        <div class="d-flex mb-3 bg-secondary">
+            <div class="p-2  bg-info">Flex item 1</div>
+            <div class="p-2 bg-warning">Flex item 2</div>
+            <div class="p-2 me-auto bg-primary">Flex item 3</div>
+        </div><br>
+
+        <code>.flex-wrap:</code>
+        <div class="d-flex flex-wrap bg-light">
+            <div class="p-2 border">Flex item 1</div>
+            <div class="p-2 border">Flex item 2</div>
+            <div class="p-2 border">Flex item 3</div>
+            <div class="p-2 border">Flex item 4</div>
+            <div class="p-2 border">Flex item 5</div>
+            <div class="p-2 border">Flex item 6</div>
+            <div class="p-2 border">Flex item 7</div>
+            <div class="p-2 border">Flex item 8</div>
+            <div class="p-2 border">Flex item 9</div>
+            <div class="p-2 border">Flex item 10</div>
+            <div class="p-2 border">Flex item 11</div>
+            <div class="p-2 border">Flex item 12</div>
+            <div class="p-2 border">Flex item 13 </div>
+            <div class="p-2 border">Flex item 14</div>
+            <div class="p-2 border">Flex item 15</div>
+            <div class="p-2 border">Flex item 16</div>
+            <div class="p-2 border">Flex item 17</div>
+            <div class="p-2 border">Flex item 18</div>
+            <div class="p-2 border">Flex item 19</div>
+            <div class="p-2 border">Flex item 20</div>
+            <div class="p-2 border">Flex item 21</div>
+            <div class="p-2 border">Flex item 22</div>
+            <div class="p-2 border">Flex item 23</div>
+            <div class="p-2 border">Flex item 24</div>
+            <div class="p-2 border">Flex item 25</div>
+        </div><br>
+
+        <code>.flex-wrap-reverse:</code>
+        <div class="d-flex flex-wrap-reverse bg-light">
+            <div class="p-2 border">Flex item 1</div>
+            <div class="p-2 border">Flex item 2</div>
+            <div class="p-2 border">Flex item 3</div>
+            <div class="p-2 border">Flex item 4</div>
+            <div class="p-2 border">Flex item 5</div>
+            <div class="p-2 border">Flex item 6</div>
+            <div class="p-2 border">Flex item 7</div>
+            <div class="p-2 border">Flex item 8</div>
+            <div class="p-2 border">Flex item 9</div>
+            <div class="p-2 border">Flex item 10</div>
+            <div class="p-2 border">Flex item 11</div>
+            <div class="p-2 border">Flex item 12</div>
+            <div class="p-2 border">Flex item 13 </div>
+            <div class="p-2 border">Flex item 14</div>
+            <div class="p-2 border">Flex item 15</div>
+            <div class="p-2 border">Flex item 16</div>
+            <div class="p-2 border">Flex item 17</div>
+            <div class="p-2 border">Flex item 18</div>
+            <div class="p-2 border">Flex item 19</div>
+            <div class="p-2 border">Flex item 20</div>
+            <div class="p-2 border">Flex item 21</div>
+            <div class="p-2 border">Flex item 22</div>
+            <div class="p-2 border">Flex item 23</div>
+            <div class="p-2 border">Flex item 24</div>
+            <div class="p-2 border">Flex item 25</div>
+        </div><br>
+
+        <code>.flex-nowrap:</code>
+        <div class="d-flex flex-nowrap bg-light">
+            <div class="p-2 border">Flex item 1</div>
+            <div class="p-2 border">Flex item 2</div>
+            <div class="p-2 border">Flex item 3</div>
+            <div class="p-2 border">Flex item 4</div>
+            <div class="p-2 border">Flex item 5</div>
+            <div class="p-2 border">Flex item 6</div>
+            <div class="p-2 border">Flex item 7</div>
+            <div class="p-2 border">Flex item 8</div>
+            <div class="p-2 border">Flex item 9</div>
+            <div class="p-2 border">Flex item 10</div>
+            <div class="p-2 border">Flex item 11</div>
+            <div class="p-2 border">Flex item 12</div>
+            <div class="p-2 border">Flex item 13 </div>
+            <div class="p-2 border">Flex item 14</div>
+            <div class="p-2 border">Flex item 15</div>
+            <div class="p-2 border">Flex item 16</div>
+            <div class="p-2 border">Flex item 17</div>
+            <div class="p-2 border">Flex item 18</div>
+            <div class="p-2 border">Flex item 19</div>
+            <div class="p-2 border">Flex item 20</div>
+            <div class="p-2 border">Flex item 21</div>
+            <div class="p-2 border">Flex item 22</div>
+        </div><br>
+          
+        <code>.align-content-start (default):</code>
+        <div class="d-flex flex-wrap align-content-start bg-light" style="height:250px">
+            <div class="p-2 border">Flex item 1</div>
+            <div class="p-2 border">Flex item 2</div>
+            <div class="p-2 border">Flex item 3</div>
+            <div class="p-2 border">Flex item 4</div>
+            <div class="p-2 border">Flex item 5</div>
+            <div class="p-2 border">Flex item 6</div>
+            <div class="p-2 border">Flex item 7</div>
+            <div class="p-2 border">Flex item 8</div>
+            <div class="p-2 border">Flex item 9</div>
+            <div class="p-2 border">Flex item 10</div>
+            <div class="p-2 border">Flex item 11</div>
+            <div class="p-2 border">Flex item 12</div>
+            <div class="p-2 border">Flex item 13</div>
+            <div class="p-2 border">Flex item 14</div>
+            <div class="p-2 border">Flex item 15</div>
+            <div class="p-2 border">Flex item 16</div>
+            <div class="p-2 border">Flex item 17</div>
+            <div class="p-2 border">Flex item 18</div>
+            <div class="p-2 border">Flex item 19</div>
+            <div class="p-2 border">Flex item 20</div>
+            <div class="p-2 border">Flex item 21</div>
+            <div class="p-2 border">Flex item 22</div>
+            <div class="p-2 border">Flex item 23</div>
+            <div class="p-2 border">Flex item 24</div>
+            <div class="p-2 border">Flex item 25</div>
+        </div><br>
+
+        <code>.align-content-end:</code>
+        <div class="d-flex flex-wrap align-content-end bg-light" style="height:250px">
+            <div class="p-2 border">Flex item 1</div>
+            <div class="p-2 border">Flex item 2</div>
+            <div class="p-2 border">Flex item 3</div>
+            <div class="p-2 border">Flex item 4</div>
+            <div class="p-2 border">Flex item 5</div>
+            <div class="p-2 border">Flex item 6</div>
+            <div class="p-2 border">Flex item 7</div>
+            <div class="p-2 border">Flex item 8</div>
+            <div class="p-2 border">Flex item 9</div>
+            <div class="p-2 border">Flex item 10</div>
+            <div class="p-2 border">Flex item 11</div>
+            <div class="p-2 border">Flex item 12</div>
+            <div class="p-2 border">Flex item 13</div>
+            <div class="p-2 border">Flex item 14</div>
+            <div class="p-2 border">Flex item 15</div>
+            <div class="p-2 border">Flex item 16</div>
+            <div class="p-2 border">Flex item 17</div>
+            <div class="p-2 border">Flex item 18</div>
+            <div class="p-2 border">Flex item 19</div>
+            <div class="p-2 border">Flex item 20</div>
+            <div class="p-2 border">Flex item 21</div>
+            <div class="p-2 border">Flex item 22</div>
+            <div class="p-2 border">Flex item 23</div>
+            <div class="p-2 border">Flex item 24</div>
+            <div class="p-2 border">Flex item 25</div>
+        </div><br>
+
+        <code>.align-content-center:</code>
+        <div class="d-flex flex-wrap align-content-center bg-light" style="height:250px">
+            <div class="p-2 border">Flex item 1</div>
+            <div class="p-2 border">Flex item 2</div>
+            <div class="p-2 border">Flex item 3</div>
+            <div class="p-2 border">Flex item 4</div>
+            <div class="p-2 border">Flex item 5</div>
+            <div class="p-2 border">Flex item 6</div>
+            <div class="p-2 border">Flex item 7</div>
+            <div class="p-2 border">Flex item 8</div>
+            <div class="p-2 border">Flex item 9</div>
+            <div class="p-2 border">Flex item 10</div>
+            <div class="p-2 border">Flex item 11</div>
+            <div class="p-2 border">Flex item 12</div>
+            <div class="p-2 border">Flex item 13</div>
+            <div class="p-2 border">Flex item 14</div>
+            <div class="p-2 border">Flex item 15</div>
+            <div class="p-2 border">Flex item 16</div>
+            <div class="p-2 border">Flex item 17</div>
+            <div class="p-2 border">Flex item 18</div>
+            <div class="p-2 border">Flex item 19</div>
+            <div class="p-2 border">Flex item 20</div>
+            <div class="p-2 border">Flex item 21</div>
+            <div class="p-2 border">Flex item 22</div>
+            <div class="p-2 border">Flex item 23</div>
+            <div class="p-2 border">Flex item 24</div>
+            <div class="p-2 border">Flex item 25</div>
+        </div>
+
+        <code>.align-content-around:</code>
+        <div class="d-flex flex-wrap align-content-around bg-light" style="height:250px">
+            <div class="p-2 border">Flex item 1</div>
+            <div class="p-2 border">Flex item 2</div>
+            <div class="p-2 border">Flex item 3</div>
+            <div class="p-2 border">Flex item 4</div>
+            <div class="p-2 border">Flex item 5</div>
+            <div class="p-2 border">Flex item 6</div>
+            <div class="p-2 border">Flex item 7</div>
+            <div class="p-2 border">Flex item 8</div>
+            <div class="p-2 border">Flex item 9</div>
+            <div class="p-2 border">Flex item 10</div>
+            <div class="p-2 border">Flex item 11</div>
+            <div class="p-2 border">Flex item 12</div>
+            <div class="p-2 border">Flex item 13</div>
+            <div class="p-2 border">Flex item 14</div>
+            <div class="p-2 border">Flex item 15</div>
+            <div class="p-2 border">Flex item 16</div>
+            <div class="p-2 border">Flex item 17</div>
+            <div class="p-2 border">Flex item 18</div>
+            <div class="p-2 border">Flex item 19</div>
+            <div class="p-2 border">Flex item 20</div>
+            <div class="p-2 border">Flex item 21</div>
+            <div class="p-2 border">Flex item 22</div>
+            <div class="p-2 border">Flex item 23</div>
+            <div class="p-2 border">Flex item 24</div>
+            <div class="p-2 border">Flex item 25</div>
+        </div><br>
+        
+        <code>.align-content-stretch:</code>
+        <div class="d-flex flex-wrap align-content-stretch bg-light" style="height:250px">
+            <div class="p-2 border">Flex item 1</div>
+            <div class="p-2 border">Flex item 2</div>
+            <div class="p-2 border">Flex item 3</div>
+            <div class="p-2 border">Flex item 4</div>
+            <div class="p-2 border">Flex item 5</div>
+            <div class="p-2 border">Flex item 6</div>
+            <div class="p-2 border">Flex item 7</div>
+            <div class="p-2 border">Flex item 8</div>
+            <div class="p-2 border">Flex item 9</div>
+            <div class="p-2 border">Flex item 10</div>
+            <div class="p-2 border">Flex item 11</div>
+            <div class="p-2 border">Flex item 12</div>
+            <div class="p-2 border">Flex item 13</div>
+            <div class="p-2 border">Flex item 14</div>
+            <div class="p-2 border">Flex item 15</div>
+            <div class="p-2 border">Flex item 16</div>
+            <div class="p-2 border">Flex item 17</div>
+            <div class="p-2 border">Flex item 18</div>
+            <div class="p-2 border">Flex item 19</div>
+            <div class="p-2 border">Flex item 20</div>
+            <div class="p-2 border">Flex item 21</div>
+            <div class="p-2 border">Flex item 22</div>
+            <div class="p-2 border">Flex item 23</div>
+            <div class="p-2 border">Flex item 24</div>
+            <div class="p-2 border">Flex item 25</div>
+        </div><br>
+
+        <code>.align-self-start:</code>
+        <div class="d-flex bg-light" style="height:150px">
+            <div class="p-2 border">Flex item 1</div>
+            <div class="p-2 border align-self-start">Flex item 2</div>
+            <div class="p-2 border">Flex item 3</div>
+        </div><br>
+        
+        <code>.align-self-end:</code>
+        <div class="d-flex bg-light" style="height:150px">
+            <div class="p-2 border">Flex item 1</div>
+            <div class="p-2 border align-self-end">Flex item 2</div>
+            <div class="p-2 border">Flex item 3</div>
+        </div><br>
+        
+        <code>.align-self-center:</code>
+        <div class="d-flex bg-light" style="height:150px">
+            <div class="p-2 border">Flex item 1</div>
+            <div class="p-2 border align-self-center">Flex item 2</div>
+            <div class="p-2 border">Flex item 3</div>
+        </div><br>
+        
+        <code>.align-self-baseline:</code>
+        <div class="d-flex bg-light" style="height:150px">
+            <div class="p-2 border">Flex item 1</div>
+            <div class="p-2 border align-self-baseline">Flex item 2</div>
+            <div class="p-2 border">Flex item 3</div>
+        </div><br>
+        
+        <code>.align-self-stretch (default):</code>
+        <div class="d-flex bg-light" style="height:150px">
+            <div class="p-2 border">Flex item 1</div>
+            <div class="p-2 border align-self-stretch">Flex item 2</div>
+            <div class="p-2 border">Flex item 3</div>
+        </div><br>
+
+        <code>.align-items-start:</code>
+        <div class="d-flex align-items-start bg-light" style="height:150px">
+            <div class="p-2 border">Flex item 1</div>
+            <div class="p-2 border">Flex item 2</div>
+            <div class="p-2 border">Flex item 3</div>
+        </div><br>
+        
+        <code>.align-items-end:</code>
+        <div class="d-flex align-items-end bg-light" style="height:150px">
+            <div class="p-2 border">Flex item 1</div>
+            <div class="p-2 border">Flex item 2</div>
+            <div class="p-2 border">Flex item 3</div>
+        </div><br>
+        
+        <code>.align-items-center:</code>
+        <div class="d-flex align-items-center bg-light" style="height:150px">
+            <div class="p-2 border">Flex item 1</div>
+            <div class="p-2 border">Flex item 2</div>
+            <div class="p-2 border">Flex item 3</div>
+        </div><br>
+        
+        <code>.align-items-baseline:</code>
+        <div class="d-flex align-items-baseline bg-light" style="height:150px">
+            <div class="p-2 border">Flex item 1</div>
+            <div class="p-2 border">Flex item 2</div>
+            <div class="p-2 border">Flex item 3</div>
+        </div><br>
+        
+        <code>.align-items-stretch (default):</code>
+        <div class="d-flex align-items-stretch bg-light" style="height:150px">
+            <div class="p-2 border">Flex item 1</div>
+            <div class="p-2 border">Flex item 2</div>
+            <div class="p-2 border">Flex item 3</div>
+        </div><br>
+        
+        
+        
+        
+
+
+    </div>
 
 <div id="Page-end"></div>
 </body>

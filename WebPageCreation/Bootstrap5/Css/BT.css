@@ -1,0 +1,96 @@
+:root{
+    /* --instructions:	rgb(220 20 60); */
+    --instructions:	rgb(0 0 0);
+}
+
+h1 {
+    color: rgba(255, 0, 0, 0.8);
+    padding: 30px;
+}
+
+h2,h3,h4,h5,h6{
+    color: var(--instructions);
+}
+
+hr {
+    border: 3px solid rgba(125, 11, 255, 0.8);
+    margin: 60px;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-size: 30px;
+    color: var(--instructions);
+}
+
+table,
+th,
+tr,
+td {
+    border: 8px double red;
+    text-align: center;
+}
+th{
+    color: var(--instructions);
+}
+
+span {
+    margin: 5px;
+    display: inline-block;
+    width: auto;
+    height: 50px;
+    color: red;
+}
+
+.dropdown-menu {
+    text-align: center;
+}
+
+/*
+ *導覽列表的顯示隱藏
+*/
+.fixed-buttons {
+    position: fixed;
+    padding: 45px;
+    top: 60%;
+    right: 0;
+    width:1px;
+    flex-direction: column;
+    text-align: center;
+}
+
+/*
+ *主題轉換的顯示隱藏
+*/
+.Theme-color-hide{
+    position: fixed;
+    padding: 45px;
+    transition: transform 1.3s;
+    right: -30px; 
+    top: 28%; 
+    width:1px;
+}
+.Theme-color-show:hover{
+    transition: transform 0.6s;
+    transform: translateX(-30%); 
+}
+
+.dark-mode {
+    background-color: black;
+}
+.light-mode {
+    background-color: white;
+}
+
+
+
+.fixed-buttons button {
+    margin-bottom: 5px;
+}
+.tooltip img {
+    width: 180px;
+    height: auto;
+}
