@@ -1,6 +1,10 @@
-:root{
+:root {
     /* --instructions:	rgb(220 20 60); */
-    --instructions:	rgb(0 0 0);
+    --instructions: rgb(0 0 0);
+}
+
+body{
+    background-color: white;
 }
 
 h1 {
@@ -8,7 +12,8 @@ h1 {
     padding: 30px;
 }
 
-h2,h3,h4,h5,h6{
+h2,h3,h4,h5,h6
+,label {
     color: var(--instructions);
 }
 
@@ -33,7 +38,8 @@ td {
     border: 8px double red;
     text-align: center;
 }
-th{
+
+th {
     color: var(--instructions);
 }
 
@@ -43,6 +49,14 @@ span {
     width: auto;
     height: 50px;
     color: red;
+}
+
+div span {
+    margin: 6px;
+    padding: 1% 0px;
+    display: inline-block;
+    width: 100px;
+    height: 50px;
 }
 
 .dropdown-menu {
@@ -57,30 +71,35 @@ span {
     padding: 45px;
     top: 60%;
     right: 0;
-    width:1px;
+    width: 1px;
     flex-direction: column;
     text-align: center;
+}
+.fixed-buttons.show-animation {
+    animation: fadeInRight 1.5s ease;
 }
 
 /*
  *主題轉換的顯示隱藏
 */
-.Theme-color-hide{
+.Theme-color-hide {
     position: fixed;
     padding: 45px;
     transition: transform 1.3s;
-    right: -30px; 
-    top: 28%; 
-    width:1px;
+    right: -30px;
+    top: 28%;
+    width: 1px;
 }
-.Theme-color-show:hover{
+
+.Theme-color-show:hover {
     transition: transform 0.6s;
-    transform: translateX(-30%); 
+    transform: translateX(-30%);
 }
 
 .dark-mode {
     background-color: black;
 }
+
 .light-mode {
     background-color: white;
 }
@@ -90,6 +109,7 @@ span {
 .fixed-buttons button {
     margin-bottom: 5px;
 }
+
 .tooltip img {
     width: 180px;
     height: auto;

@@ -4,15 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="widdth=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./Css/bootstrap.min-5.3.0.css">
-    <link rel="stylesheet" href="./Css/BT.css">
     <link rel="icon" href="https://cdn.discordapp.com/attachments/794504493035159602/1074566158121967636/9041083_bootstrap_fill_icon">
-    <script src="./Js/bootstrap.bundle.min-5.3.0.js"></script>
 
-    <title>Bootstrap</title>
+    <link rel="stylesheet" href="./Css/bootstrap.min-5.3.0.css">
+    <link rel="stylesheet" href="./Css/animate.min.css">
+    <link rel="stylesheet" href="./Css/BT.css">
+    <script src="./Js/bootstrap.bundle.min-5.3.0.js"></script>
+    <script src="./Js/wow.min.js"></script>
+    <script>new WOW().init();</script>
 </head> 
 
 <body>
+
+    <!--? https://getbootstrap.com/docs/5.3 -->
 
     <!--? 主要容器框架的選擇 -->
     <!--* ("container" 固定式寬度,固定聚集在網頁中間)  -->
@@ -52,6 +56,7 @@
 *   e = margin-right 或 padding-right
 *   x = padding-left 和 padding-right 或 margin-left 和 margin-right
 *   y = padding-top 和 padding-bottom 或 margin-top 和 margin-bottom
+*   g = 物件的間距 1~5
 *   blank = 在元素的所有 4 個邊上設置一個 margin 或 padding
 *   ------------------------------------
 *   0 = 將 margin 或 padding 設置為 0
@@ -153,119 +158,139 @@
 
     <!--? Bootstrap中的 col-sm-1 ~ col-sm-12 由小到最大 在小螢幕跨越1列~12列 -->
     <!--? 通常 container 只有左右 可利用.pt-5 增加額外的填充 讓排版看起來更好 -->
-    <div class="cotainer-fluid p-3 bg-primary text-white text-center" id="Home">
+    <div class="cotainer-fluid p-3 bg-primary text-white text-center wow fadeIn" data-wow-delay="0.2s" id="Home">
         <h1>這是一個使用Bootstrap 5.3.0的網頁</h1>
-        <p>調整這個響應式頁面的大小，看看效果如何!</p>
+        <p>此網頁使用27吋螢幕製作,無特別測試其他尺寸,可能展示有所不同</p>
+        <p>因為這是一個筆記網頁,此頁含有大量代碼,瀏覽器加載延遲會造成跳轉失效,多按幾次就好</p>
     </div>
+
+    <!--! 正式內容的開始請按 Ctrl + G 輸入 333 跳至該行 -->
 
 <!-- ************************************************************************************ -->
 
-
-    <nav class="navbar navbar-expand-sm navbar-dark sticky-top bg-warning" id="nav">
-        <div class="container-fluid">
-            <div class="dropdown">
-                <button type="button" class="btn btn-lg btn-outline-success" data-bs-toggle="tooltip" data-bs-placement="bottom" title="<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Go-home.svg/2048px-Go-home.svg.png' alt='My Image'>" data-bs-html="true">
-                    <a href="#Home" class="text-success">首頁</a>
+    <nav class="navbar navbar-expand-sm bg-primary-subtle sticky-top wow fadeIn" data-wow-delay="0.7s" id="nav"> <!-- fixed-top 為直接將導覽列定再最上面 -->
+        <ul class="nav nav-pills mx-auto">
+            <div class ="dropdown" aria-expanded="false">
+                <button type="button" class="btn btn-lg btn-outline-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="首頁">
+                    <a href="#Home" class="text-primary">首頁</a>
                 </button>
-                  
-                <button type="button" class="btn btn-lg btn-outline-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">排版樣式</button>
-                <ol class="dropdown-menu" style="transform: translateX(40%);" aria-labelledby="dropdownMenuButtonLight">
-                    <li><a href="#BoxLine" class="text-success dropdown-item">框線文字</a></li>
-                    <li><a href="#FrameLayout" class="text-success dropdown-item">框線排版</a></li>
-                    <li><a href="#Bgc" class="text-success dropdown-item">背景顏色</a></li>
-                    <li><a href="#Ssp" class="text-success dropdown-item">Scrollspy</a></li>
-                    <li><a href="#Flex" class="text-success dropdown-item">Flex演示</a></li>
-                </ol>
 
-                <button type="button" class="btn btn-lg btn-outline-success dropdown-toggle" data-bs-toggle="dropdown">文字大小</button>
-                <ol class="dropdown-menu" style="transform: translateX(125%);">
-                    <li><a href="#h1-h6" class="text-success dropdown-item">大標樣式</a></li>
-                    <li><a href="#FontSize" class="text-success dropdown-item">更大的文字</a></li>
-                    <li><a href="#SmallFont" class="text-success dropdown-item">較小的文字</a></li>
-                </ol>
+                <button type="button" class="btn btn-lg btn-outline-info text-primary dropdown-toggle" data-bs-toggle="dropdown">排版樣式</button>
+                <div class="dropdown-menu" style="transform: translateX(40%);">
+                    <a href="#BoxLine" class="text-success dropdown-item">框線文字</a>
+                    <a href="#FrameLayout" class="text-success dropdown-item">框線排版</a>
+                    <a href="#Bgc" class="text-success dropdown-item">背景顏色</a>
+                    <a href="#Ssp" class="text-success dropdown-item">Scrollspy</a>
+                    <a href="#Flex" class="text-success dropdown-item">Flex演示</a>
+                </div>
 
-                <button type="button" class="btn btn-lg btn-outline-success dropdown-toggle" data-bs-toggle="dropdown">文字樣式</button>
-                <ol class="dropdown-menu" style="transform: translateX(210%);">
-                    <li><a href="#Quotations" class="text-success dropdown-item">文章引用</a></li>
-                    <li><a href="#BL" class="text-success dropdown-item">底部虛線</a></li>
-                    <li><a href="#SpecialStyles" class="text-success dropdown-item">特別樣式</a></li>
-                    <li><a href="#Textcolor" class="text-success dropdown-item">文字顏色</a></li>
-                    <li><a href="#Tbg" class="text-success dropdown-item">文字背景</a></li>
-                </ol>
+                <button type="button" class="btn btn-lg btn-outline-info text-primary dropdown-toggle" data-bs-toggle="dropdown">文字大小</button>
+                <div class="dropdown-menu" style="transform: translateX(125%);">
+                    <a href="#h1-h6" class="text-success dropdown-item">大標樣式</a>
+                    <a href="#FontSize" class="text-success dropdown-item">更大的文字</a>
+                    <a href="#SmallFont" class="text-success dropdown-item">較小的文字</a>
+                </div>
 
-                <button type="button" class="btn btn-lg btn-outline-success dropdown-toggle" data-bs-toggle="dropdown">表格樣式</button>
-                <ol class="dropdown-menu" style="transform: translateX(293%);">
-                    <li><a href="#BF" class="text-success dropdown-item">基本表格</a></li>
-                    <li><a href="#TableColor" class="text-success dropdown-item">表格顏色</a></li>
-                    <li><a href="#tbb" class="text-success dropdown-item">表格方框</a></li>
-                </ol>
+                <button type="button" class="btn btn-lg btn-outline-info text-primary dropdown-toggle" data-bs-toggle="dropdown">文字樣式</button>
+                <div class="dropdown-menu" style="transform: translateX(205%);">
+                    <a href="#Quotations" class="text-success dropdown-item">文章引用</a>
+                    <a href="#BL" class="text-success dropdown-item">底部虛線</a>
+                    <a href="#SpecialStyles" class="text-success dropdown-item">特別樣式</a>
+                    <a href="#Textcolor" class="text-success dropdown-item">文字顏色</a>
+                    <a href="#Tbg" class="text-success dropdown-item">文字背景</a>
+                </div>
 
-                <button type="button" class="btn btn-lg btn-outline-success dropdown-toggle" data-bs-toggle="dropdown">警示條樣式</button>
-                <ol class="dropdown-menu" style="transform: translateX(385%);">
-                    <li><a href="#WgL" class="text-success dropdown-item">警示連結</a></li>
-                    <li><a href="#Dwl" class="text-success dropdown-item">可關警示</a></li>
-                </ol>
+                <button type="button" class="btn btn-lg btn-outline-info text-primary dropdown-toggle" data-bs-toggle="dropdown">表格樣式</button>
+                <div class="dropdown-menu" style="transform: translateX(290%);">
+                    <a href="#BF" class="text-success dropdown-item">基本表格</a>
+                    <a href="#TableColor" class="text-success dropdown-item">表格顏色</a>
+                    <a href="#tbb" class="text-success dropdown-item">表格方框</a>
+                </div>
 
-                <button type="button" class="btn btn-lg btn-outline-success dropdown-toggle" data-bs-toggle="dropdown">按鈕樣式</button>
-                <ol class="dropdown-menu" style="transform: translateX(475%);">
-                    <li><a href="#BB" class="text-success dropdown-item">基本按鈕</a></li>
-                    <li><a href="#Eb" class="text-success dropdown-item">懸浮效果按鈕</a></li>
-                    <li><a href="#Bbs" class="text-success dropdown-item">按鈕大小</a></li>
-                    <li><a href="#SEB" class="text-success dropdown-item">特殊效果按鈕</a></li>
-                    <li><a href="#BG" class="text-success dropdown-item">按鈕群組</a></li>
-                </ol>
+                <button type="button" class="btn btn-lg btn-outline-info text-primary dropdown-toggle" data-bs-toggle="dropdown">警示條樣式</button>
+                <div class="dropdown-menu" style="transform: translateX(380%);">
+                    <a href="#WgL" class="text-success dropdown-item">警示連結</a>
+                    <a href="#Dwl" class="text-success dropdown-item">可關警示</a>
+                </div>
 
-                <button type="button" class="btn btn-lg btn-outline-success dropdown-toggle" data-bs-toggle="dropdown">特別物件</button>
-                <ol class="dropdown-menu" style="transform: translateX(560%);">
-                    <li><a href="#Medallion" class="text-success dropdown-item">勳章樣式</a></li>
-                    <li><a href="#LoadingStyle" class="text-success dropdown-item">載入樣式</a></li>
-                    <li><a href="#Pb" class="text-success dropdown-item">進度條</a></li>
-                    <li><a href="#card" class="text-success dropdown-item">卡片樣式</a></li>
-                    <li><a href="#PL" class="text-success dropdown-item">分頁連結</a></li>
-                    <li><a href="#Slideshow" class="text-success dropdown-item">圖像幻燈片</a></li>
-                    <li><a href="#Modal" class="text-success dropdown-item">模態面板</a></li>
-                    <li><a href="#Tooltip" class="text-success dropdown-item">提示文字</a></li>
-                    <li><a href="#effS" class="text-success dropdown-item">效果陰影</a></li>
-                    <li><a href="#scra" class="text-success dropdown-item">縮放比例</a></li>
-                </ol>
+                <button type="button" class="btn btn-lg btn-outline-info text-primary dropdown-toggle" data-bs-toggle="dropdown">按鈕樣式</button>
+                <div class="dropdown-menu" style="transform: translateX(470%);">
+                    <a href="#BB" class="text-success dropdown-item">基本按鈕</a>
+                    <a href="#Eb" class="text-success dropdown-item">懸停效果按鈕</a>
+                    <a href="#Bbs" class="text-success dropdown-item">按鈕大小</a>
+                    <a href="#SEB" class="text-success dropdown-item">特殊效果按鈕</a>
+                    <a href="#BG" class="text-success dropdown-item">按鈕群組</a>
+                </div>
 
-                <button type="button" class="btn btn-lg btn-outline-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">列表與選單</button>
-                <ol class="dropdown-menu" style="transform: translateX(650%);">
-                    <li><a href="#BLG" class="text-success dropdown-item">基本列表組</a></li>
-                    <li><a href="#Pdm" class="text-success dropdown-item">下拉式選單</a></li>
-                    <li><a href="#Foldable" class="text-success dropdown-item">折疊式</a></li>
-                    <li><a href="#GuidedMenu" class="text-success dropdown-item">引導菜單</a></li>
-                    <li><a href="#Fpw" class="text-success dropdown-item">懸浮彈窗</a></li>
-                    <li><a href="#Sbar" class="text-success dropdown-item">側邊欄</a></li>
-                </ol>
- 
+                <button type="button" class="btn btn-lg btn-outline-info text-primary dropdown-toggle" data-bs-toggle="dropdown">特別物件</button>
+                <div class="dropdown-menu" style="transform: translateX(553%);">
+                    <a href="#Medallion" class="text-success dropdown-item">勳章樣式</a>
+                    <a href="#LoadingStyle" class="text-success dropdown-item">載入樣式</a>
+                    <a href="#Pb" class="text-success dropdown-item">進度條</a>
+                    <a href="#card" class="text-success dropdown-item">卡片樣式</a>
+                    <a href="#PL" class="text-success dropdown-item">分頁連結</a>
+                    <a href="#Slideshow" class="text-success dropdown-item">圖像幻燈片</a>
+                    <a href="#Modal" class="text-success dropdown-item">模態面板</a>
+                    <a href="#Tooltip" class="text-success dropdown-item">提示文字</a>
+                    <a href="#effS" class="text-success dropdown-item">效果陰影</a>
+                    <a href="#scra" class="text-success dropdown-item">縮放比例</a>
+                </div>
+
+                <button type="button" class="btn btn-lg btn-outline-info text-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">列表與選單</button>
+                <div class="dropdown-menu" style="transform: translateX(643%);">
+                    <a href="#BLG" class="text-success dropdown-item">基本列表組</a>
+                    <a href="#Pdm" class="text-success dropdown-item">下拉式選單</a>
+                    <a href="#Foldable" class="text-success dropdown-item">折疊式</a>
+                    <a href="#GuidedMenu" class="text-success dropdown-item">引導菜單</a>
+                    <a href="#Fpw" class="text-success dropdown-item">懸浮彈窗</a>
+                    <a href="#Sbar" class="text-success dropdown-item">側邊欄</a>
+                </div>
             </div>
-        </div>
+        </ul>
     </nav>
 
+<!-- ************************************************************************************ -->
+
     <div class="fixed-buttons">
-        <button class="btn bg-info text-white" id="show-button">顯示</button>
-        <button class="btn bg-info text-white" id="hide-button">隱藏</button>
+        <button class="btn bg-info text-white" id="show-button" >顯示</button>
+        <button class="btn bg-info text-white" id="hide-button" >隱藏</button>
         <button class="btn bg-info"><a href="#Home" class="text-white">頁首</a></button>
         <button class="btn bg-info"><a href="#Page-end" class="text-white">頁尾</a></button>
     </div>
 
     <script>
-        const nav_hide = document.querySelector('nav');
-        const button_hide = document.getElementById('hide-button');
-        button_hide.addEventListener('click', () => {nav_hide.style.display = 'none';});
+        window.addEventListener('load', () => {
+            const nav = document.querySelector('nav');
+            const showButton = document.getElementById('show-button');
+            const hideButton = document.getElementById('hide-button');
+            const fixedButtons = document.querySelector(".fixed-buttons");
 
-        const nav_show = document.querySelector('nav');
-        const button_show = document.getElementById('show-button');
-        button_show.addEventListener('click', () => {nav_show.style.display = 'block';});
+            if (nav.style.display === 'none'){hideButton.disabled = true;}
+            else {showButton.disabled = true;}
+            fixedButtons.classList.add("show-animation");
+  
+            showButton.addEventListener('click', () => {
+                nav.style.display = 'block';
+                hideButton.disabled = false;
+                showButton.disabled = true;
+            });
+
+            hideButton.addEventListener('click', () => {
+                nav.style.display = 'none';
+                showButton.disabled = false;
+                hideButton.disabled = true;
+            });
+        });
     </script>
+
+<!-- ************************************************************************************ -->
 
     <div class="Theme-color-hide Theme-color-show">
         <button class="btn bg-info text-white" id="light-button" onclick="toggleLightMode()">白色主題</button>
         <button class="btn bg-info text-white" id="dark-button" onclick="toggleDarkMode()">黑色主題</button>
     </div>
 
-    <script>
+    <script>                               
         function toggleDarkMode() {
             var body = document.getElementsByTagName("body")[0];
             if (body.classList.contains("white")) {
@@ -289,12 +314,12 @@
             }
             body.classList.remove("dark-mode");
             body.classList.add("light-mode");
-            var elements = document.querySelectorAll('body h2,h3,h4,h5,h6,p,th');
+            var elements = document.querySelectorAll('body h2,h3,h4,h5,h6,p,th,label');
                 for (var i = 0; i < elements.length; i++) {
                     var color = window.getComputedStyle(elements[i]).color;
-                    //if (color === 'rgb(255,255,255)') {
+                    // if (color === 'rgb(255,255,255)') {
                         elements[i].style.color = 'rgb(0, 0, 0)';
-                    //} 
+                    // } 
                 }toggleButtonStates();
         }
 
@@ -313,10 +338,10 @@
         }
     </script>
 
-
 <!-- ************************************************************************************ -->
 
-    <div class="container col-sm-4">
+<div tabindex="0"> <!-- 加上 data-bs-spy="scroll" 可以監聽,滾動到哪個頁面,將當前頁面標記再導覽欄 -->
+    <div class="container col-sm-4 wow fadeIn" data-wow-delay="0.35s">
         <div class="row">
             <div class="col-sm-4">
                 <h3>第一欄</h3>
@@ -342,7 +367,7 @@
 <!-- ************************************************************************************ -->
 
     <!--? p-5 = 容器內部往邊上間距為5單位 / my-5 = 容器外部上下的邊距單位 / mt-5 = 容器外部左右的邊距單位 -->
-    <div class="container p-5 my-5 border text-center">
+    <div class="container p-5 my-5 border text-center wow fadeIn" data-wow-delay="0.35s">
         <h1>預設框線</h1>
         <p>測試文字</p>
     </div>
@@ -359,7 +384,7 @@
 
 <!-- ************************************************************************************ -->
 
-    <div class="container p-3 my-5 mt-3 border text-center">
+    <div class="container p-3 my-5 mt-3 border text-center wow fadeIn" data-wow-delay="0.35s">
         <h1>框線的排版練習</h1>
 
         <div class="row" style="padding: 0px 50px;">
@@ -377,7 +402,7 @@
 *   所有的 <p> 都有 margin-top: 0 和 margin-bottom: 1rem
 -->
 
-    <div class="container my-5 mt-3 border">
+    <div class="container my-5 mt-3 border wow fadeIn" data-wow-delay="0.35s">
         <h1 class="text-center" style="font-size: 50px;">h1到h6的展示</h1>
         <h1 style="color: #000;">h1 Bootstrap</h1>
         <h2>h2 Bootstrap</h2>
@@ -389,7 +414,7 @@
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border">
+    <div class="container my-5 mt-3 border wow fadeIn" data-wow-delay="0.35s">
         <h1 class="text-center">Display更大的字體的練習</h1>
         <p class="display-1">Display 1</p>
         <p class="display-2">Display 2</p>
@@ -401,21 +426,21 @@
 
     <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border">
+    <div class="container my-5 mt-3 border wow fadeIn" data-wow-delay="0.35s">
         <h1 class="text-center">small更小的字體</h1>
         <p class="text-center">測試<small>文字</small></p>
     </div><hr id="BL">
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border">
+    <div class="container my-5 mt-3 border wow fadeIn" data-wow-delay="0.35s">
         <h1 class="text-center">abbr底部虛線邊框</h1>
         <p class="text-center">測<abbr title="test">試文</abbr>字</p>
     </div><hr id="Quotations">
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border text-center">
+    <div class="container my-5 mt-3 border text-center wow fadeIn" data-wow-delay="0.35s">
         <h1 class="text-center">footer引文</h1>
         <p>這是一篇文章</p>
         <footer class="blockquote-footer">這是文章來源</footer>
@@ -423,7 +448,7 @@
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border text-center">
+    <div class="container my-5 mt-3 border text-center wow fadeIn" data-wow-delay="0.35s">
         <h1 class="text-center">特別用途標籤</h1>
         <p>這是一個<code>code</code></p>
         <p><kbd>win+s</kbd></p>
@@ -431,7 +456,7 @@
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border text-center">
+    <div class="container my-5 mt-3 border text-center wow fadeIn" data-wow-delay="0.35s">
         <h1 class="text-center">文字顏色</h1>
         <p class="text-muted">灰色顏色</p>
         <p class="text-primary">藍色文字</p>
@@ -444,7 +469,7 @@
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border">
+    <div class="container my-5 mt-3 border wow fadeIn" data-wow-delay="0.35s">
         <h1 class="text-center">背景顏色</h1>
         <div class="bg-primary p-3 my-2"></div>
         <div class="bg-success p-3 my-2"></div>
@@ -462,7 +487,7 @@
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border text-center">
+    <div class="container my-5 mt-3 border text-center wow fadeIn" data-wow-delay="0.35s">
         <h1>文字與背景顏色</h1>
         <div class="text-bg-primary p-3 my-2">文字顏色自動調整與背景顏色</div>
         <div class="text-bg-success p-3 my-2">文字顏色自動調整與背景顏色</div>
@@ -475,7 +500,7 @@
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border">
+    <div class="container my-5 mt-3 border wow fadeIn" data-wow-delay="0.35s">
         <h1 class="text-center">基本表格</h1>
         <!--? (table/初始,只有底線)(table-striped/加上條紋)(table-bordered/增加所有的邊框)(table-hover/滑鼠旋停變色)(table-borderless/無邊框) -->
         <table class="table table-dark table-striped table-bordered table-hover">
@@ -512,7 +537,7 @@
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border">
+    <div class="container my-5 mt-3 border wow fadeIn" data-wow-delay="0.35s">
         <h1 class="text-center">進階表格顏色</h1>
         <table class="table table-bordered">
             <tr class="table-secondary">
@@ -557,7 +582,7 @@
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border">
+    <div class="container my-5 mt-3 border wow fadeIn" data-wow-delay="0.35s">
         <h1 class="text-center">警示鏈接</h1>
 
         <div class="alert alert-success text-center">
@@ -583,7 +608,7 @@
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border">
+    <div class="container my-5 mt-3 border wow fadeIn" data-wow-delay="0.35s">
         <h1 class="text-center">可關閉警示窗格</h1>
 
         <div class="alert alert-success text-center alert-dismissible fade show">
@@ -655,7 +680,7 @@
  
 <!-- ************************************************************************************ -->
 
-      <div class="container my-5 mt-3 border text-center">
+      <div class="container my-5 mt-3 border text-center wow fadeIn" data-wow-delay="0.35s">
             <h1>基本按鈕</h1>
 
             <table class="table table-bordered">
@@ -683,7 +708,7 @@
 
 <!-- ************************************************************************************ -->
 
-<div class="container my-5 mt-3 border justify-content-center">
+<div class="container my-5 mt-3 border justify-content-center wow fadeIn" data-wow-delay="0.35s">
     <h1 class="text-center">大中小按鈕</h1>
 
     <table class="table table-bordered">
@@ -699,7 +724,7 @@
 
 <!-- ************************************************************************************ -->
 
-<div class="container my-5 mt-3 border text-center">
+<div class="container my-5 mt-3 border text-center wow fadeIn" data-wow-delay="0.35s">
     <h1>懸停效果按鈕</h1>
 
     <table class="table table-bordered">
@@ -723,7 +748,7 @@
 
 <!-- ************************************************************************************ -->
 
-<div class="container my-5 mt-3 border">
+<div class="container my-5 mt-3 border wow fadeIn" data-wow-delay="0.35s">
     <h1 class="text-center">特別效果按鈕</h1>
 
     <table class="table table-bordered">
@@ -745,7 +770,7 @@
 
 <!-- ************************************************************************************ -->
 
-<div class="container my-5 mt-3 border">
+<div class="container my-5 mt-3 border wow fadeIn" data-wow-delay="0.35s">
     <h1 class="text-center">按鈕群組</h1>
 
     <table class="table table-bordered">
@@ -787,7 +812,7 @@
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border text-center">
+    <div class="container my-5 mt-3 border text-center wow fadeIn" data-wow-delay="0.35s">
         <h1 class="text-center">勳章樣式</h1>
         <span class="badge bg-primary">Primary</span>
         <span class="badge bg-secondary">Secondary</span>
@@ -818,7 +843,7 @@
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border">
+    <div class="container my-5 mt-3 border wow fadeIn" data-wow-delay="0.35s">
         <h1 class="text-center">進度條</h1>
 
         <div class="progress" style="height:20px">
@@ -929,7 +954,7 @@
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-1 mt-2 border">
+    <div class="container my-1 mt-2 border wow fadeIn" data-wow-delay="0.35s">
         <h1 class="text-center">彩色載入Spinners</h1>
       
         <div class="justify-content-center align-items-center d-flex">
@@ -955,7 +980,7 @@
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border">
+    <div class="container my-5 mt-3 border wow fadeIn" data-wow-delay="0.35s">
         <h1 class="text-center">分頁連結列表</h1>
 
         <ol class="pagination justify-content-center">
@@ -974,7 +999,7 @@
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border">
+    <div class="container my-5 mt-3 border wow fadeIn" data-wow-delay="0.35s">
         <h1 class="text-center">基本列表組</h1>
 
         <ol class="list-group text-center">
@@ -1040,7 +1065,7 @@
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border text-center">
+    <div class="container my-5 mt-3 border text-center wow fadeIn" data-wow-delay="0.35s">
         <h1>Card卡片樣式</h1>
 
         <div class="d-flex justify-content-center text-white">
@@ -1068,7 +1093,7 @@
 
 <!-- ************************************************************************************ -->
 
-    <div class="container p-5 my-5 mt-3 border text-center" style="height:600px">
+    <div class="container p-5 my-5 mt-3 border text-center wow fadeIn" data-wow-delay="0.35s" style="height:600px">
         <h1>下拉式表單</h1>
 
         <button type="button" class="btn btn-primary">水平按鈕1</button>
@@ -1110,7 +1135,7 @@
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border text-center" style="height:500px">
+    <div class="container my-5 mt-3 border text-center wow fadeIn" data-wow-delay="0.35s" style="height:500px">
         <h1>基本可折疊</h1>
 
         <a href="#ExpandTheArticle" class="btn btn-primary" data-bs-toggle="collapse">展開文章</a>
@@ -1169,7 +1194,7 @@
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 border text-center">
+    <div class="container my-5 border text-center wow fadeIn" data-wow-delay="0.35s">
 
         <nav class="navbar navbar-expand bg-dark navbar-dark" style="height: 70px;">
             <div class="container-fluid">
@@ -1190,10 +1215,10 @@
 
 <!-- ************************************************************************************ -->
 
-    <div class="container my-5 mt-3 border text-center">
+    <div class="container my-5 mt-3 border text-center wow fadeIn" data-wow-delay="0.35s">
         <h1>圖片幻燈片</h1>
 
-        <div id="slide_show" class="carousel slide" data-bs-ride="carousel">
+        <div id="slide_show" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#slide_show" data-bs-slide-to="0" class="active"></button>
                 <button type="button" data-bs-target="#slide_show" data-bs-slide-to="1"></button>
@@ -1201,7 +1226,6 @@
             </div>
 
             <div class="carousel-inner">
-
                 <div class="carousel-item active">
                     <img src="./Picture/la.jpg" alt="連線失敗" class="d-block" style="width: 100%;">
                     <div class="carousel-caption">
@@ -1251,7 +1275,7 @@
 
 <!-- ************************************************************************************ -->
 
-    <div class="container p-5 my-5 mt-3 border text-center">
+    <div class="container p-5 my-5 mt-3 border text-center wow fadeIn" data-wow-delay="0.35s">
         <h1>模態Modal</h1>
 
         <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#mymodal">基本模態</button>
@@ -1273,11 +1297,9 @@
                 <!--! 模態內容 -->
                 <div class="modal-body text-center">
                     <h3>內容的部份</h3>
-                    <p>上了三個月的網頁課程 什麼東西都沒學到因何而發生？上了三個月的網頁課程 什麼東西都沒學到，到底應該如何實現。更多上了三個月的網頁課程 什麼東西都沒學到的意義是這樣的，既然如此，非洲有講過一句名言，最靈繁的人也看不見自己的背脊。這不禁令我深思。</p>
-
-                    <p>我這幾天一直在思索這個問題，我們一般認為，抓住了問題的關鍵，其他一切則會迎刃而解。就我個人來說，上了三個月的網頁課程 什麼東西都沒學到對我的意義，不能不說非常重大。我們都知道，只要有意義，那麽就必須慎重考慮。而這些並不是完全重要，更加重要的問題是，一般來說，總結的來說，問題的關鍵究竟為何？本人也是經過了深思熟慮，在每個日日夜夜思考這個問題。帶著這些問題，我們來審視一下上了三個月的網頁課程 什麼東西都沒學到。</p>
-                        
-                    <p>生活中，若上了三個月的網頁課程 什麼東西都沒學到出現了，我們就不得不考慮它出現了的事實。瞭解清楚上了三個月的網頁課程 什麼東西都沒學到到底是一種怎麽樣的存在，是解決一切問題的關鍵。其實上了三個月的網頁課程 什麼東西都沒學到是非常值得我們深思的。</p>
+                    <label>上了三個月的網頁課程 什麼東西都沒學到因何而發生？上了三個月的網頁課程 什麼東西都沒學到，到底應該如何實現。更多上了三個月的網頁課程 什麼東西都沒學到的意義是這樣的，既然如此，非洲有講過一句名言，最靈繁的人也看不見自己的背脊。這不禁令我深思。</label><br><br><br>
+                    <label>我這幾天一直在思索這個問題，我們一般認為，抓住了問題的關鍵，其他一切則會迎刃而解。就我個人來說，上了三個月的網頁課程 什麼東西都沒學到對我的意義，不能不說非常重大。我們都知道，只要有意義，那麽就必須慎重考慮。而這些並不是完全重要，更加重要的問題是，一般來說，總結的來說，問題的關鍵究竟為何？本人也是經過了深思熟慮，在每個日日夜夜思考這個問題。帶著這些問題，我們來審視一下上了三個月的網頁課程 什麼東西都沒學到。</label><br><br><br>  
+                    <label>生活中，若上了三個月的網頁課程 什麼東西都沒學到出現了，我們就不得不考慮它出現了的事實。瞭解清楚上了三個月的網頁課程 什麼東西都沒學到到底是一種怎麽樣的存在，是解決一切問題的關鍵。其實上了三個月的網頁課程 什麼東西都沒學到是非常值得我們深思的。</label><br><br><br>
                 </div>
 
                 <!--! 退出按鈕 -->
@@ -1299,7 +1321,7 @@
 
 <!-- ************************************************************************************ -->
 
-    <div class="container p-3 mt-3 my-5 border text-center">
+    <div class="container p-3 mt-3 my-5 border text-center wow fadeIn" data-wow-delay="0.35s">
         <h1>提示文字Tooltip</h1>
 
         <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="這是往上顯示">Top</a>
@@ -1317,7 +1339,7 @@
 
 <!-- ************************************************************************************ -->
 
-    <div class="container border text-center" style="height: 350px;">
+    <div class="container border text-center wow fadeIn" data-wow-delay="0.35s" style="height: 350px;">
         <h1>懸浮彈窗</h1>
 
         <button type="button" class="btn btn-info" data-bs-toggle="popover" data-bs-placement="left" data-bs-trigger="hover" title="左左左左" data-bs-content="測試文字" id="toastbtn1">
@@ -1336,12 +1358,12 @@
             不要按我
         </button>
 
-        <div class="toast">
+        <div class="toast p-2 w-10" style="margin: 50px 10px 10px 470px;">
             <div class="toast-header">
                 <strong class="me-auto">叫你點了嗎</strong>
+                <small>1秒以前</small>
                 <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
             </div>
-
             <div class="toast-body">
                 <p>不是說不要點嗎</p>
             </div>
@@ -1350,22 +1372,21 @@
         <script>
             var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
             var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-              return new bootstrap.Popover(popoverTriggerEl)
+                return new bootstrap.Popover(popoverTriggerEl)
             })
 
-            document.getElementById("toastbtn1").onclick = function(){
-                var toastElList = [].slice.call(document.querySelectorAll('.toast'))
-                var toastList = toastElList.map(function(toastEl) {
-                return new bootstrap.Toast(toastEl)
-            })
-                toastList.forEach(toast => toast.show()) 
-            }
-
-            document.getElementById("toastbtn2").onclick = function(){
+            document.getElementById("toastbtn1").onclick = function() {
                 var toastElList = [].slice.call(document.querySelectorAll('.toast'))
                 var toastList = toastElList.map(function(toastEl) {
                     return new bootstrap.Toast(toastEl)
-            })
+                })
+                toastList.forEach(toast => toast.show()) 
+            }
+            document.getElementById("toastbtn2").onclick = function() {
+                var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+                var toastList = toastElList.map(function(toastEl) {
+                    return new bootstrap.Toast(toastEl)
+                })
                 toastList.forEach(toast => toast.show()) 
             }
         </script>
@@ -1373,7 +1394,7 @@
 
  <!-- ************************************************************************************ -->
 
-    <div class="container p-5 border text-center">
+    <div class="container p-5 border text-center wow fadeIn" data-wow-delay="0.35s">
         <h1>Scrollspy</h1>
 
         <iframe
@@ -1385,7 +1406,7 @@
 
  <!-- ************************************************************************************ -->
 
-    <div class="offcanvas offcanvas-start text-bg-dark" id="Sidebar_Left">
+    <div class="offcanvas offcanvas-start text-bg-dark wow fadeIn" data-wow-delay="0.35s" id="Sidebar_Left">
         <div class="offcanvas-header">
             <h1 class="offcanvas-title" style="color: white;">標題內容</h>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
@@ -1459,7 +1480,7 @@
 
  <!-- ************************************************************************************ -->
 
-    <div class="container border text-center" style="width: auto; height: 1050px">
+    <div class="container border text-center wow fadeIn" data-wow-delay="0.35s" style="width: auto; height: 1050px">
         <h1>表格方框</h1>
 
         <span class="border border-dark">四面框</span>
@@ -1530,7 +1551,7 @@
 
  <!-- ************************************************************************************ -->
 
-    <div class="container p-auto border text-center">
+    <div class="container p-auto border text-center wow fadeIn" data-wow-delay="0.35s">
         <h1>效果陰影(只有白色主題看得到)</h1>
 
         <div class="shadow-none p-4 mb-4 bg-white">無影子</div>
@@ -1541,7 +1562,7 @@
 
  <!-- ************************************************************************************ -->
 
-    <div class="container p-auto border text-center">
+    <div class="container p-auto border text-center wow fadeIn" data-wow-delay="0.35s">
         <h1>縮放比例(會造成卡頓將其註解)</h1>
   
         <h2>縮放比例 1:1</h2>
@@ -1567,7 +1588,7 @@
 
  <!-- ************************************************************************************ -->
 
-    <div class="container p-auto border">
+    <div class="container p-auto border wow fadeIn" data-wow-delay="0.35s">
         <h1 class="text-center">Flex演示</h1>
 
         <div class="d-flex p-3 text-white bg-secondary">
@@ -1686,7 +1707,7 @@
             <div class="p-2 border">Flex item 10</div>
             <div class="p-2 border">Flex item 11</div>
             <div class="p-2 border">Flex item 12</div>
-            <div class="p-2 border">Flex item 13 </div>
+            <div class="p-2 border">Flex item 13</div>
             <div class="p-2 border">Flex item 14</div>
             <div class="p-2 border">Flex item 15</div>
             <div class="p-2 border">Flex item 16</div>
@@ -1715,7 +1736,7 @@
             <div class="p-2 border">Flex item 10</div>
             <div class="p-2 border">Flex item 11</div>
             <div class="p-2 border">Flex item 12</div>
-            <div class="p-2 border">Flex item 13 </div>
+            <div class="p-2 border">Flex item 13</div>
             <div class="p-2 border">Flex item 14</div>
             <div class="p-2 border">Flex item 15</div>
             <div class="p-2 border">Flex item 16</div>
@@ -1744,7 +1765,7 @@
             <div class="p-2 border">Flex item 10</div>
             <div class="p-2 border">Flex item 11</div>
             <div class="p-2 border">Flex item 12</div>
-            <div class="p-2 border">Flex item 13 </div>
+            <div class="p-2 border">Flex item 13</div>
             <div class="p-2 border">Flex item 14</div>
             <div class="p-2 border">Flex item 15</div>
             <div class="p-2 border">Flex item 16</div>
@@ -1970,16 +1991,73 @@
             <div class="p-2 border">Flex item 2</div>
             <div class="p-2 border">Flex item 3</div>
         </div><br>
-        
-        
-        
-        
+    </div><hr>
+
+ <!-- ************************************************************************************ -->
+
+    <div class="container p-auto border wow fadeIn" data-wow-delay="0.35s">
+        <h1 class="text-center">堆疊形式</h1>
+
+        <form action="#">
+            <div class="mb-3 mt-3">
+                <label>是有什麼意見:</label>
+                <textarea class="form-control" rows="3" placeholder="有意見就說阿"></textarea>
+            </div>
+
+            <div class="mb-3 mt-3">
+                <label>Email:</label>
+                <input type="email" class="form-control form-control-lg" placeholder="Enter email">
+            </div>
+
+            <div class="mb-3">
+                <label>Password:</label>
+                <input type="password" class="form-control form-control-lg" placeholder="Enter password">
+                <input type="password" class="form-control-plaintext form-control-lg" placeholder="確認密碼">
+            </div>
+
+            <div class="row">
+                <div class="col">
+                  <input type="text" class="form-control form-control-sm" placeholder="姓">
+                </div>
+
+                <div class="col">
+                  <input type="text" class="form-control form-control-sm" placeholder="名">
+                </div>
+            </div>
+
+            <input type="text" class="form-control mt-3" placeholder="你也想輸入嗎" disabled>
+
+            <div class="mb-3 mt-3">
+                <label>選擇檔案:</label>
+                <input type="file" class="form-control form-control-sm">
+            </div>
+
+            <div class="form-check mx-3 p-2">
+                <label class="check">
+                  <input class="form-check-input" type="checkbox">記住帳密
+                </label>
+            </div>
+
+            <div class="mb-3">
+                <label>選色器:</label>
+                <input type="color" class="form-control form-control-color" id="myColor" value="#000" title="Choose a color">
+            </div>
+
+            <button type="submit" class="btn btn-info mb-3">送出</button>
+        </form>
+    </div><hr>
+
+<!-- ************************************************************************************ -->
+
+    <div class="container p-auto border wow fadeIn" data-wow-delay="0.35s">
 
 
     </div>
 
 <div id="Page-end"></div>
+</div> <!-- 343首行 -->
 </body>
+<!--! Nav的設置 Ctrl + G 輸入 161 跳至該行 -->
 <!--! **************************Body結束了喔*********************************** -->
 
 </html>
