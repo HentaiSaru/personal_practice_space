@@ -3,7 +3,7 @@
     --instructions: rgb(0 0 0);
 }
 
-body{
+body {
     background-color: white;
 }
 
@@ -12,8 +12,12 @@ h1 {
     padding: 30px;
 }
 
-h2,h3,h4,h5,h6
-,label {
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
     color: var(--instructions);
 }
 
@@ -69,12 +73,13 @@ div span {
 .fixed-buttons {
     position: fixed;
     padding: 45px;
-    top: 60%;
+    top: 50%;
     right: 0;
     width: 1px;
     flex-direction: column;
     text-align: center;
 }
+
 .fixed-buttons.show-animation {
     animation: fadeInRight 1.5s ease;
 }
@@ -82,12 +87,16 @@ div span {
 /*
  *主題轉換的顯示隱藏
 */
+.TheTcs-hide {
+    display: none;
+}
+
 .Theme-color-hide {
     position: fixed;
     padding: 45px;
     transition: transform 1.3s;
     right: -30px;
-    top: 28%;
+    top: 10%;
     width: 1px;
 }
 
