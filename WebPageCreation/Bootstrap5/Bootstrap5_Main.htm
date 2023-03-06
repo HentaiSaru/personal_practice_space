@@ -158,10 +158,10 @@
 
     <!--? Bootstrap中的 col-sm-1 ~ col-sm-12 由小到最大 在小螢幕跨越1列~12列 -->
     <!--? 通常 container 只有左右 可利用.pt-5 增加額外的填充 讓排版看起來更好 -->
-    <div class="cotainer-fluid p-3 bg-primary text-white text-center wow fadeIn" data-wow-delay="0.2s" id="Home">
+    <div class="cotainer p-3 bg-primary text-white text-center wow fadeIn" data-wow-delay="0.2s" id="Home">
         <h1>這是一個使用Bootstrap 5.3.0的網頁</h1>
         <p>此網頁使用27吋螢幕製作,無特別測試其他尺寸,可能展示有所不同</p>
-        <p>因為這是一個筆記網頁,此頁含有大量代碼,瀏覽器加載延遲會造成跳轉失效,多按幾次就好</p>
+        <p id="Home1">因為這是一個筆記網頁,此頁含有大量代碼,瀏覽器加載延遲會造成跳轉失效,多按幾次就好</p>
     </div>
 
     <!--! 正式內容的開始請按 Ctrl + G 輸入 333 跳至該行 -->
@@ -251,7 +251,7 @@
 
 <!-- ************************************************************************************ -->
 
-    <div class="fixed-buttons">
+    <div class="container fixed-buttons">
         <button class="btn bg-info text-white" id="show-button" >顯示</button>
         <button class="btn bg-info text-white" id="hide-button" >隱藏</button>
         <button class="btn bg-info"><a href="#Home" class="text-white">頁首</a></button>
@@ -285,12 +285,48 @@
 
 <!-- ************************************************************************************ -->
 
-    <div class="Theme-color-hide Theme-color-show">
+    <div class="container TheTcs-hide Theme-color-show" id="Themebox">
         <button class="btn bg-info text-white" id="light-button" onclick="toggleLightMode()">白色主題</button>
         <button class="btn bg-info text-white" id="dark-button" onclick="toggleDarkMode()">黑色主題</button>
     </div>
 
-    <script>                               
+    <script>
+
+        /*const homeElement = document.getElementById('Home1');
+        const themeContainer = document.getElementById('Themebox');
+
+        function updateThemeContainerVisibility() {
+            const homeRect = homeElement.getBoundingClientRect();
+            const themeRect = themeContainer.getBoundingClientRect();
+
+            if (themeRect.bottom > homeRect.top && themeRect.top < homeRect.bottom) {
+                themeContainer.classList.remove('TheTcs-hide');
+                themeContainer.classList.add('Theme-color-hide');
+            } else {
+                themeContainer.classList.remove('Theme-color-hide');
+                themeContainer.classList.add('TheTcs-hide');
+            }
+        }
+        window.addEventListener('scroll', updateThemeContainerVisibility);*/
+
+        const homeElement = document.getElementById('Home1');
+        const themeContainer = document.getElementById('Themebox');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+                    themeContainer.classList.remove('Theme-color-hide');
+                    themeContainer.classList.add('TheTcs-hide');           
+                } else {
+                    themeContainer.classList.remove('TheTcs-hide');
+                    themeContainer.classList.add('Theme-color-hide');
+                }
+            });
+                }, { threshold: 0 });
+            observer.observe(homeElement);
+
+
+
         function toggleDarkMode() {
             var body = document.getElementsByTagName("body")[0];
             if (body.classList.contains("white")) {
@@ -317,11 +353,9 @@
             var elements = document.querySelectorAll('body h2,h3,h4,h5,h6,p,th,label');
                 for (var i = 0; i < elements.length; i++) {
                     var color = window.getComputedStyle(elements[i]).color;
-                    // if (color === 'rgb(255,255,255)') {
                         elements[i].style.color = 'rgb(0, 0, 0)';
-                    // } 
                 }toggleButtonStates();
-        }
+            } 
 
         function toggleButtonStates() {
             var darkButton = document.getElementById("dark-button");
@@ -404,7 +438,7 @@
 
     <div class="container my-5 mt-3 border wow fadeIn" data-wow-delay="0.35s">
         <h1 class="text-center" style="font-size: 50px;">h1到h6的展示</h1>
-        <h1 style="color: #000;">h1 Bootstrap</h1>
+        <h1 style="padding: 0px;">h1 Bootstrap</h1>
         <h2>h2 Bootstrap</h2>
         <h3>h3 Bootstrap</h3>
         <h4>h4 Bootstrap</h4>
