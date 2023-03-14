@@ -1,19 +1,28 @@
 import java.util.*;
+import java.io.*;
+/*
+ * Versions 1.1
+ * [+] 新增輸出執行指令
+ * [+] 變數修正
+*/
+
 public class RandomNhentai{
     public static void main(String[] argv){
 
-        try (Scanner H = new Scanner(System.in)){
-			boolean t = true;
+        try (Scanner NHentai = new Scanner(System.in)){
+            FileWriter bat = new FileWriter("本本網址.bat",false);
 			System.out.println("輸入任意數字自動給予指定數量本本,輸入數字-1停止該程式\n");
+            boolean Cycle_State = true;
 
-			while(t){
-			    System.out.print("請輸入 : ");
-			    int enter = H.nextInt();
+			while(Cycle_State){
+			    System.out.print("請輸入數量 : ");
+			    int enter = NHentai.nextInt();
                 if(enter >= 1){
                     for(int i=1;i<=enter;i++){
                         long hentai = (long)(Math.random()*388999+1);
-                        System.out.println("https://nhentai.net/g/"+hentai+"/");
+                        bat.write("start https://nhentai.net/g/"+hentai+"/\n");
                     }
+                    bat.close();
                 }
                 else if(enter == -1){
                     System.out.println("程式已終止...");
@@ -21,6 +30,6 @@ public class RandomNhentai{
                 }
 			}
             
-		}catch(Exception e){System.out.println("請輸入數字\n程式已終止...");}
+		}catch(Exception InputMismatchException){System.out.println("請輸入數字\n程式已終止...");}
     }
 }
