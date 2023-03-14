@@ -1,11 +1,10 @@
-import java.util.*;
-import java.io.*;
 /*
  * Versions 1.1
  * [+] 新增輸出執行指令
  * [+] 變數修正
-*/
-
+~~~~~~~~~~~~~~~~~~~~~~~*/
+import java.util.*;
+import java.io.*;
 public class RandomNhentai{
     public static void main(String[] argv){
 

@@ -1,13 +1,12 @@
-import java.util.*;
-import java.io.*;
-import java.net.*;
 /*
  * Versions 1.1
  * [+] 變數修正
  * [+] 新增驗證功能待測試
  * [+] 新增方法待測試
-*/
-
+~~~~~~~~~~~~~~~~~~~~~~~*/
+import java.util.*;
+import java.io.*;
+import java.net.*;
 public class RandomURL {
     public static void main(String[] argv) {
 
